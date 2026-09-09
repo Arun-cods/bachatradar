@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Download, X, Smartphone, Sparkles, CheckCircle2, Share } from 'lucide-react';
 
 export const MobileInstallBanner: React.FC = () => {
@@ -55,9 +55,9 @@ export const MobileInstallBanner: React.FC = () => {
       setDeferredPrompt(null);
       setIsInstallable(false);
     } else if (isIos) {
-      alert("To physically install BachatRadar on your iPhone/iPad:\n\n1. Tap the Share button (square with arrow) at the bottom of Safari.\n2. Scroll down and tap 'Add to Home Screen'.\n3. Tap 'Add' in the top right.\n\nBachatRadar will appear on your phone home screen like a native app!");
+      alert("To install BachatRadar on your iPhone/iPad:\n\n1. Tap the Share button (square with arrow) at the bottom of Safari.\n2. Scroll down and tap 'Add to Home Screen'.\n3. Tap 'Add' in the top right.\n\nBachatRadar will appear on your phone home screen like a native app!");
     } else {
-      alert("To install BachatRadar on your mobile:\n\n1. Tap your browser menu (3 dots in top right).\n2. Tap 'Install App' or 'Add to Home screen'.\n\nBachatRadar will physically install on your phone!");
+      alert("To install BachatRadar on your mobile:\n\n1. Tap your browser menu (3 dots in top right).\n2. Tap 'Install App' or 'Add to Home screen'.\n\nBachatRadar will install directly on your phone!");
     }
   };
 
@@ -82,7 +82,7 @@ export const MobileInstallBanner: React.FC = () => {
             </span>
           </div>
           <div className="text-[10px] text-slate-300 hidden sm:block">
-            Works physically on all Android & iOS phones with instant live darkstore alerts.
+            Works smoothly on all Android & iOS phones with instant live darkstore alerts.
           </div>
         </div>
       </div>
