@@ -1,10 +1,8 @@
 # BachatRadar Robots Exclusion Standard
 User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /private-executive
 
-# Crawlers
+# Dedicated Search Engine Crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -20,6 +18,5 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-# Sitemap Index
-Sitemap: https://bachatradar.com/sitemap.xml
-Sitemap: https://bachatradar.in/sitemap.xml
+# Sitemap Index for Google Search Console
+Sitemap: https://arungopagani.is-a.dev/bachatradar/sitemap.xml

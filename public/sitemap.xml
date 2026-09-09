@@ -6,7 +6,7 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://bachatradar.com/</loc>
+    <loc>https://arungopagani.is-a.dev/bachatradar/</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.00</priority>
@@ -14,43 +14,43 @@
 
   <!-- City Locations -->
   <url>
-    <loc>https://bachatradar.com/hyderabad</loc>
+    <loc>https://arungopagani.is-a.dev/bachatradar/#hyderabad</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://bachatradar.com/bengaluru</loc>
+    <loc>https://arungopagani.is-a.dev/bachatradar/#bengaluru</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://bachatradar.com/delhi-ncr</loc>
+    <loc>https://arungopagani.is-a.dev/bachatradar/#delhi-ncr</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://bachatradar.com/mumbai</loc>
+    <loc>https://arungopagani.is-a.dev/bachatradar/#mumbai</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://bachatradar.com/pune</loc>
+    <loc>https://arungopagani.is-a.dev/bachatradar/#pune</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://bachatradar.com/chennai</loc>
+    <loc>https://arungopagani.is-a.dev/bachatradar/#chennai</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://bachatradar.com/suryapet</loc>
+    <loc>https://arungopagani.is-a.dev/bachatradar/#suryapet</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
@@ -58,31 +58,31 @@
 
   <!-- Product Categories -->
   <url>
-    <loc>https://bachatradar.com/category/dairy-breakfast</loc>
+    <loc>https://arungopagani.is-a.dev/bachatradar/#dairy-breakfast</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://bachatradar.com/category/atta-rice-dal</loc>
+    <loc>https://arungopagani.is-a.dev/bachatradar/#atta-rice-dal</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://bachatradar.com/category/edible-oils-ghee</loc>
+    <loc>https://arungopagani.is-a.dev/bachatradar/#edible-oils-ghee</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://bachatradar.com/category/fruits-vegetables</loc>
+    <loc>https://arungopagani.is-a.dev/bachatradar/#fruits-vegetables</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://bachatradar.com/category/snacks-beverages</loc>
+    <loc>https://arungopagani.is-a.dev/bachatradar/#snacks-beverages</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.80</priority>
@@ -90,13 +90,13 @@
 
   <!-- Store Arbitrage Feeds -->
   <url>
-    <loc>https://bachatradar.com/compare/blinkit-vs-zepto</loc>
+    <loc>https://arungopagani.is-a.dev/bachatradar/#blinkit-vs-zepto</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://bachatradar.com/compare/instamart-vs-bigbasket</loc>
+    <loc>https://arungopagani.is-a.dev/bachatradar/#instamart-vs-bigbasket</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.85</priority>
