@@ -9,10 +9,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   </React.StrictMode>,
 );
 
-// Purge any stale demo phone/user data from localStorage on load
 try {
+  localStorage.removeItem('bachatradar_google_accounts');
   const savedUser = localStorage.getItem('bachatradar_user');
-  if (savedUser && (savedUser.includes('9014218406') || savedUser.includes('Gopagani'))) {
+  if (savedUser && (savedUser.includes('9014218406') || savedUser.includes('Gopagani') || savedUser.includes('gopagani') || savedUser.includes('arun'))) {
     localStorage.removeItem('bachatradar_user');
   }
 } catch (e) {}
