@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import {
   X,
   Share2,
@@ -56,7 +56,6 @@ BachatRadar aggregates live darkstore rates side-by-side:
 Proudly 100% Founded & Bootstrapped by Gopagani Arun.
 
 Try it live: https://bachatradar.com/
-Official Contact: gopaganiarungoud@gmail.com | +91 9014218406
 
 #QuickCommerce #StartupIndia #BachatRadar #ECommerce #Blinkit #Zepto #SwiggyInstamart #BigBasket #GrocerySavings #FinTech #IndiaTech #FounderStory`;
 
@@ -383,12 +382,10 @@ Official Contact: gopaganiarungoud@gmail.com | +91 9014218406
           {/* Footer */}
           <div className="border-t border-slate-800 pt-3 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-2">
             <div>
-              100% Owned by <strong className="text-white">Gopagani Arun</strong> (Founder & CEO)
+              100% Free Public Utility • <strong className="text-white">BachatRadar Technologies Pvt. Ltd.</strong>
             </div>
-            <div className="flex items-center gap-3">
-              <span>📞 +91 9014218406</span>
-              <span>•</span>
-              <span>✉️ gopaganiarungoud@gmail.com</span>
+            <div className="text-emerald-400 font-semibold">
+              Zero Fees • Transparent Multi-Store Arbitrage
             </div>
           </div>
 

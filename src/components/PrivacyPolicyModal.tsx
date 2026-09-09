@@ -226,10 +226,10 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
                   3. Official Grievance Officer
                 </h3>
                 <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-[11px] space-y-1 font-medium text-slate-700">
-                  <div><strong>Designated Grievance Officer:</strong> Gopagani Arun</div>
-                  <div><strong>Official Email:</strong> gopaganiarungoud@gmail.com</div>
-                  <div><strong>Mobile:</strong> +91 9014218406</div>
-                  <div><strong>Operational Head:</strong> Suryapet, Telangana & Bengaluru, Karnataka</div>
+                  <div><strong>Designated Grievance Officer:</strong> Gopagani Arun (Founder & CEO)</div>
+                  <div><strong>Official Redressal:</strong> In-App Help & Problem Desk</div>
+                  <div><strong>Official Support:</strong> support@bachatradar.com</div>
+                  <div><strong>Jurisdiction:</strong> Hyderabad & Suryapet, Telangana, India</div>
                 </div>
               </div>
             </div>

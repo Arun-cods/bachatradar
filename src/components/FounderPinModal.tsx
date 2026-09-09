@@ -275,7 +275,7 @@ export const FounderPinModal: React.FC<FounderPinModalProps> = ({
                 <div>
                   <div className="font-extrabold text-amber-300">Owner-Exclusive Biometric Security</div>
                   <p className="text-[11px] text-slate-300 mt-0.5">
-                    This facial scanner is calibrated strictly for Founder & Owner <strong className="text-white">Gopagani Arun</strong> (+91 9014218406). Regular members and customers are <span className="text-amber-300 font-bold underline">never</span> photographed or asked for camera permissions.
+                    This facial scanner is calibrated strictly for Founder & Owner <strong className="text-white">Gopagani Arun</strong>. Regular members and customers are <span className="text-amber-300 font-bold underline">never</span> photographed or asked for camera permissions.
                   </p>
                 </div>
               </div>
