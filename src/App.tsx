@@ -16,8 +16,6 @@ import { DpdpConsentBanner } from './components/DpdpConsentBanner';
 import { HelpSupportModal } from './components/HelpSupportModal';
 import { LocationAvailabilityModal } from './components/LocationAvailabilityModal';
 import { MobileInstallBanner } from './components/MobileInstallBanner';
-import { AppSplashScreen } from './components/AppSplashScreen';
-import { QuickCommerceHomeView } from './components/QuickCommerceHomeView';
 import { CITIES, INITIAL_FOUNDER_STATS } from './data/mockGroceryData';
 import { COMPREHENSIVE_GROCERY_DATA } from './data/comprehensiveCatalog';
 import { CityOption, CartItem, Product, PlatformId, FounderStats, UserProfile } from './types';
@@ -330,12 +328,6 @@ export const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col selection:bg-emerald-500 selection:text-white pb-16 sm:pb-0 w-full max-w-full overflow-x-hidden">
       
-      {/* Native App Opening Splash Screen & Login / Registration Gateway */}
-      <AppSplashScreen
-        currentUser={currentUser}
-        onLoginSuccess={handleLoginSuccess}
-        selectedCity={selectedCity}
-      />
 
       {/* Mobile PWA Install Banner */}
       <MobileInstallBanner />
@@ -378,26 +370,6 @@ export const App: React.FC = () => {
 
       {/* Main Content */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-6 w-full max-w-full overflow-x-hidden">
-        
-        {/* Flipkart Minutes / Zepto Style Modern Quick-Commerce App Home View */}
-        <QuickCommerceHomeView
-          selectedCity={selectedCity}
-          selectedArea={selectedArea}
-          onOpenLocationModal={() => setIsLocationModalOpen(true)}
-          currentUser={currentUser}
-          selectedCategory={homeCategory}
-          onSelectCategory={(cat) => setHomeCategory(cat)}
-          searchQuery={homeSearchQuery}
-          onSearchChange={(q) => setHomeSearchQuery(q)}
-          onOpenCart={() => setIsCartOpen(true)}
-          onOpenShare={handleShareApp}
-          totalCartItemCount={totalCartItemCount}
-          onAddToCart={handleAddToCart}
-          onUpdateQuantity={handleUpdateQuantity}
-          cartQuantities={cartQuantities}
-          onTrackAffiliateClick={handleTrackAffiliateClick}
-          onTriggerLiveRefresh={handleTriggerLivePriceRefresh}
-        />
         
         {/* Hero Section */}
         <section className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">

@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { 
   Search, Sparkles, ShoppingBag, ExternalLink, ArrowUpDown, Check, Tag, 
   ChevronDown, Database, Zap, ArrowLeft, ArrowRight, Layers, SlidersHorizontal, RefreshCw,
-  Plus, Minus, LayoutGrid, List
+  Plus, Minus, LayoutGrid, List, MoveHorizontal
 } from 'lucide-react';
 import { Product, PlatformId } from '../types';
 import { PLATFORMS } from '../data/mockGroceryData';
@@ -42,7 +42,7 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
   const [selectedWeightFilter, setSelectedWeightFilter] = useState<'all' | 'grams' | 'half-kg' | '1kg-plus' | 'packs'>('all');
   const [onlyEssentials, setOnlyEssentials] = useState<boolean>(false);
   const [sortBy, setSortBy] = useState<'savings' | 'price-asc' | 'price-desc'>('savings');
-  const [mobileLayout, setMobileLayout] = useState<'single' | 'double'>('single');
+  const [mobileLayout, setMobileLayout] = useState<'single' | 'double' | 'scroll'>('scroll');
 
   React.useEffect(() => {
     if (externalCategory !== undefined && externalCategory !== selectedCategory) {
@@ -133,6 +133,30 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
   const handleLoadMore = (increment: number) => {
     setCumulativePageSize((prev) => Math.min(prev + increment, totalCategorySkus));
   };
+
+  
+  // Featured quick picks for the horizontal scroll carousel (including Daawat Rice & BB Royal Rice)
+  const featuredQuickPicks = useMemo(() => {
+    const riceQuery = queryMasterCatalog({
+      category: 'staples',
+      searchQuery: 'Rozana Super Basmati',
+      page: 1,
+      pageSize: 4,
+      cityMultiplier,
+    }).items;
+
+    const essentials = catalogResponse.items.slice(0, 4);
+    // Combine unique items
+    const combined: Product[] = [];
+    const seenIds = new Set<string>();
+    [...riceQuery, ...essentials].forEach((p) => {
+      if (!seenIds.has(p.id)) {
+        seenIds.add(p.id);
+        combined.push(p);
+      }
+    });
+    return combined;
+  }, [catalogResponse.items, cityMultiplier]);
 
   const handleJumpPage = (e: React.FormEvent) => {
     e.preventDefault();
@@ -382,29 +406,40 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
               </button>
             </div>
 
-            {/* Mobile View Toggle: 1 in 1 Line (Full Section) vs 2 in 1 Line (Multiple) */}
-            <div className="flex sm:hidden items-center bg-slate-100 rounded-xl p-0.5 text-[11px] font-bold shrink-0">
+            {/* Layout Toggle: Scroll in 1 Line vs Full Section vs 2 in 1 Line */}
+            <div className="flex items-center bg-slate-100 rounded-xl p-0.5 text-[11px] font-bold shrink-0">
+              <button
+                type="button"
+                onClick={() => setMobileLayout('scroll')}
+                className={`px-2.5 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
+                  mobileLayout === 'scroll' ? 'bg-white text-emerald-700 shadow-sm font-black' : 'text-slate-600 hover:text-slate-900'
+                }`}
+                title="Horizontal Scroll: Multiple items in 1 line"
+              >
+                <MoveHorizontal className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Scroll (1 Line)</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setMobileLayout('double')}
+                className={`px-2.5 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
+                  mobileLayout === 'double' ? 'bg-white text-emerald-700 shadow-sm font-black' : 'text-slate-600 hover:text-slate-900'
+                }`}
+                title="2 in 1 Line"
+              >
+                <LayoutGrid className="w-3.5 h-3.5" />
+                <span>2 in 1 Line</span>
+              </button>
               <button
                 type="button"
                 onClick={() => setMobileLayout('single')}
-                className={`px-2 py-1 rounded-lg transition-all flex items-center gap-1 ${
-                  mobileLayout === 'single' ? 'bg-white text-emerald-700 shadow-sm' : 'text-slate-500'
+                className={`px-2.5 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
+                  mobileLayout === 'single' ? 'bg-white text-emerald-700 shadow-sm font-black' : 'text-slate-600 hover:text-slate-900'
                 }`}
                 title="1 Full Section per product"
               >
                 <List className="w-3.5 h-3.5" />
                 <span>Full Section</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => setMobileLayout('double')}
-                className={`px-2 py-1 rounded-lg transition-all flex items-center gap-1 ${
-                  mobileLayout === 'double' ? 'bg-white text-emerald-700 shadow-sm' : 'text-slate-500'
-                }`}
-                title="2 Products in 1 Line"
-              >
-                <LayoutGrid className="w-3.5 h-3.5" />
-                <span>2 in 1 Line</span>
               </button>
             </div>
           </div>
@@ -412,8 +447,158 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
 
       </div>
 
+      {/* Pinned Quick-Picks Horizontal Scroll Carousel (Swipe Multiple in 1 Line) */}
+      {featuredQuickPicks.length > 0 && (
+        <div className="mb-8 bg-gradient-to-r from-emerald-50/80 via-teal-50/50 to-slate-50 p-4 sm:p-6 rounded-3xl border border-emerald-200 shadow-xs">
+          <div className="flex items-center justify-between mb-3.5">
+            <div className="flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
+              <h2 className="text-sm sm:text-base font-black text-slate-900 tracking-tight flex items-center gap-1.5">
+                <span>⚡ Daily Essentials & Rice Arbitrage (Swipe Multiple Items in 1 Line ⇄)</span>
+              </h2>
+            </div>
+            <span className="text-[11px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 rounded-full">
+              Live Darkstore Rates
+            </span>
+          </div>
+
+          <div className="flex gap-4 overflow-x-auto scrollbar-none pb-3 pt-1 w-full max-w-full snap-x">
+            {featuredQuickPicks.map((product) => {
+              const stats = getProductStats(product);
+              const isAddedToCart = cartProductIds.has(product.id);
+              const itemQuantity = cartQuantities ? (cartQuantities[product.id] || 0) : (isAddedToCart ? 1 : 0);
+
+              return (
+                <div
+                  key={'carousel_' + product.id}
+                  className="min-w-[310px] sm:min-w-[340px] max-w-[360px] shrink-0 snap-start bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between hover:border-slate-300"
+                >
+                  <div className="p-4 sm:p-5">
+                    <div className="flex gap-3 items-start">
+                      <img
+                        src={product.imageUrl}
+                        alt={product.name}
+                        className="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-2xl border border-slate-100 shrink-0 bg-slate-50"
+                        loading="lazy"
+                      />
+                      <div className="flex-1 min-w-0">
+                        <span className="text-[9.5px] sm:text-[11px] font-bold text-emerald-700 bg-emerald-50 px-1.5 sm:px-2 py-0.5 rounded-md uppercase tracking-wider">
+                          {product.brand}
+                        </span>
+                        <h3 className="font-black text-xs sm:text-sm text-slate-900 leading-snug mt-1 line-clamp-2">
+                          {product.name}
+                        </h3>
+                        {product.nameHindi && (
+                          <p className="text-[11px] text-slate-500 font-medium truncate">{product.nameHindi}</p>
+                        )}
+                        <div className="mt-1 flex flex-wrap items-center gap-1.5">
+                          <span className="text-[10px] bg-slate-100 text-slate-700 px-1.5 py-0.5 rounded-lg font-semibold">
+                            {product.unit}
+                          </span>
+                          {stats && stats.maxSavings > 0 && (
+                            <span className="text-[10px] bg-emerald-100 text-emerald-800 font-black px-1.5 py-0.5 rounded-full border border-emerald-200">
+                              Save ₹{stats.maxSavings} ({stats.savingsPercent}%)
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 pt-3 border-t border-slate-100">
+                      <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2 flex items-center justify-between">
+                        <span>Live Darkstore Rates</span>
+                        <span className="text-slate-400 font-mono text-[10px]">Real-Time Sync</span>
+                      </div>
+
+                      <div className="space-y-1.5">
+                        {(Object.keys(PLATFORMS) as PlatformId[]).map((platformId) => {
+                          const platform = PLATFORMS[platformId];
+                          const offer = product.offers[platformId];
+                          const isLowest = stats && stats.lowestOffer.platform === platformId && offer.inStock;
+
+                          if (!offer) return null;
+
+                          return (
+                            <a
+                              key={platformId}
+                              href={getDirectStoreBuyUrl(platformId, product.name)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={() => onTrackAffiliateClick(platformId, product)}
+                              className={`flex items-center justify-between p-2 rounded-xl text-xs transition-colors hover:ring-2 hover:ring-emerald-400/30 cursor-pointer ${
+                                isLowest
+                                  ? 'bg-emerald-50 border border-emerald-300 font-bold text-emerald-950 shadow-xs'
+                                  : 'bg-slate-50 border border-slate-100 text-slate-700 hover:bg-slate-100'
+                              }`}
+                            >
+                              <div className="flex items-center gap-1.5">
+                                <span>{platform.logo}</span>
+                                <span className="font-semibold text-[11px]">{platform.name}</span>
+                                {isLowest && (
+                                  <span className="bg-emerald-600 text-white text-[8.5px] font-black px-1.5 py-0.5 rounded uppercase">
+                                    Cheapest
+                                  </span>
+                                )}
+                              </div>
+                              <div className="flex items-center gap-2">
+                                {offer.inStock ? (
+                                  <>
+                                    <span className="text-slate-400 text-[10px] line-through">₹{offer.mrp}</span>
+                                    <span className={`text-xs font-black ${isLowest ? 'text-emerald-700' : 'text-slate-900'}`}>₹{offer.price}</span>
+                                    <span className="text-[10px] text-slate-500 hidden sm:inline">{offer.deliveryTimeMin}m</span>
+                                  </>
+                                ) : (
+                                  <span className="text-slate-400 text-[10px] italic">Out of Stock</span>
+                                )}
+                              </div>
+                            </a>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-3.5 sm:p-4 bg-slate-50/70 border-t border-slate-100 flex items-center gap-2">
+                    {stats && stats.lowestOffer && (
+                      <a
+                        href={getDirectStoreBuyUrl(stats.lowestOffer.platform, product.name)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => onTrackAffiliateClick(stats.lowestOffer.platform, product)}
+                        className="flex-1 py-2 px-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-1"
+                      >
+                        <span>Buy on {PLATFORMS[stats.lowestOffer.platform].name}</span>
+                        <ExternalLink className="w-3 h-3 text-slate-400" />
+                      </a>
+                    )}
+                    {itemQuantity > 0 ? (
+                      <div className="flex items-center rounded-xl bg-emerald-600 text-white font-black text-xs">
+                        <button type="button" onClick={() => onUpdateQuantity ? onUpdateQuantity(product.id, -1) : onAddToCart(product)} className="px-2 py-2 hover:bg-emerald-700"><Minus className="w-3 h-3" /></button>
+                        <span className="px-2 font-black">{itemQuantity}</span>
+                        <button type="button" onClick={() => onUpdateQuantity ? onUpdateQuantity(product.id, 1) : onAddToCart(product)} className="px-2 py-2 hover:bg-emerald-700"><Plus className="w-3 h-3" /></button>
+                      </div>
+                    ) : (
+                      <button onClick={() => onAddToCart(product)} className="py-2 px-3 rounded-xl font-black text-xs flex items-center gap-1 border bg-white text-slate-800 border-slate-300 hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-500">
+                        <ShoppingBag className="w-3.5 h-3.5 text-emerald-600" />
+                        <span>+ Basket</span>
+                      </button>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
       {/* 24,580 Multi-Store Products Grid */}
-      <div className={`grid ${mobileLayout === 'double' ? 'grid-cols-2 gap-2.5 sm:gap-6' : 'grid-cols-1 gap-4 sm:gap-6'} md:grid-cols-2 lg:grid-cols-3 w-full max-w-full`}>
+      <div className={
+        mobileLayout === 'scroll'
+          ? 'flex gap-4 overflow-x-auto scrollbar-none pb-4 pt-1 w-full max-w-full snap-x'
+          : mobileLayout === 'double'
+          ? 'grid grid-cols-2 gap-2.5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 w-full max-w-full'
+          : 'grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 w-full max-w-full'
+      }>
         {displayedProducts.map((product) => {
           const stats = getProductStats(product);
           const isAddedToCart = cartProductIds.has(product.id);
@@ -422,7 +607,11 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
           return (
             <div
               key={product.id}
-              className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between hover:border-slate-300 w-full max-w-full"
+              className={
+                mobileLayout === 'scroll'
+                  ? 'min-w-[310px] sm:min-w-[340px] max-w-[360px] shrink-0 snap-start bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between hover:border-slate-300'
+                  : 'bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between hover:border-slate-300 w-full max-w-full'
+              }
             >
               {/* Product Header & Image */}
               <div>
@@ -472,21 +661,8 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
                     </div>
                   </div>
 
-                  {/* Compact rate summary for 2-in-1-line mode */}
-                  {mobileLayout === 'double' && stats && stats.lowestOffer && (
-                    <div className="block sm:hidden mt-2 pt-2 border-t border-slate-100">
-                      <div className="text-[10px] text-slate-400 line-through">MRP ₹{stats.lowestOffer.mrp}</div>
-                      <div className="text-sm font-black text-emerald-700 flex items-center justify-between">
-                        <span>₹{stats.lowestOffer.price}</span>
-                        <span className="text-[9px] bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded uppercase">
-                          {PLATFORMS[stats.lowestOffer.platform].name}
-                        </span>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Multi-Store Price Comparison Matrix (Full details) */}
-                  <div className={mobileLayout === 'double' ? 'hidden sm:block mt-4 pt-4 border-t border-slate-100' : 'mt-4 pt-4 border-t border-slate-100'}>
+                  {/* Multi-Store Price Comparison Matrix (Full details - Never Hidden) */}
+                  <div className="mt-4 pt-4 border-t border-slate-100">
                     <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2 flex items-center justify-between">
                       <span>Live Darkstore Rates</span>
                       <span className="text-slate-400 font-mono text-[10px]">Real-Time Sync</span>
