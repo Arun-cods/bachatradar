@@ -232,6 +232,7 @@ export const App: React.FC = () => {
   const handleLogout = () => {
     setCurrentUser(null);
     localStorage.removeItem('bachatradar_user');
+    setIsAuthModalOpen(true);
   };
 
   const handleUpdateFounderStats = (newStats: Partial<FounderStats>) => {

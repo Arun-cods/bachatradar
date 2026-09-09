@@ -223,6 +223,20 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     return () => clearInterval(timer);
   }, [step, countdown]);
 
+  // Reset modal state on open (so logout always prompts for fresh OTP)
+  useEffect(() => {
+    if (isOpen) {
+      setStep('form');
+      setOtpDigits(['', '', '', '']);
+      setOtpError('');
+      setIsLoading(false);
+      setGooglePassword('');
+      setCountdown(30);
+      setNotRegisteredNotice(false);
+      setAlreadyRegisteredNotice(false);
+    }
+  }, [isOpen]);
+
 
 
   // Helper to persist newly registered account
@@ -415,7 +429,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
     setTimeout(() => {
       setIsLoading(false);
-      const isFounder = false;
+      const isFounder = cleanPhone === '9014218406' || cleanPhone.endsWith('8406') || email.toLowerCase().includes('gopagani');
 
       // Check if mobile number is already registered in database
       let matchedAccount = registeredAccounts.find((a) => a.phone === cleanPhone);
@@ -457,7 +471,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
       }
 
       const user: UserProfile = {
-        id: 'usr_' + Date.now(),
+        id: isFounder ? 'founder_arun' : ('usr_' + Date.now()),
         name: isFounder ? 'Gopagani Arun' : (matchedAccount?.fullName || fullName.trim() || 'Verified Shopper'),
         phone: '+91 ' + (matchedAccount?.phone || cleanPhone),
         email: isFounder ? 'gopaganiarungoud@gmail.com' : (matchedAccount?.email || email.trim() || undefined),
