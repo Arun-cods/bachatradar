@@ -30,9 +30,11 @@ export interface Product {
   name: string;
   nameHindi?: string;
   brand: string;
-  category: 'dairy' | 'veggies' | 'staples' | 'snacks' | 'household';
+  category: 'dairy' | 'veggies' | 'staples' | 'snacks' | 'household' | 'festive' | string;
   unit: string;
   imageUrl: string;
+  price?: number;
+  mrp?: number;
   trending?: boolean;
   isDailyEssential?: boolean;
   sponsored?: {
