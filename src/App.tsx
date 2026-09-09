@@ -328,8 +328,11 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col selection:bg-emerald-500 selection:text-white pb-16 sm:pb-0 w-full max-w-full overflow-x-hidden">
-      {/* App Splash Screen on initial load (auto fades out or skip on tap) */}
-      <AppSplash />
+      {/* App Splash Screen & Entrance Login */}
+      <AppSplash
+        currentUser={currentUser}
+        onLoginSuccess={handleLoginSuccess}
+      />
 
       {/* Mobile PWA Install Banner */}
       <MobileInstallBanner />
