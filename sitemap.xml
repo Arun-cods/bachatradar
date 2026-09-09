@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://bachatradar.com/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- City Locations -->
+  <url>
+    <loc>https://bachatradar.com/hyderabad</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://bachatradar.com/bengaluru</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://bachatradar.com/delhi-ncr</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://bachatradar.com/mumbai</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://bachatradar.com/pune</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://bachatradar.com/chennai</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://bachatradar.com/suryapet</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Product Categories -->
+  <url>
+    <loc>https://bachatradar.com/category/dairy-breakfast</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bachatradar.com/category/atta-rice-dal</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bachatradar.com/category/edible-oils-ghee</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bachatradar.com/category/fruits-vegetables</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bachatradar.com/category/snacks-beverages</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Store Arbitrage Feeds -->
+  <url>
+    <loc>https://bachatradar.com/compare/blinkit-vs-zepto</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://bachatradar.com/compare/instamart-vs-bigbasket</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.85</priority>
+  </url>
+</urlset>
