@@ -108,53 +108,7 @@ export const recordLoginAudit = (
 const REGISTERED_ACCOUNTS_KEY = 'bachatradar_registered_accounts';
 const GOOGLE_ACCOUNTS_KEY = 'bachatradar_google_accounts';
 
-const INITIAL_REGISTERED_ACCOUNTS: RegisteredAccount[] = [
-  {
-    phone: '9014218406',
-    fullName: 'Gopagani Arun',
-    email: 'gopaganiarungoud@gmail.com',
-    city: 'Hyderabad',
-    society: 'Founder & CEO Office (Ameerpet)',
-    preferredApps: ['Blinkit', 'Zepto', 'Swiggy Instamart', 'BigBasket'],
-    orderFrequency: 'Daily (Milk, Veggies, Bread)',
-    otherSitesRequested: 'Country Delight',
-    isFounder: true,
-    registeredAt: '2026-01-01T00:00:00.000Z',
-  },
-  {
-    phone: '9848022338',
-    fullName: 'K. Rajesh Varma',
-    email: 'rajesh.varma@gmail.com',
-    city: 'Hyderabad',
-    society: 'My Home Bhooja, Hitec City',
-    preferredApps: ['Zepto', 'Blinkit', 'BigBasket'],
-    orderFrequency: 'Daily (Milk, Veggies, Bread)',
-    otherSitesRequested: 'D-Mart Ready',
-    registeredAt: '2026-03-02T10:14:22.000Z',
-  },
-  {
-    phone: '9820144552',
-    fullName: 'Pooja Kulkarni',
-    email: 'pooja.kulkarni@outlook.com',
-    city: 'Mumbai',
-    society: 'Hiranandani Gardens, Powai',
-    preferredApps: ['Zepto', 'Swiggy Instamart', 'Amazon Fresh'],
-    orderFrequency: '2-3 Times a Week',
-    otherSitesRequested: 'Nature Basket',
-    registeredAt: '2026-03-04T14:28:10.000Z',
-  },
-  {
-    phone: '9880199221',
-    fullName: 'Siddharth Rao',
-    email: 'siddharth.rao@techcorp.in',
-    city: 'Bengaluru',
-    society: 'Prestige Lakeside Habitat, Varthur',
-    preferredApps: ['Blinkit', 'Zepto', 'Swiggy Instamart'],
-    orderFrequency: 'Weekly Major Restock',
-    otherSitesRequested: 'Country Delight, Local Mandi',
-    registeredAt: '2026-03-07T08:45:33.000Z',
-  },
-];
+const INITIAL_REGISTERED_ACCOUNTS: RegisteredAccount[] = [];
 
 const INITIAL_GOOGLE_ACCOUNTS: SavedGoogleAccount[] = [];
 
@@ -315,7 +269,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     // In Register mode: Check whether phone number is ALREADY registered
     if (authMode === 'register') {
       const isAlready = registeredAccounts.some((a) => a.phone === cleanPhone);
-      if (isAlready && cleanPhone !== '9014218406') {
+      if (isAlready) {
         setOtpError(`Mobile number +91 ${cleanPhone} is already registered! Please switch to Login.`);
         setAlreadyRegisteredNotice(true);
         return;
@@ -453,10 +407,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
     setTimeout(() => {
       setIsLoading(false);
-      const isFounder =
-        cleanPhone === '9014218406' ||
-        email.toLowerCase().includes('gopagani') ||
-        fullName.toLowerCase().includes('arun');
+      const isFounder = false;
 
       // Check if mobile number is already registered in database
       let matchedAccount = registeredAccounts.find((a) => a.phone === cleanPhone);
@@ -566,15 +517,14 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         setIsLoading(false);
         const user: UserProfile = {
           id: 'usr_g_' + Date.now(),
-          name: isFounder ? 'Gopagani Arun' : (matchedAccount?.fullName || acc.name),
-          email: isFounder ? 'gopaganiarungoud@gmail.com' : acc.email,
-          phone: isFounder ? '+91 9014218406' : (matchedAccount?.phone ? '+91 ' + matchedAccount.phone : '+91 9014218406'),
-          city: isFounder ? 'Hyderabad' : (matchedAccount?.city || 'Hyderabad'),
-          society: isFounder ? 'Founder & CEO Office (Ameerpet)' : (matchedAccount?.society || 'Ameerpet'),
+          name: matchedAccount?.fullName || acc.name,
+          email: acc.email,
+          phone: matchedAccount?.phone ? '+91 ' + matchedAccount.phone : '+91 9876543210',
+          city: matchedAccount?.city || 'Hyderabad',
+          society: matchedAccount?.society || 'Ameerpet',
           lifetimeSavingsRupees: 0,
-          isPro: true,
-          isFounder: isFounder,
-          aadhaarMasked: isFounder ? '•••• •••• 9544' : undefined,
+          isPro: false,
+          isFounder: false,
         };
         localStorage.setItem('bachatradar_user', JSON.stringify(user));
         recordLoginAudit(
