@@ -9,16 +9,22 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   </React.StrictMode>,
 );
 
-// Register Progressive Web App (PWA) Service Worker for mobile devices
+// Purge any stale demo phone/user data from localStorage on load
+try {
+  const savedUser = localStorage.getItem('bachatradar_user');
+  if (savedUser && (savedUser.includes('9014218406') || savedUser.includes('Gopagani'))) {
+    localStorage.removeItem('bachatradar_user');
+  }
+} catch (e) {}
+
+// Force update Service Worker to ensure fresh build is loaded
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js').then(
-      (registration) => {
-        console.log('BachatRadar PWA Service Worker registered:', registration.scope);
-      },
-      (err) => {
-        console.warn('PWA Service Worker registration failed:', err);
-      }
-    );
+    navigator.serviceWorker.register('./sw.js').then((registration) => {
+      registration.update();
+      console.log('BachatRadar Service Worker updated:', registration.scope);
+    }).catch((err) => {
+      console.warn('SW registration warning:', err);
+    });
   });
 }
