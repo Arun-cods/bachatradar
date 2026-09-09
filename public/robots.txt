@@ -1,0 +1,25 @@
+# BachatRadar Robots Exclusion Standard
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private-executive
+
+# Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Sitemap Index
+Sitemap: https://bachatradar.com/sitemap.xml
+Sitemap: https://bachatradar.in/sitemap.xml
