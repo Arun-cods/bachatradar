@@ -11,36 +11,47 @@ export const AppSplash: React.FC<AppSplashProps> = ({
 }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [isFading, setIsFading] = useState(false);
-  const [progress, setProgress] = useState(25);
-  const [statusText, setStatusText] = useState('Initializing darkstore engine...');
+  const [progress, setProgress] = useState(12);
+  const [statusText, setStatusText] = useState('Initializing darkstore comparison engine...');
 
   const onCompleteRef = useRef(onComplete);
   onCompleteRef.current = onComplete;
 
   useEffect(() => {
+    // Stage 1: 35%
     const t1 = setTimeout(() => {
-      setProgress(60);
+      setProgress(35);
       setStatusText('Connecting to Blinkit, Zepto, Instamart & BigBasket...');
-    }, 250);
+    }, 300);
 
+    // Stage 2: 65%
     const t2 = setTimeout(() => {
-      setProgress(95);
-      setStatusText('Syncing live rates & surge fee radar...');
-    }, 550);
+      setProgress(65);
+      setStatusText('Syncing live darkstore inventory & surge fees...');
+    }, 650);
 
+    // Stage 3: 88%
     const t3 = setTimeout(() => {
-      setProgress(100);
-      setStatusText('Ready!');
-    }, 850);
-
-    const t4 = setTimeout(() => {
-      setIsFading(true);
+      setProgress(88);
+      setStatusText('Calibrating real-time price comparison radar...');
     }, 1000);
 
+    // Stage 4: 100% Complete!
+    const t4 = setTimeout(() => {
+      setProgress(100);
+      setStatusText('Darkstores Connected • 100% Ready');
+    }, 1350);
+
+    // Stage 5: Begin fade-out
     const t5 = setTimeout(() => {
+      setIsFading(true);
+    }, 1750);
+
+    // Stage 6: Unmount and trigger complete
+    const t6 = setTimeout(() => {
       setIsVisible(false);
       onCompleteRef.current?.();
-    }, 1250);
+    }, 2100);
 
     return () => {
       clearTimeout(t1);
@@ -48,39 +59,30 @@ export const AppSplash: React.FC<AppSplashProps> = ({
       clearTimeout(t3);
       clearTimeout(t4);
       clearTimeout(t5);
+      clearTimeout(t6);
     };
-  }, []); // Run once on mount!
-
-  const handleSkip = () => {
-    setIsFading(true);
-    setTimeout(() => {
-      setIsVisible(false);
-      onCompleteRef.current?.();
-    }, 100);
-  };
+  }, []);
 
   if (!isVisible) return null;
 
   return (
     <div
-      onClick={handleSkip}
-      className={`fixed inset-0 z-50 flex flex-col items-center justify-between bg-slate-950 text-white p-6 select-none cursor-pointer transition-opacity duration-300 ${
+      className={`fixed inset-0 z-50 flex flex-col items-center justify-between bg-slate-950 text-white p-6 select-none transition-opacity duration-350 ${
         isFading ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
-      style={{ transition: 'opacity 300ms ease-out' }}
+      style={{ transition: 'opacity 350ms ease-out' }}
     >
-      {/* Top Skip Button */}
-      <div className="w-full flex justify-end pt-2 pr-2">
-        <button
-          type="button"
-          onClick={handleSkip}
-          className="text-xs font-bold text-slate-400 hover:text-emerald-400 transition-colors py-1 px-3 rounded-full bg-slate-900 border border-slate-800 cursor-pointer shadow-sm"
-        >
-          Skip ↗
-        </button>
+      {/* Top Brand Header */}
+      <div className="w-full flex justify-between items-center max-w-sm mx-auto pt-2">
+        <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+          BachatRadar OS 2.0
+        </span>
+        <span className="text-[11px] font-mono font-bold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded-full border border-emerald-800/50">
+          Live Sync
+        </span>
       </div>
 
-      {/* Center Logo & Name */}
+      {/* Center Logo & 100% Progress Animation */}
       <div className="flex flex-col items-center text-center max-w-sm my-auto">
         {/* Animated 3D Logo */}
         <div className="relative mb-5">
@@ -104,16 +106,26 @@ export const AppSplash: React.FC<AppSplashProps> = ({
           India's Real-Time Quick-Commerce Price Comparison Engine
         </p>
 
-        {/* Loading Progress Bar */}
-        <div className="w-56 sm:w-64 bg-slate-900 rounded-full h-1.5 mt-8 overflow-hidden border border-slate-800">
-          <div
-            className="h-full bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full transition-all duration-250 ease-out"
-            style={{ width: `${progress}%` }}
-          />
+        {/* 100% Progress Bar with Animated Percentage Counter */}
+        <div className="w-64 sm:w-72 mt-8">
+          <div className="flex justify-between items-center text-xs font-bold mb-1.5 px-0.5">
+            <span className="text-slate-400 text-[11px]">System Status</span>
+            <span className="font-mono text-emerald-400 text-xs font-black">
+              {progress}%
+            </span>
+          </div>
+
+          <div className="w-full bg-slate-900 rounded-full h-2 overflow-hidden border border-slate-800 p-0.5 shadow-inner">
+            <div
+              className="h-full bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-300 rounded-full transition-all duration-300 ease-out shadow-sm shadow-emerald-500/50"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+
+          <p className="text-[11px] text-slate-400 mt-2.5 font-medium h-4 transition-all">
+            {statusText}
+          </p>
         </div>
-        <p className="text-[11px] text-slate-400 mt-2 font-medium">
-          {statusText}
-        </p>
       </div>
 
       {/* Bottom Store Badges */}

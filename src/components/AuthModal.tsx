@@ -1004,35 +1004,10 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                 </p>
               </div>
 
-              {/* Real-Time Incoming SMS Notification Banner */}
-              <div className="p-3 bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-300 rounded-2xl flex items-center justify-between shadow-xs">
-                <div className="flex items-center gap-2.5 text-left min-w-0">
-                  <div className="w-8 h-8 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-xs">
-                    💬
-                  </div>
-                  <div className="min-w-0">
-                    <div className="text-[10px] font-black text-emerald-900 uppercase tracking-wider">
-                      SMS from VK-BACHAT
-                    </div>
-                    <div className="text-xs font-bold text-slate-800">
-                      Your OTP code is <span className="font-mono text-emerald-700 font-black text-sm bg-emerald-100/80 px-1.5 py-0.5 rounded tracking-widest">{secretOtp}</span>
-                    </div>
-                  </div>
-                </div>
-
-                <button
-                  type="button"
-                  onClick={() => {
-                    const digits = secretOtp.split('');
-                    setOtpDigits(digits);
-                    setTimeout(() => {
-                      triggerVerification();
-                    }, 100);
-                  }}
-                  className="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-black text-xs shrink-0 shadow-xs transition-all cursor-pointer"
-                >
-                  Auto-Fill
-                </button>
+              {/* Cellular SMS Delivery Notice (No on-screen code spoiler) */}
+              <div className="p-3 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs font-semibold flex items-center justify-center gap-2 text-center">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Physical cellular SMS dispatched to <strong>+91 {phone}</strong></span>
               </div>
 
               {/* 4 Discrete Boxes */}
