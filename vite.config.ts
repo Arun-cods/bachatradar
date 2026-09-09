@@ -75,10 +75,12 @@ function realSmsGatewayPlugin(): Plugin {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [react(), realSmsGatewayPlugin()],
   server: {
     port: 3000,
     open: false,
+    allowedHosts: true,
     watch: {
       usePolling: true,
       interval: 1000,

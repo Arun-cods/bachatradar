@@ -23,7 +23,15 @@ export const SocialShareModal: React.FC<SocialShareModalProps> = ({ isOpen, onCl
 
   if (!isOpen) return null;
 
-  const siteUrl = 'https://bachatradar.com/';
+  // Guaranteed 24/7 globally-hosted production URL accessible on any phone anywhere:
+  const LIVE_URL = 'https://arun-cods.github.io/bachatradar/';
+
+  const currentHostname = typeof window !== 'undefined' ? window.location.hostname : '';
+  const isLocalDev = !currentHostname || currentHostname === 'localhost' || currentHostname === '127.0.0.1' || currentHostname.startsWith('10.') || currentHostname.startsWith('192.168.');
+
+  // Clean canonical link that always loads the website reliably on any device:
+  const siteUrl = isLocalDev ? LIVE_URL : (typeof window !== 'undefined' ? window.location.href.split('?')[0].split('#')[0] : LIVE_URL);
+  const localNetworkUrl = 'http://10.133.8.198:3000/';
 
   // Viral WhatsApp message
   const whatsAppMessage = `🛒 *BachatRadar (बचत रडार) — India's #1 Daily Quick-Commerce Price Tracker!*
@@ -55,11 +63,11 @@ BachatRadar aggregates live darkstore rates side-by-side:
 
 Proudly 100% Founded & Bootstrapped by Gopagani Arun.
 
-Try it live: https://bachatradar.com/
+Try it live: ${siteUrl}
 
 #QuickCommerce #StartupIndia #BachatRadar #ECommerce #Blinkit #Zepto #SwiggyInstamart #BigBasket #GrocerySavings #FinTech #IndiaTech #FounderStory`;
 
-  const twitterText = `Tired of overpaying on grocery apps? Compare Blinkit, Zepto, Swiggy Instamart & BigBasket in 1 tap on BachatRadar! Save ₹2,000+ monthly. 100% Free: https://bachatradar.com/ by @GopaganiArun #QuickCommerce #BachatRadar`;
+  const twitterText = `Tired of overpaying on grocery apps? Compare Blinkit, Zepto, Swiggy Instamart & BigBasket in 1 tap on BachatRadar! Save ₹2,000+ monthly. 100% Free: ${siteUrl} by @GopaganiArun #QuickCommerce #BachatRadar`;
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(siteUrl);
@@ -180,21 +188,57 @@ Try it live: https://bachatradar.com/
           {activeTab === 'share' && (
             <div className="space-y-4">
               {/* Domain & URL Bar */}
-              <div className="p-3.5 rounded-2xl bg-slate-800/80 border border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-3">
-                <div className="flex items-center gap-2 text-xs">
-                  <Globe className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <div>
-                    <div className="font-bold text-white">Official Web Address:</div>
-                    <div className="font-mono text-emerald-400 text-sm">{siteUrl}</div>
+              <div className="p-4 rounded-2xl bg-slate-800/90 border border-emerald-500/30 space-y-3">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                  <div className="flex items-center gap-2.5 text-xs">
+                    <Globe className="w-5 h-5 text-emerald-400 shrink-0" />
+                    <div>
+                      <div className="font-bold text-white flex items-center gap-2">
+                        <span>Official Live Web Address:</span>
+                        <span className="px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-bold">100% Reliable Anywhere</span>
+                      </div>
+                      <div className="font-mono text-emerald-400 text-sm break-all select-all font-semibold">{siteUrl}</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 w-full sm:w-auto">
+                    <button
+                      onClick={handleCopyLink}
+                      className="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black text-xs flex items-center justify-center gap-1.5 transition-all shadow-md active:scale-95 cursor-pointer"
+                    >
+                      {copiedLink ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                      <span>{copiedLink ? 'Copied URL!' : 'Copy Live Link'}</span>
+                    </button>
+                    <a
+                      href={siteUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-2 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-bold text-xs flex items-center justify-center gap-1 transition-all"
+                      title="Test live link in new tab"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                      <span>Open</span>
+                    </a>
                   </div>
                 </div>
-                <button
-                  onClick={handleCopyLink}
-                  className="w-full sm:w-auto px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black text-xs flex items-center justify-center gap-1.5 transition-all shadow-md active:scale-95 cursor-pointer"
-                >
-                  {copiedLink ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                  <span>{copiedLink ? 'Copied URL!' : 'Copy Live Link'}</span>
-                </button>
+
+                {isLocalDev && (
+                  <div className="pt-2.5 border-t border-slate-700/60 flex flex-col sm:flex-row items-start sm:items-center justify-between text-[11px] text-slate-400 gap-2">
+                    <div className="flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                      <span>Same Wi-Fi Direct Testing (Mobile): <code className="text-blue-300 font-mono font-bold">{localNetworkUrl}</code></span>
+                    </div>
+                    <button
+                      onClick={() => {
+                        navigator.clipboard.writeText(localNetworkUrl);
+                        setCopiedLink(true);
+                        setTimeout(() => setCopiedLink(false), 2000);
+                      }}
+                      className="text-xs text-blue-400 hover:text-blue-300 underline font-medium cursor-pointer"
+                    >
+                      Copy Wi-Fi Link
+                    </button>
+                  </div>
+                )}
               </div>
 
               {/* Social Telecast Grid */}
