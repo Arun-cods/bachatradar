@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { 
   Search, Sparkles, ShoppingBag, ExternalLink, ArrowUpDown, Check, Tag, 
   ChevronDown, Database, Zap, ArrowLeft, ArrowRight, Layers, SlidersHorizontal, RefreshCw,
-  Plus, Minus
+  Plus, Minus, LayoutGrid, List
 } from 'lucide-react';
 import { Product, PlatformId } from '../types';
 import { PLATFORMS } from '../data/mockGroceryData';
@@ -34,6 +34,7 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
   const [selectedWeightFilter, setSelectedWeightFilter] = useState<'all' | 'grams' | 'half-kg' | '1kg-plus' | 'packs'>('all');
   const [onlyEssentials, setOnlyEssentials] = useState<boolean>(false);
   const [sortBy, setSortBy] = useState<'savings' | 'price-asc' | 'price-desc'>('savings');
+  const [mobileLayout, setMobileLayout] = useState<'single' | 'double'>('single');
   
   // Navigation & Load More controls
   const [displayMode, setDisplayMode] = useState<'infinite' | 'pages'>('infinite');
@@ -126,27 +127,27 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
     <section className="mb-12" id="catalog-section">
       
       {/* Master Data Metrics Badge */}
-      <div className="mb-4 bg-slate-900 text-white rounded-2xl p-4 sm:px-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border border-slate-800 shadow-md">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+      <div className="mb-4 bg-slate-900 text-white rounded-2xl p-3.5 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border border-slate-800 shadow-md w-full max-w-full min-w-0">
+        <div className="flex items-center gap-3 min-w-0">
+          <div className="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold shrink-0">
             <Database className="w-4 h-4" />
           </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="font-extrabold text-white text-sm sm:text-base">
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="font-extrabold text-white text-xs sm:text-base">
                 24,580 Active Quick-Commerce SKUs Synced
               </span>
               <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                 100% LIVE
               </span>
             </div>
-            <div className="text-slate-400 text-xs mt-0.5">
+            <div className="text-slate-400 text-[11px] sm:text-xs mt-0.5 break-words">
               Zepto (9,840) • Blinkit (11,450) • Swiggy Instamart (12,100) • Flipkart Minutes (10,500) • BigBasket (24,000) • Amazon Fresh (18,500)
             </div>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 self-start sm:self-auto">
+        <div className="flex items-center gap-2 self-start sm:self-auto shrink-0">
           <div className="flex items-center gap-1.5 text-[11px] font-bold bg-slate-800 text-emerald-400 px-3 py-1.5 rounded-xl border border-slate-700">
             <Zap className="w-3.5 h-3.5 text-amber-400" />
             <span>Multi-App Arbitrage Active</span>
@@ -155,19 +156,19 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
       </div>
 
       {/* Search, Filter & Category Bar */}
-      <div className="bg-white rounded-3xl p-4 sm:p-6 shadow-sm border border-slate-200 mb-6 space-y-4">
+      <div className="bg-white rounded-3xl p-3.5 sm:p-6 shadow-sm border border-slate-200 mb-6 space-y-4 w-full max-w-full min-w-0 overflow-hidden">
         
         {/* Top Controls: Search Input + Sorting */}
-        <div className="flex flex-col md:flex-row gap-3 md:items-center justify-between">
+        <div className="flex flex-col md:flex-row gap-3 md:items-center justify-between w-full max-w-full">
           
           {/* Universal Search Input */}
-          <div className="relative flex-1">
+          <div className="relative flex-1 min-w-0 w-full">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => handleSearchChange(e.target.value)}
-              placeholder="Search across all 24,580 items: Nutella, Atta 10kg, Amul Gold, Tomatoes, Surf Excel, Horlicks..."
+              placeholder="Search across 24,580 items: Nutella, Atta, Amul Gold, Tomatoes, Surf Excel..."
               className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all placeholder:text-slate-400 text-slate-900 font-medium"
             />
             {searchQuery && (
@@ -181,7 +182,7 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
           </div>
 
           {/* Essentials & Sorting Controls */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 w-full md:w-auto justify-between md:justify-end">
             <button
               onClick={() => setOnlyEssentials(!onlyEssentials)}
               className={`px-3 py-2.5 rounded-2xl text-xs font-bold border transition-all flex items-center gap-1.5 shrink-0 ${
@@ -195,7 +196,7 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
             </button>
 
             {/* Sort Dropdown */}
-            <div className="flex items-center bg-slate-50 border border-slate-200 rounded-2xl px-3 py-2.5 text-xs font-semibold text-slate-700">
+            <div className="flex items-center bg-slate-50 border border-slate-200 rounded-2xl px-3 py-2.5 text-xs font-semibold text-slate-700 shrink-0">
               <ArrowUpDown className="w-3.5 h-3.5 mr-1.5 text-slate-400 shrink-0" />
               <select
                 aria-label="Sort items"
@@ -212,7 +213,7 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
         </div>
 
         {/* Quick Search Tag Pills */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none text-[11px]">
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none text-[11px] w-full max-w-full min-w-0">
           <span className="text-slate-400 font-bold shrink-0">Popular:</span>
           {quickSearchTags.map((tag) => (
             <button
@@ -230,7 +231,7 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
         </div>
 
         {/* Category Pills with Live 24,580 SKU Counts */}
-        <div className="flex items-center gap-2 overflow-x-auto pt-2 border-t border-slate-100 pb-1 scrollbar-none">
+        <div className="flex items-center gap-2 overflow-x-auto pt-2 border-t border-slate-100 pb-1 scrollbar-none w-full max-w-full min-w-0">
           {MASTER_CATALOG_CATEGORIES.map((cat) => (
             <button
               key={cat.id}
@@ -253,7 +254,7 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
         </div>
 
         {/* Quick-Commerce Weight & Unit Variation Filter Bar (Grams, Half Kg, 1Kg+, Packs) */}
-        <div className="flex items-center gap-2 overflow-x-auto pt-2 border-t border-slate-100 pb-1 scrollbar-none text-xs">
+        <div className="flex items-center gap-2 overflow-x-auto pt-2 border-t border-slate-100 pb-1 scrollbar-none text-xs w-full max-w-full min-w-0">
           <span className="text-[11px] font-bold text-slate-400 shrink-0 uppercase tracking-wider">
             Weight / Size:
           </span>
@@ -279,27 +280,27 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
         </div>
 
         {/* Status Bar: Live count + Display Mode Switcher */}
-        <div className="pt-3 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
-          <div className="flex items-center gap-2 text-slate-600 font-bold">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>
+        <div className="pt-3 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs w-full max-w-full min-w-0">
+          <div className="flex items-center gap-2 text-slate-600 font-bold min-w-0">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+            <span className="truncate">
               Showing <strong className="text-slate-900 font-black">{displayedProducts.length}</strong> of{' '}
-              <strong className="text-emerald-700 font-black">{totalCategorySkus.toLocaleString('en-IN')}</strong> available items
+              <strong className="text-emerald-700 font-black">{totalCategorySkus.toLocaleString('en-IN')}</strong> items
             </span>
             {searchQuery && (
-              <span className="text-slate-400 font-normal">
-                (filtered for "{searchQuery}")
+              <span className="text-slate-400 font-normal truncate hidden sm:inline">
+                ("{searchQuery}")
               </span>
             )}
           </div>
 
           {/* Display Mode Toggle & Batch Size Controls */}
-          <div className="flex flex-wrap items-center gap-2">
-            <div className="flex items-center bg-slate-100 rounded-xl p-0.5 text-[11px] font-bold">
-              <span className="px-2 text-slate-400">View:</span>
+          <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto min-w-0">
+            <div className="flex items-center bg-slate-100 rounded-xl p-0.5 text-[11px] font-bold overflow-x-auto max-w-full scrollbar-none">
+              <span className="px-2 text-slate-400 shrink-0">View:</span>
               <button
                 onClick={() => setCumulativePageSize(60)}
-                className={`px-2 py-0.5 rounded-lg transition-all ${
+                className={`px-2 py-0.5 rounded-lg transition-all shrink-0 ${
                   cumulativePageSize === 60 ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -307,7 +308,7 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
               </button>
               <button
                 onClick={() => setCumulativePageSize(120)}
-                className={`px-2 py-0.5 rounded-lg transition-all ${
+                className={`px-2 py-0.5 rounded-lg transition-all shrink-0 ${
                   cumulativePageSize === 120 ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -315,7 +316,7 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
               </button>
               <button
                 onClick={() => setCumulativePageSize(300)}
-                className={`px-2 py-0.5 rounded-lg transition-all ${
+                className={`px-2 py-0.5 rounded-lg transition-all shrink-0 ${
                   cumulativePageSize === 300 ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -323,7 +324,7 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
               </button>
               <button
                 onClick={() => setCumulativePageSize(1000)}
-                className={`px-2 py-0.5 rounded-lg transition-all ${
+                className={`px-2 py-0.5 rounded-lg transition-all shrink-0 ${
                   cumulativePageSize === 1000 ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -331,25 +332,25 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
               </button>
               <button
                 onClick={() => setCumulativePageSize(totalCategorySkus)}
-                className={`px-2.5 py-0.5 rounded-lg font-black transition-all flex items-center gap-1 ${
+                className={`px-2 py-0.5 rounded-lg font-black transition-all flex items-center gap-1 shrink-0 ${
                   cumulativePageSize >= totalCategorySkus
                     ? 'bg-purple-600 text-white shadow-sm'
                     : 'bg-purple-100 text-purple-800 hover:bg-purple-200'
                 }`}
               >
                 <Zap className="w-3 h-3 text-amber-500" />
-                <span>All {totalCategorySkus.toLocaleString('en-IN')}</span>
+                <span>All</span>
               </button>
             </div>
 
-            <div className="flex items-center bg-slate-100 rounded-xl p-0.5 text-[11px] font-bold">
+            <div className="flex items-center bg-slate-100 rounded-xl p-0.5 text-[11px] font-bold shrink-0">
               <button
                 onClick={() => setDisplayMode('infinite')}
                 className={`px-2.5 py-1 rounded-lg transition-all ${
                   displayMode === 'infinite' ? 'bg-white text-emerald-700 shadow-sm' : 'text-slate-500 hover:text-slate-800'
                 }`}
               >
-                Continuous Scroll
+                Scroll
               </button>
               <button
                 onClick={() => setDisplayMode('pages')}
@@ -357,7 +358,33 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
                   displayMode === 'pages' ? 'bg-white text-emerald-700 shadow-sm' : 'text-slate-500 hover:text-slate-800'
                 }`}
               >
-                Page Navigation ({totalPages} Pages)
+                Pages ({totalPages})
+              </button>
+            </div>
+
+            {/* Mobile View Toggle: 1 in 1 Line (Full Section) vs 2 in 1 Line (Multiple) */}
+            <div className="flex sm:hidden items-center bg-slate-100 rounded-xl p-0.5 text-[11px] font-bold shrink-0">
+              <button
+                type="button"
+                onClick={() => setMobileLayout('single')}
+                className={`px-2 py-1 rounded-lg transition-all flex items-center gap-1 ${
+                  mobileLayout === 'single' ? 'bg-white text-emerald-700 shadow-sm' : 'text-slate-500'
+                }`}
+                title="1 Full Section per product"
+              >
+                <List className="w-3.5 h-3.5" />
+                <span>Full Section</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setMobileLayout('double')}
+                className={`px-2 py-1 rounded-lg transition-all flex items-center gap-1 ${
+                  mobileLayout === 'double' ? 'bg-white text-emerald-700 shadow-sm' : 'text-slate-500'
+                }`}
+                title="2 Products in 1 Line"
+              >
+                <LayoutGrid className="w-3.5 h-3.5" />
+                <span>2 in 1 Line</span>
               </button>
             </div>
           </div>
@@ -366,7 +393,7 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
       </div>
 
       {/* 24,580 Multi-Store Products Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className={`grid ${mobileLayout === 'double' ? 'grid-cols-2 gap-2.5 sm:gap-6' : 'grid-cols-1 gap-4 sm:gap-6'} md:grid-cols-2 lg:grid-cols-3 w-full max-w-full`}>
         {displayedProducts.map((product) => {
           const stats = getProductStats(product);
           const isAddedToCart = cartProductIds.has(product.id);
@@ -375,7 +402,7 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
           return (
             <div
               key={product.id}
-              className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between hover:border-slate-300"
+              className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between hover:border-slate-300 w-full max-w-full"
             >
               {/* Product Header & Image */}
               <div>
@@ -386,43 +413,60 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
                       <Tag className="w-3 h-3 text-amber-600" />
                       Sponsored by {product.sponsored.brandName}
                     </span>
-                    <span className="text-[10px] text-amber-700">{product.sponsored.tagline}</span>
+                    <span className="text-[10px] text-amber-700 hidden sm:inline">{product.sponsored.tagline}</span>
                   </div>
                 )}
 
-                <div className="p-4 sm:p-5">
-                  <div className="flex gap-4 items-start">
+                <div className={mobileLayout === 'double' ? 'p-3 sm:p-5' : 'p-4 sm:p-5'}>
+                  <div className={mobileLayout === 'double' ? 'flex flex-col sm:flex-row gap-2 sm:gap-4 items-start' : 'flex gap-4 items-start'}>
                     <img
                       src={product.imageUrl}
                       alt={product.name}
-                      className="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-2xl border border-slate-100 shrink-0 bg-slate-50"
+                      className={
+                        mobileLayout === 'double'
+                          ? 'w-full h-24 sm:w-24 sm:h-24 object-cover rounded-xl border border-slate-100 shrink-0 bg-slate-50'
+                          : 'w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-2xl border border-slate-100 shrink-0 bg-slate-50'
+                      }
                       loading="lazy"
                     />
-                    <div className="flex-1">
-                      <span className="text-[10px] sm:text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md uppercase tracking-wider">
+                    <div className="flex-1 min-w-0">
+                      <span className="text-[9.5px] sm:text-[11px] font-bold text-emerald-700 bg-emerald-50 px-1.5 sm:px-2 py-0.5 rounded-md uppercase tracking-wider">
                         {product.brand}
                       </span>
-                      <h3 className="font-black text-sm sm:text-base text-slate-900 leading-snug mt-1">
+                      <h3 className="font-black text-xs sm:text-base text-slate-900 leading-snug mt-1 line-clamp-2">
                         {product.name}
                       </h3>
                       {product.nameHindi && (
-                        <p className="text-xs text-slate-500 font-medium">{product.nameHindi}</p>
+                        <p className="text-[11px] sm:text-xs text-slate-500 font-medium truncate">{product.nameHindi}</p>
                       )}
-                      <div className="mt-1.5 flex flex-wrap items-center gap-2">
-                        <span className="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded-lg font-semibold">
+                      <div className="mt-1 flex flex-wrap items-center gap-1.5 sm:gap-2">
+                        <span className="text-[10px] sm:text-xs bg-slate-100 text-slate-700 px-1.5 sm:px-2 py-0.5 rounded-lg font-semibold">
                           {product.unit}
                         </span>
                         {stats && stats.maxSavings > 0 && (
-                          <span className="text-xs bg-emerald-100 text-emerald-800 font-black px-2 py-0.5 rounded-full border border-emerald-200">
-                            Save ₹{stats.maxSavings} ({stats.savingsPercent}% OFF)
+                          <span className="text-[10px] sm:text-xs bg-emerald-100 text-emerald-800 font-black px-1.5 sm:px-2 py-0.5 rounded-full border border-emerald-200">
+                            Save ₹{stats.maxSavings} ({stats.savingsPercent}%)
                           </span>
                         )}
                       </div>
                     </div>
                   </div>
 
-                  {/* Multi-Store Price Comparison Matrix */}
-                  <div className="mt-4 pt-4 border-t border-slate-100">
+                  {/* Compact rate summary for 2-in-1-line mode */}
+                  {mobileLayout === 'double' && stats && stats.lowestOffer && (
+                    <div className="block sm:hidden mt-2 pt-2 border-t border-slate-100">
+                      <div className="text-[10px] text-slate-400 line-through">MRP ₹{stats.lowestOffer.mrp}</div>
+                      <div className="text-sm font-black text-emerald-700 flex items-center justify-between">
+                        <span>₹{stats.lowestOffer.price}</span>
+                        <span className="text-[9px] bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded uppercase">
+                          {PLATFORMS[stats.lowestOffer.platform].name}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Multi-Store Price Comparison Matrix (Full details) */}
+                  <div className={mobileLayout === 'double' ? 'hidden sm:block mt-4 pt-4 border-t border-slate-100' : 'mt-4 pt-4 border-t border-slate-100'}>
                     <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2 flex items-center justify-between">
                       <span>Live Darkstore Rates</span>
                       <span className="text-slate-400 font-mono text-[10px]">Real-Time Sync</span>

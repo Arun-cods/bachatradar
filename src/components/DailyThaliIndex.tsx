@@ -13,8 +13,8 @@ export const DailyThaliIndex: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white rounded-2xl p-4 sm:p-6 border border-slate-200 shadow-sm mb-12">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+    <div className="bg-white rounded-2xl p-4 sm:p-6 border border-slate-200 shadow-sm mb-12 w-full max-w-full overflow-hidden">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 w-full max-w-full">
         <div>
           <div className="flex items-center gap-2">
             <span className="p-1.5 rounded-lg bg-orange-100 text-orange-700">
@@ -42,7 +42,7 @@ export const DailyThaliIndex: React.FC = () => {
       </div>
 
       {/* Grid of 5 App Thali Costs */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3 w-full max-w-full">
         {thaliRates.map((item) => (
           <div
             key={item.platform.id}

@@ -65,15 +65,15 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button
             type="button"
             onClick={onOpenLocationModal}
-            className="flex items-center bg-slate-100 hover:bg-emerald-50 transition-all rounded-xl px-3 py-1.5 border border-slate-200 hover:border-emerald-300 text-xs sm:text-sm group cursor-pointer shadow-xs"
+            className="flex items-center bg-slate-100 hover:bg-emerald-50 transition-all rounded-xl px-2.5 sm:px-3 py-1.5 border border-slate-200 hover:border-emerald-300 text-xs sm:text-sm group cursor-pointer shadow-xs min-w-0 max-w-[130px] sm:max-w-none"
             title="Click to detect live GPS location, change area, or check darkstore availability"
           >
-            <MapPin className="w-4 h-4 text-emerald-600 mr-2 shrink-0 group-hover:scale-110 transition-transform" />
-            <div className="text-left leading-tight">
-              <div className="font-extrabold text-slate-900 flex items-center gap-1">
-                <span>{selectedCity.name}</span>
-                <span className="text-[10px] text-slate-500 font-normal">({selectedCity.pincode})</span>
-                <span className="text-[10px] text-emerald-600 font-bold ml-0.5">▾</span>
+            <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 mr-1.5 sm:mr-2 shrink-0 group-hover:scale-110 transition-transform" />
+            <div className="text-left leading-tight min-w-0">
+              <div className="font-extrabold text-slate-900 flex items-center gap-1 min-w-0">
+                <span className="truncate">{selectedCity.name}</span>
+                <span className="text-[10px] text-slate-500 font-normal hidden sm:inline">({selectedCity.pincode})</span>
+                <span className="text-[10px] text-emerald-600 font-bold ml-0.5 shrink-0">▾</span>
               </div>
               <div className="text-[10px] text-emerald-700 font-semibold hidden md:block">
                 {selectedArea || selectedCity.popularAreas[0]} • Change Location
@@ -84,20 +84,20 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Right Action Items */}
           <div className="flex items-center gap-2 sm:gap-3">
             
-            {/* Help Desk Problem Reporting Button */}
+            {/* Help Desk Problem Reporting Button - hidden on mobile since it's on bottom bar */}
             <button
               onClick={onOpenHelp}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-50 hover:bg-amber-100 text-amber-950 transition-all border border-amber-300/80 shadow-xs cursor-pointer"
+              className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-50 hover:bg-amber-100 text-amber-950 transition-all border border-amber-300/80 shadow-xs cursor-pointer"
               title="Report an issue or get help from Founder Desk"
             >
               <HelpCircle className="w-3.5 h-3.5 text-amber-600" />
               <span className="hidden sm:inline">Help</span>
             </button>
 
-            {/* Social Share Button */}
+            {/* Social Share Button - hidden on mobile since it's on bottom bar */}
             <button
               onClick={onOpenShare}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white transition-all shadow-sm shadow-emerald-600/20 cursor-pointer"
+              className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white transition-all shadow-sm shadow-emerald-600/20 cursor-pointer"
               title="Share BachatRadar with friends & family"
             >
               <Share2 className="w-3.5 h-3.5" />

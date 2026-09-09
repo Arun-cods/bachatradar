@@ -69,8 +69,8 @@ export const SavingsTicker: React.FC<SavingsTickerProps> = ({ onManualRefresh })
   };
 
   return (
-    <div className="bg-slate-950 text-white overflow-hidden py-2 px-3 sm:px-4 border-b border-slate-800 text-xs sm:text-sm select-none shadow-sm">
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 sm:gap-4">
+    <div className="bg-slate-950 text-white overflow-hidden py-2 px-3 sm:px-4 border-b border-slate-800 text-xs sm:text-sm select-none shadow-sm w-full max-w-full">
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 sm:gap-4 w-full max-w-full overflow-hidden">
         
         {/* Live Real-Time Pulse Indicator */}
         <div className="flex items-center gap-2 shrink-0 font-extrabold text-emerald-400">
@@ -87,7 +87,7 @@ export const SavingsTicker: React.FC<SavingsTickerProps> = ({ onManualRefresh })
         </div>
 
         {/* Scrolling or highlighted ticker items */}
-        <div className="flex-1 overflow-x-auto whitespace-nowrap scrollbar-none flex items-center gap-5 text-slate-300 text-xs">
+        <div className="flex-1 min-w-0 overflow-x-auto whitespace-nowrap scrollbar-none flex items-center gap-5 text-slate-300 text-xs">
           
           {/* Live Engine Status */}
           <div className="flex items-center gap-1.5">

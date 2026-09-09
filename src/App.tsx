@@ -324,7 +324,7 @@ export const App: React.FC = () => {
   const totalCartItemCount = cartItems.reduce((sum, it) => sum + it.quantity, 0);
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col selection:bg-emerald-500 selection:text-white pb-16 sm:pb-0">
+    <div className="min-h-screen bg-slate-50 flex flex-col selection:bg-emerald-500 selection:text-white pb-16 sm:pb-0 w-full max-w-full overflow-x-hidden">
       
       {/* Mobile PWA Install Banner */}
       <MobileInstallBanner />
@@ -366,7 +366,7 @@ export const App: React.FC = () => {
       <SavingsTicker onManualRefresh={handleTriggerLivePriceRefresh} />
 
       {/* Main Content */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8 w-full max-w-full overflow-x-hidden">
         
         {/* Hero Section */}
         <section className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">

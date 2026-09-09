@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 // Register Progressive Web App (PWA) Service Worker for mobile devices
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').then(
+    navigator.serviceWorker.register('./sw.js').then(
       (registration) => {
         console.log('BachatRadar PWA Service Worker registered:', registration.scope);
       },

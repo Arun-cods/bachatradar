@@ -53,8 +53,8 @@ export const SurgeFeeRadar: React.FC<SurgeFeeRadarProps> = ({ city }) => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950 text-white rounded-2xl p-4 sm:p-6 shadow-xl border border-slate-700/50 mb-8">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5">
+    <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950 text-white rounded-2xl p-4 sm:p-6 shadow-xl border border-slate-700/50 mb-8 w-full max-w-full overflow-hidden">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5 w-full max-w-full">
         <div>
           <div className="flex items-center gap-2">
             <span className="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-amber-400 text-amber-950 tracking-wider uppercase">
@@ -82,27 +82,27 @@ export const SurgeFeeRadar: React.FC<SurgeFeeRadarProps> = ({ city }) => {
       </div>
 
       {/* 5 Instant Delivery App Fee Cards */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3 w-full max-w-full">
         {feeStatus.map((item) => (
           <div
             key={item.platform.id}
-            className={`p-3.5 rounded-xl border transition-all ${
+            className={`p-3 sm:p-3.5 rounded-xl border transition-all min-w-0 ${
               item.isSurging
                 ? 'bg-amber-950/40 border-amber-500/50'
                 : 'bg-slate-800/50 border-slate-700 hover:border-slate-600'
             }`}
           >
-            <div className="flex items-center justify-between mb-2">
-              <span className="font-extrabold text-sm flex items-center gap-1.5">
-                <span>{item.platform.logo}</span>
-                <span>{item.platform.name}</span>
+            <div className="flex flex-wrap items-center justify-between gap-1 mb-2">
+              <span className="font-extrabold text-xs sm:text-sm flex items-center gap-1 min-w-0">
+                <span className="shrink-0">{item.platform.logo}</span>
+                <span className="truncate">{item.platform.name}</span>
               </span>
               {item.isSurging ? (
-                <span className="flex items-center text-[10px] font-bold text-amber-400 bg-amber-400/20 px-2 py-0.5 rounded-full">
+                <span className="flex items-center text-[9.5px] sm:text-[10px] font-bold text-amber-400 bg-amber-400/20 px-1.5 sm:px-2 py-0.5 rounded-full shrink-0">
                   Surging
                 </span>
               ) : (
-                <span className="flex items-center text-[10px] font-bold text-emerald-400 bg-emerald-400/20 px-2 py-0.5 rounded-full">
+                <span className="flex items-center text-[9.5px] sm:text-[10px] font-bold text-emerald-400 bg-emerald-400/20 px-1.5 sm:px-2 py-0.5 rounded-full shrink-0">
                   No Surge
                 </span>
               )}

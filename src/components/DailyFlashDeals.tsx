@@ -33,8 +33,8 @@ export const DailyFlashDeals: React.FC<DailyFlashDealsProps> = ({
     .slice(0, 4);
 
   return (
-    <section className="mb-12">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+    <section className="mb-12 w-full max-w-full overflow-hidden">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 w-full max-w-full">
         <div className="flex items-center gap-2">
           <span className="p-1.5 rounded-xl bg-red-100 text-red-600 font-bold">
             <Flame className="w-4 h-4" />
@@ -58,7 +58,7 @@ export const DailyFlashDeals: React.FC<DailyFlashDealsProps> = ({
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-full">
         {flashDeals.map(({ product, lowest, discountPct }) => {
           const platform = PLATFORMS[lowest.platform as PlatformId];
 
