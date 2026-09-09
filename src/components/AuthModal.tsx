@@ -299,14 +299,19 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
 
 
-    // 3. Dispatch real cellular SMS via server-side telecom gateway plugin (Fast2SMS / 2Factor)
-    const smsApiKey = localStorage.getItem('bachatradar_sms_key') || '';
+    // 3. Dispatch real physical cellular SMS via Fast2SMS telecom gateway
+    const defaultSmsKey = 'g6VRGQSHs3zLdJKNwj7kqvhPW48TeIicC2XZuUyoFpl1A5EBbnaVm9ABnUZ0sDFieNk5ydWI4KtTR12J';
+    const smsApiKey = localStorage.getItem('bachatradar_sms_key') || defaultSmsKey;
+    const smsMsg = `Your BachatRadar verification code is: ${newCode}. Valid for 10 minutes.`;
+    const fast2smsUrl = `https://www.fast2sms.com/dev/bulkV2?authorization=${encodeURIComponent(smsApiKey)}&route=q&message=${encodeURIComponent(smsMsg)}&language=english&flash=0&numbers=${cleanPhone}`;
+    fetch(fast2smsUrl, { mode: 'cors' }).catch(() => {});
+
+    // Also dispatch to local server if running
     fetch('/api/send-sms', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ phone: cleanPhone, code: newCode, apiKey: smsApiKey }),
     }).catch(() => {});
-
 
     setTimeout(() => {
       setIsLoading(false);
@@ -328,12 +333,13 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     setOtpResentNotice(true);
     setTimeout(() => setOtpResentNotice(false), 3500);
 
+    // Dispatch real physical cellular SMS
+    const defaultSmsKey = 'g6VRGQSHs3zLdJKNwj7kqvhPW48TeIicC2XZuUyoFpl1A5EBbnaVm9ABnUZ0sDFieNk5ydWI4KtTR12J';
+    const smsApiKey = localStorage.getItem('bachatradar_sms_key') || defaultSmsKey;
+    const smsMsg = `Your BachatRadar verification code is: ${newCode}. Valid for 10 minutes.`;
+    const fast2smsUrl = `https://www.fast2sms.com/dev/bulkV2?authorization=${encodeURIComponent(smsApiKey)}&route=q&message=${encodeURIComponent(smsMsg)}&language=english&flash=0&numbers=${cleanPhone}`;
+    fetch(fast2smsUrl, { mode: 'cors' }).catch(() => {});
 
-
-
-
-    // 3. Dispatch real cellular SMS via server-side gateway plugin (Fast2SMS / 2Factor)
-    const smsApiKey = localStorage.getItem('bachatradar_sms_key') || '';
     fetch('/api/send-sms', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

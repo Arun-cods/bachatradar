@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 interface AppSplashProps {
   currentUser?: any;
-  onLoginSuccess?: (user: any) => void;
   onComplete?: () => void;
 }
 
@@ -15,32 +14,33 @@ export const AppSplash: React.FC<AppSplashProps> = ({
   const [progress, setProgress] = useState(25);
   const [statusText, setStatusText] = useState('Initializing darkstore engine...');
 
-  const isLoggedIn = Boolean(currentUser || (typeof window !== 'undefined' && localStorage.getItem('bachatradar_user')));
+  const onCompleteRef = useRef(onComplete);
+  onCompleteRef.current = onComplete;
 
   useEffect(() => {
     const t1 = setTimeout(() => {
       setProgress(60);
       setStatusText('Connecting to Blinkit, Zepto, Instamart & BigBasket...');
-    }, 350);
+    }, 250);
 
     const t2 = setTimeout(() => {
       setProgress(95);
       setStatusText('Syncing live rates & surge fee radar...');
-    }, 750);
+    }, 550);
 
     const t3 = setTimeout(() => {
       setProgress(100);
       setStatusText('Ready!');
-    }, 1100);
+    }, 850);
 
     const t4 = setTimeout(() => {
       setIsFading(true);
-    }, 1300);
+    }, 1000);
 
     const t5 = setTimeout(() => {
       setIsVisible(false);
-      onComplete?.();
-    }, 1650);
+      onCompleteRef.current?.();
+    }, 1250);
 
     return () => {
       clearTimeout(t1);
@@ -49,14 +49,14 @@ export const AppSplash: React.FC<AppSplashProps> = ({
       clearTimeout(t4);
       clearTimeout(t5);
     };
-  }, [onComplete]);
+  }, []); // Run once on mount!
 
   const handleSkip = () => {
     setIsFading(true);
     setTimeout(() => {
       setIsVisible(false);
-      onComplete?.();
-    }, 150);
+      onCompleteRef.current?.();
+    }, 100);
   };
 
   if (!isVisible) return null;
@@ -64,10 +64,10 @@ export const AppSplash: React.FC<AppSplashProps> = ({
   return (
     <div
       onClick={handleSkip}
-      className={`fixed inset-0 z-50 flex flex-col items-center justify-between bg-slate-950 text-white p-6 select-none cursor-pointer transition-opacity duration-350 ${
+      className={`fixed inset-0 z-50 flex flex-col items-center justify-between bg-slate-950 text-white p-6 select-none cursor-pointer transition-opacity duration-300 ${
         isFading ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
-      style={{ transition: 'opacity 350ms ease-out' }}
+      style={{ transition: 'opacity 300ms ease-out' }}
     >
       {/* Top Skip Button */}
       <div className="w-full flex justify-end pt-2 pr-2">
@@ -107,7 +107,7 @@ export const AppSplash: React.FC<AppSplashProps> = ({
         {/* Loading Progress Bar */}
         <div className="w-56 sm:w-64 bg-slate-900 rounded-full h-1.5 mt-8 overflow-hidden border border-slate-800">
           <div
-            className="h-full bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full transition-all duration-300 ease-out"
+            className="h-full bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full transition-all duration-250 ease-out"
             style={{ width: `${progress}%` }}
           />
         </div>
