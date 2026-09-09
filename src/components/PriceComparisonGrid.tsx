@@ -18,6 +18,10 @@ interface PriceComparisonGridProps {
   cartProductIds: Set<string>;
   cartQuantities?: Record<string, number>;
   cityMultiplier?: number;
+  externalCategory?: string;
+  externalSearchQuery?: string;
+  onCategoryChange?: (category: string) => void;
+  onSearchChange?: (query: string) => void;
 }
 
 export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
@@ -28,13 +32,29 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
   cartProductIds,
   cartQuantities,
   cityMultiplier = 1.0,
+  externalCategory,
+  externalSearchQuery,
+  onCategoryChange: _onCategoryChange,
+  onSearchChange: _onSearchChange,
 }) => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState(externalSearchQuery || '');
+  const [selectedCategory, setSelectedCategory] = useState<string>(externalCategory || 'all');
   const [selectedWeightFilter, setSelectedWeightFilter] = useState<'all' | 'grams' | 'half-kg' | '1kg-plus' | 'packs'>('all');
   const [onlyEssentials, setOnlyEssentials] = useState<boolean>(false);
   const [sortBy, setSortBy] = useState<'savings' | 'price-asc' | 'price-desc'>('savings');
   const [mobileLayout, setMobileLayout] = useState<'single' | 'double'>('single');
+
+  React.useEffect(() => {
+    if (externalCategory !== undefined && externalCategory !== selectedCategory) {
+      setSelectedCategory(externalCategory);
+    }
+  }, [externalCategory]);
+
+  React.useEffect(() => {
+    if (externalSearchQuery !== undefined && externalSearchQuery !== searchQuery) {
+      setSearchQuery(externalSearchQuery);
+    }
+  }, [externalSearchQuery]);
   
   // Navigation & Load More controls
   const [displayMode, setDisplayMode] = useState<'infinite' | 'pages'>('infinite');

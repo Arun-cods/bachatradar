@@ -16,10 +16,12 @@ import { DpdpConsentBanner } from './components/DpdpConsentBanner';
 import { HelpSupportModal } from './components/HelpSupportModal';
 import { LocationAvailabilityModal } from './components/LocationAvailabilityModal';
 import { MobileInstallBanner } from './components/MobileInstallBanner';
+import { AppSplashScreen } from './components/AppSplashScreen';
+import { QuickCommerceHomeView } from './components/QuickCommerceHomeView';
 import { CITIES, INITIAL_FOUNDER_STATS } from './data/mockGroceryData';
 import { COMPREHENSIVE_GROCERY_DATA } from './data/comprehensiveCatalog';
 import { CityOption, CartItem, Product, PlatformId, FounderStats, UserProfile } from './types';
-import { Sparkles, ArrowRight, MapPin, Search, ShoppingBag, Share2, HelpCircle, RefreshCw } from 'lucide-react';
+import { Sparkles, ArrowRight, MapPin, Search, ShoppingBag, Share2, HelpCircle, RefreshCw, Home, LayoutGrid, RotateCcw } from 'lucide-react';
 
 export const App: React.FC = () => {
   const [selectedCity, setSelectedCity] = useState<CityOption>(() => {
@@ -145,17 +147,19 @@ export const App: React.FC = () => {
     setIsPrivacyModalOpen(true);
   };
   
-  // Clean default: public visitors see clean [Login] button, NO private founder details in top bar!
+  // User profile state: remembers logged-in shoppers & founders
   const [currentUser, setCurrentUser] = useState<UserProfile | null>(() => {
     const saved = localStorage.getItem('bachatradar_user');
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        if (parsed && parsed.phone && !parsed.id.includes('founder_arun')) return parsed;
+        if (parsed && parsed.phone) return parsed;
       } catch (e) {}
     }
     return null;
   });
+  const [homeCategory, setHomeCategory] = useState<string>('all');
+  const [homeSearchQuery, setHomeSearchQuery] = useState<string>('');
   const [founderStats, setFounderStats] = useState<FounderStats>(INITIAL_FOUNDER_STATS);
 
   // Fully working reactive city & area switching: recomputes darkstore prices and surge for selected city
@@ -326,6 +330,13 @@ export const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col selection:bg-emerald-500 selection:text-white pb-16 sm:pb-0 w-full max-w-full overflow-x-hidden">
       
+      {/* Native App Opening Splash Screen & Login / Registration Gateway */}
+      <AppSplashScreen
+        currentUser={currentUser}
+        onLoginSuccess={handleLoginSuccess}
+        selectedCity={selectedCity}
+      />
+
       {/* Mobile PWA Install Banner */}
       <MobileInstallBanner />
 
@@ -366,7 +377,27 @@ export const App: React.FC = () => {
       <SavingsTicker onManualRefresh={handleTriggerLivePriceRefresh} />
 
       {/* Main Content */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8 w-full max-w-full overflow-x-hidden">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-6 w-full max-w-full overflow-x-hidden">
+        
+        {/* Flipkart Minutes / Zepto Style Modern Quick-Commerce App Home View */}
+        <QuickCommerceHomeView
+          selectedCity={selectedCity}
+          selectedArea={selectedArea}
+          onOpenLocationModal={() => setIsLocationModalOpen(true)}
+          currentUser={currentUser}
+          selectedCategory={homeCategory}
+          onSelectCategory={(cat) => setHomeCategory(cat)}
+          searchQuery={homeSearchQuery}
+          onSearchChange={(q) => setHomeSearchQuery(q)}
+          onOpenCart={() => setIsCartOpen(true)}
+          onOpenShare={handleShareApp}
+          totalCartItemCount={totalCartItemCount}
+          onAddToCart={handleAddToCart}
+          onUpdateQuantity={handleUpdateQuantity}
+          cartQuantities={cartQuantities}
+          onTrackAffiliateClick={handleTrackAffiliateClick}
+          onTriggerLiveRefresh={handleTriggerLivePriceRefresh}
+        />
         
         {/* Hero Section */}
         <section className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
@@ -460,6 +491,10 @@ export const App: React.FC = () => {
           cartProductIds={cartProductIds}
           cartQuantities={cartQuantities}
           cityMultiplier={selectedCity.id === 'del' ? 0.98 : selectedCity.id === 'mum' ? 1.04 : selectedCity.id === 'hyd' ? 0.97 : 1.0}
+          externalCategory={homeCategory}
+          externalSearchQuery={homeSearchQuery}
+          onCategoryChange={(cat) => setHomeCategory(cat)}
+          onSearchChange={(q) => setHomeSearchQuery(q)}
         />
 
         {/* How It Works Formula */}
@@ -599,56 +634,50 @@ export const App: React.FC = () => {
         onOpenHelp={() => setIsHelpModalOpen(true)}
       />
 
-      {/* Mobile Bottom Navigation Bar (Physically accessible on all smartphones) */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 px-3 py-2 flex items-center justify-around text-[10px] font-bold text-slate-400 shadow-2xl">
+      {/* Mobile Bottom Navigation Bar (Flipkart Minutes / Zepto Style) */}
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-4 py-2 flex items-center justify-around text-[10px] font-bold shadow-2xl">
         <button
           type="button"
-          onClick={() => window.scrollTo({ top: 400, behavior: 'smooth' })}
-          className="flex flex-col items-center gap-1 hover:text-emerald-400 active:scale-95 transition-all cursor-pointer"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="flex flex-col items-center gap-1 text-[#e01962] font-black active:scale-95 transition-all cursor-pointer"
         >
-          <Search className="w-4 h-4 text-emerald-400" />
-          <span>Compare</span>
+          <Home className="w-4 h-4 text-[#e01962]" />
+          <span>Home</span>
         </button>
 
         <button
           type="button"
-          onClick={() => setIsLocationModalOpen(true)}
-          className="flex flex-col items-center gap-1 hover:text-emerald-400 active:scale-95 transition-all cursor-pointer"
+          onClick={() => {
+            const el = document.getElementById('catalog-section');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="flex flex-col items-center gap-1 text-slate-600 hover:text-[#e01962] active:scale-95 transition-all cursor-pointer"
         >
-          <MapPin className="w-4 h-4 text-amber-400" />
-          <span className="truncate max-w-[65px]">{selectedCity.name}</span>
+          <LayoutGrid className="w-4 h-4 text-slate-600" />
+          <span>Categories</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={handleTriggerLivePriceRefresh}
+          className="flex flex-col items-center gap-1 text-slate-600 hover:text-[#e01962] active:scale-95 transition-all cursor-pointer"
+        >
+          <RotateCcw className="w-4 h-4 text-slate-600" />
+          <span>Buy Again</span>
         </button>
 
         <button
           type="button"
           onClick={() => setIsCartOpen(true)}
-          className="relative flex flex-col items-center gap-1 hover:text-emerald-400 active:scale-95 transition-all cursor-pointer"
+          className="relative flex flex-col items-center gap-1 text-slate-600 hover:text-[#e01962] active:scale-95 transition-all cursor-pointer"
         >
-          <ShoppingBag className="w-4 h-4 text-emerald-400" />
+          <ShoppingBag className="w-4 h-4 text-slate-600" />
           {totalCartItemCount > 0 && (
-            <span className="absolute -top-1 -right-1.5 bg-amber-400 text-slate-950 text-[9px] font-black w-4 h-4 rounded-full flex items-center justify-center">
+            <span className="absolute -top-1 -right-2 bg-[#e01962] text-white text-[9px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-xs">
               {totalCartItemCount}
             </span>
           )}
           <span>Basket</span>
-        </button>
-
-        <button
-          type="button"
-          onClick={handleShareApp}
-          className="flex flex-col items-center gap-1 hover:text-emerald-400 active:scale-95 transition-all cursor-pointer"
-        >
-          <Share2 className="w-4 h-4 text-blue-400" />
-          <span>Share</span>
-        </button>
-
-        <button
-          type="button"
-          onClick={() => setIsHelpModalOpen(true)}
-          className="flex flex-col items-center gap-1 hover:text-emerald-400 active:scale-95 transition-all cursor-pointer"
-        >
-          <HelpCircle className="w-4 h-4 text-purple-400" />
-          <span>Help</span>
         </button>
       </div>
 
