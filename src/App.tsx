@@ -284,6 +284,27 @@ export const App: React.FC = () => {
     setCartItems([]);
   };
 
+  const LIVE_URL = 'https://arungopagani.is-a.dev/bachatradar/';
+
+  const handleDirectWhatsAppShare = () => {
+    const text = `🛒 *BachatRadar (बचत रडार) — India's #1 Daily Quick-Commerce Price Tracker!*\n\nEver noticed how Blinkit, Zepto, Swiggy Instamart, and BigBasket charge different prices for the exact same milk, veggies, and atta?\n\nFamilies are saving *₹1,500 to ₹3,500 every month* using BachatRadar!\n⚡ Compare 10-minute darkstores in 1 tap\n🥦 Avoid surge charges & find secret discounts\n🎉 *100% FREE for all Indian families*\n\nCheck live rates now:\n${LIVE_URL}`;
+    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
+  };
+
+  const handleShareApp = () => {
+    if (typeof navigator !== 'undefined' && navigator.share) {
+      navigator.share({
+        title: 'BachatRadar — Quick-Commerce Price Tracker',
+        text: 'Compare live rates across Blinkit, Zepto, Swiggy Instamart & BigBasket! Save ₹1,500+ monthly:',
+        url: LIVE_URL,
+      }).catch(() => {
+        setIsShareModalOpen(true);
+      });
+    } else {
+      setIsShareModalOpen(true);
+    }
+  };
+
   const handleTrackAffiliateClick = (_platform: PlatformId, _product: Product) => {
     setFounderStats((prev) => ({
       ...prev,
@@ -316,7 +337,7 @@ export const App: React.FC = () => {
         onOpenLocationModal={() => setIsLocationModalOpen(true)}
         cartCount={totalCartItemCount}
         onOpenCart={() => setIsCartOpen(true)}
-        onOpenShare={() => setIsShareModalOpen(true)}
+        onOpenShare={handleShareApp}
         isFounderMode={isFounderMode}
         onToggleFounderMode={() => setIsPinModalOpen(true)}
         currentUser={currentUser}
@@ -374,10 +395,11 @@ export const App: React.FC = () => {
               <ArrowRight className="w-4 h-4" />
             </button>
             <button
-              onClick={() => setIsShareModalOpen(true)}
-              className="px-5 py-3 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-bold text-sm border border-slate-300 transition-all"
+              onClick={handleDirectWhatsAppShare}
+              className="px-5 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-slate-950 font-black text-sm flex items-center gap-2 transition-all shadow-md active:scale-95 cursor-pointer"
             >
-              <span>Share Deal Card on WhatsApp</span>
+              <Share2 className="w-4 h-4" />
+              <span>Share Deal on WhatsApp</span>
             </button>
           </div>
         </section>
@@ -469,8 +491,8 @@ export const App: React.FC = () => {
                 <span>💬 Help & Problem Desk</span>
               </button>
               <span>•</span>
-              <button onClick={() => setIsShareModalOpen(true)} className="hover:text-emerald-400 font-bold transition-colors">
-                🚀 Telecast & Share Freely
+              <button onClick={handleShareApp} className="hover:text-emerald-400 font-bold transition-colors cursor-pointer">
+                Share BachatRadar
               </button>
               <span>•</span>
               <button
@@ -613,7 +635,7 @@ export const App: React.FC = () => {
 
         <button
           type="button"
-          onClick={() => setIsShareModalOpen(true)}
+          onClick={handleShareApp}
           className="flex flex-col items-center gap-1 hover:text-emerald-400 active:scale-95 transition-all cursor-pointer"
         >
           <Share2 className="w-4 h-4 text-blue-400" />

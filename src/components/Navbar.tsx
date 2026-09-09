@@ -94,14 +94,14 @@ export const Navbar: React.FC<NavbarProps> = ({
               <span className="hidden sm:inline">Help</span>
             </button>
 
-            {/* Social Telecast & Share Button */}
+            {/* Social Share Button */}
             <button
               onClick={onOpenShare}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white transition-all shadow-sm shadow-emerald-600/20 cursor-pointer"
-              title="Telecast to LinkedIn, WhatsApp, Google & Social Media"
+              title="Share BachatRadar with friends & family"
             >
               <Share2 className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Publish / Share</span>
+              <span className="hidden sm:inline">Share</span>
             </button>
 
             {/* User Login / Profile Pill */}
@@ -185,7 +185,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       >
                         <div className="flex items-center gap-2">
                           <Share2 className="w-3.5 h-3.5 text-emerald-600" />
-                          <span>🚀 Telecast to LinkedIn & Social</span>
+                          <span>Share BachatRadar</span>
                         </div>
                         <span className="text-[10px] text-slate-400">→</span>
                       </button>
