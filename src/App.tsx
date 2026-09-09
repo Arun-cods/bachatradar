@@ -226,6 +226,7 @@ export const App: React.FC = () => {
   const handleLoginSuccess = (user: UserProfile) => {
     setCurrentUser(user);
     localStorage.setItem('bachatradar_user', JSON.stringify(user));
+    setIsAuthModalOpen(false);
   };
 
   const handleLogout = () => {
@@ -328,10 +329,15 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col selection:bg-emerald-500 selection:text-white pb-16 sm:pb-0 w-full max-w-full overflow-x-hidden">
-      {/* App Splash Screen & Entrance Login */}
+      {/* App Splash Screen (auto loads if logged in, opens AuthModal after splash if not logged in) */}
       <AppSplash
         currentUser={currentUser}
-        onLoginSuccess={handleLoginSuccess}
+        onComplete={() => {
+          const savedUser = localStorage.getItem('bachatradar_user');
+          if (!savedUser && !currentUser) {
+            setIsAuthModalOpen(true);
+          }
+        }}
       />
 
       {/* Mobile PWA Install Banner */}

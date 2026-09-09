@@ -412,18 +412,22 @@ export const AuthModal: React.FC<AuthModalProps> = ({
       // Check if mobile number is already registered in database
       let matchedAccount = registeredAccounts.find((a) => a.phone === cleanPhone);
 
-      // In LOGIN mode: If user is not registered, inform them clearly on OTP screen
+      // In LOGIN mode: If user is not yet in records, auto-register them seamlessly like Blinkit/Zepto
       if (authMode === 'login' && !matchedAccount && !isFounder) {
-        setOtpError(`Mobile number +91 ${cleanPhone} is not registered yet. Please create your profile first.`);
-        setNotRegisteredNotice(true);
-        return;
-      }
-
-      // In REGISTER mode: If user is ALREADY registered, inform them to switch to Login
-      if (authMode === 'register' && matchedAccount && !isFounder) {
-        setOtpError(`Mobile number +91 ${cleanPhone} is already registered! Please switch to Login.`);
-        setAlreadyRegisteredNotice(true);
-        return;
+        const autoAccount: RegisteredAccount = {
+          phone: cleanPhone,
+          fullName: `Shopper (+91 ${cleanPhone.slice(-4)})`,
+          email: `user_${cleanPhone.slice(-4)}@bachatradar.in`,
+          city: city || 'Hyderabad',
+          society: society.trim() || 'Ameerpet',
+          preferredApps,
+          orderFrequency,
+          otherSitesRequested,
+          isFounder: false,
+          registeredAt: new Date().toISOString(),
+        };
+        persistAccount(autoAccount);
+        matchedAccount = autoAccount;
       }
 
       // If completing registration, persist new user profile
@@ -965,6 +969,13 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                   <span>Real-time Telecom SMS Gateway • DPDP 2023 Compliant</span>
                 </div>
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className="text-xs text-slate-400 hover:text-emerald-600 font-bold transition-colors cursor-pointer py-1"
+                >
+                  Skip for now & Continue as Guest →
+                </button>
               </div>
             </div>
           )}
@@ -987,7 +998,38 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                 </p>
               </div>
 
-              {/* 4 Discrete Boxes (Clean & Empty, NO SPOILER!) */}
+              {/* Real-Time Incoming SMS Notification Banner */}
+              <div className="p-3 bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-300 rounded-2xl flex items-center justify-between shadow-xs">
+                <div className="flex items-center gap-2.5 text-left min-w-0">
+                  <div className="w-8 h-8 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-xs">
+                    💬
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-[10px] font-black text-emerald-900 uppercase tracking-wider">
+                      SMS from VK-BACHAT
+                    </div>
+                    <div className="text-xs font-bold text-slate-800">
+                      Your OTP code is <span className="font-mono text-emerald-700 font-black text-sm bg-emerald-100/80 px-1.5 py-0.5 rounded tracking-widest">{secretOtp}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    const digits = secretOtp.split('');
+                    setOtpDigits(digits);
+                    setTimeout(() => {
+                      triggerVerification();
+                    }, 100);
+                  }}
+                  className="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-black text-xs shrink-0 shadow-xs transition-all cursor-pointer"
+                >
+                  Auto-Fill
+                </button>
+              </div>
+
+              {/* 4 Discrete Boxes */}
               <div className="space-y-2 pt-1">
                 <label className="block text-xs font-bold text-slate-700 text-center">
                   Type the 4-digit code sent to your phone:
