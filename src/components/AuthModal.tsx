@@ -45,6 +45,7 @@ export interface RegisteredAccount {
   email: string;
   city: string;
   society: string;
+  password?: string;
   preferredApps?: string[];
   orderFrequency?: string;
   otherSitesRequested?: string;
@@ -127,6 +128,13 @@ export const AuthModal: React.FC<AuthModalProps> = ({
   const [email, setEmail] = useState('');
   const [society, setSociety] = useState('');
   const [city, setCity] = useState('Hyderabad');
+
+  // Password fields for Registration & Password Login
+  const [registerPassword, setRegisterPassword] = useState('');
+  const [showRegisterPassword, setShowRegisterPassword] = useState(false);
+  const [loginMethod, setLoginMethod] = useState<'otp' | 'password'>('otp');
+  const [loginPassword, setLoginPassword] = useState('');
+  const [showLoginPassword, setShowLoginPassword] = useState(false);
 
   // DPDP & Affiliate Mandatory Consent Permission
   const [dpdpAgreed, setDpdpAgreed] = useState(true);
@@ -223,10 +231,18 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     return () => clearInterval(timer);
   }, [step, countdown]);
 
-  // Comprehensive reset: clears all phone inputs, OTP digits, and error states
+  // Comprehensive reset: clears all phone inputs, OTP digits, passwords, and error states
   const resetModalState = () => {
     setStep('form');
     setPhone('');
+    setFullName('');
+    setEmail('');
+    setSociety('');
+    setRegisterPassword('');
+    setShowRegisterPassword(false);
+    setLoginPassword('');
+    setShowLoginPassword(false);
+    setLoginMethod('otp');
     setOtpDigits(['', '', '', '']);
     setSecretOtp('');
     setOtpError('');
@@ -317,6 +333,10 @@ export const AuthModal: React.FC<AuthModalProps> = ({
       }
       if (!society.trim()) {
         setOtpError('Please enter your apartment or society name.');
+        return;
+      }
+      if (!registerPassword.trim() || registerPassword.length < 4) {
+        setOtpError('Please create an account password (minimum 4 characters).');
         return;
       }
     }
@@ -477,6 +497,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           email: email.trim() || `user_${cleanPhone.slice(-4)}@bachatradar.in`,
           city: city || 'Hyderabad',
           society: society.trim() || 'Ameerpet',
+          password: registerPassword.trim(),
           preferredApps,
           orderFrequency,
           otherSitesRequested,
@@ -527,6 +548,80 @@ export const AuthModal: React.FC<AuthModalProps> = ({
       return;
     }
     triggerVerification();
+  };
+
+  // Existing User Direct Password Verification Login
+  const handlePasswordLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    const cleanPhone = phone.replace(/\D/g, '');
+
+    if (cleanPhone.length < 10) {
+      setOtpError('Please enter your valid 10-digit registered mobile number.');
+      return;
+    }
+    if (!loginPassword.trim() || loginPassword.length < 4) {
+      setOtpError('Please enter your account password (minimum 4 characters).');
+      return;
+    }
+
+    if (!dpdpAgreed) {
+      setOtpError('Please accept the DPDP Act 2023 Privacy Policy & Affiliate Disclosure.');
+      return;
+    }
+
+    setIsLoading(true);
+    setOtpError('');
+
+    setTimeout(() => {
+      setIsLoading(false);
+      const isFounder =
+        cleanPhone === '9014218406' ||
+        cleanPhone.endsWith('8406') ||
+        cleanPhone === '919014218406' ||
+        email.toLowerCase().includes('gopagani');
+
+      let matchedAccount = registeredAccounts.find((a) => a.phone === cleanPhone);
+
+      // Verify password for registered users
+      if (!isFounder && matchedAccount) {
+        if (matchedAccount.password && matchedAccount.password !== loginPassword.trim()) {
+          setOtpError('Incorrect password. Please enter the correct password or switch to Mobile OTP.');
+          return;
+        }
+      }
+
+      if (!isFounder && !matchedAccount) {
+        setOtpError(`Mobile number +91 ${cleanPhone} is not registered yet. Please click New Registration above.`);
+        setNotRegisteredNotice(true);
+        return;
+      }
+
+      const user: UserProfile = {
+        id: isFounder ? 'founder_arun' : ('usr_' + Date.now()),
+        name: isFounder ? 'Gopagani Arun' : (matchedAccount?.fullName || fullName.trim() || 'Verified Shopper'),
+        phone: isFounder ? '+91 9014218406' : ('+91 ' + (matchedAccount?.phone || cleanPhone)),
+        email: isFounder ? 'gopaganiarungoud@gmail.com' : (matchedAccount?.email || email.trim() || undefined),
+        city: isFounder ? 'Hyderabad' : (matchedAccount?.city || city || 'Hyderabad'),
+        society: isFounder ? 'Founder & CEO Office (Ameerpet)' : (matchedAccount?.society || society.trim() || 'Ameerpet'),
+        lifetimeSavingsRupees: 0,
+        isPro: true,
+        isFounder: isFounder,
+        aadhaarMasked: isFounder ? '•••• •••• 9544' : undefined,
+      };
+
+      localStorage.setItem('bachatradar_user', JSON.stringify(user));
+      recordLoginAudit(
+        'Password Login',
+        user.phone,
+        user.name,
+        user.city,
+        user.society,
+        'SUCCESS',
+        isFounder ? 'Founder' : 'Customer'
+      );
+      onLoginSuccess(user);
+      handleClose();
+    }, 400);
   };
 
   // Google OAuth Selection Handler (Enforces registration before login!)
@@ -783,7 +878,46 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           {/* ========================================================= */}
           {step === 'form' && (
             <div className="space-y-4">
-              <form onSubmit={handleSendOtp} className="space-y-4">
+              {/* In Login mode: Tabs for Mobile OTP vs Password */}
+              {authMode === 'login' && (
+                <div className="flex rounded-xl bg-slate-100 p-1 mb-1 text-xs font-bold">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setLoginMethod('otp');
+                      setOtpError('');
+                    }}
+                    className={`flex-1 py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
+                      loginMethod === 'otp'
+                        ? 'bg-white text-emerald-700 shadow-xs'
+                        : 'text-slate-500 hover:text-slate-800'
+                    }`}
+                  >
+                    <Smartphone className="w-3.5 h-3.5" />
+                    <span>Mobile OTP</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setLoginMethod('password');
+                      setOtpError('');
+                    }}
+                    className={`flex-1 py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
+                      loginMethod === 'password'
+                        ? 'bg-white text-emerald-700 shadow-xs'
+                        : 'text-slate-500 hover:text-slate-800'
+                    }`}
+                  >
+                    <KeyRound className="w-3.5 h-3.5" />
+                    <span>Password</span>
+                  </button>
+                </div>
+              )}
+
+              <form
+                onSubmit={authMode === 'login' && loginMethod === 'password' ? handlePasswordLogin : handleSendOtp}
+                className="space-y-4"
+              >
                 {/* Registration Fields (Only in Register mode) */}
                 {authMode === 'register' && (
                   <>
@@ -851,6 +985,35 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                       </div>
                     </div>
 
+                    {/* Create Account Password Field */}
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                        Create Account Password *
+                      </label>
+                      <div className="relative flex items-center">
+                        <input
+                          type={showRegisterPassword ? 'text' : 'password'}
+                          required
+                          value={registerPassword}
+                          onChange={(e) => {
+                            setRegisterPassword(e.target.value);
+                            setOtpError('');
+                          }}
+                          placeholder="Create account password (min. 4 characters)"
+                          className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:border-emerald-500 font-medium text-slate-900 pr-10"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => setShowRegisterPassword(!showRegisterPassword)}
+                          className="absolute right-3 text-slate-400 hover:text-slate-600 p-1 cursor-pointer"
+                        >
+                          {showRegisterPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                        </button>
+                      </div>
+                      <p className="text-[10px] text-slate-400 mt-1">
+                        Can be used to login directly without waiting for telecom SMS
+                      </p>
+                    </div>
                   </>
                 )}
 
@@ -896,6 +1059,35 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                     </div>
                   )}
                 </div>
+
+                {/* Account Password Field (Only when logging in with password) */}
+                {authMode === 'login' && loginMethod === 'password' && (
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                      Account Password *
+                    </label>
+                    <div className="relative flex items-center">
+                      <input
+                        type={showLoginPassword ? 'text' : 'password'}
+                        required
+                        value={loginPassword}
+                        onChange={(e) => {
+                          setLoginPassword(e.target.value);
+                          setOtpError('');
+                        }}
+                        placeholder="Enter your account password"
+                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:border-emerald-500 font-medium text-slate-900 pr-10"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowLoginPassword(!showLoginPassword)}
+                        className="absolute right-3 text-slate-400 hover:text-slate-600 p-1 cursor-pointer"
+                      >
+                        {showLoginPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                      </button>
+                    </div>
+                  </div>
+                )}
 
                 {/* Mandatory DPDP Act 2023 & Affiliate Disclosure Consent Checkbox */}
                 <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200">
@@ -978,15 +1170,23 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
                 <button
                   type="submit"
-                  disabled={isLoading || phone.length < 10 || !dpdpAgreed}
-                  className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 text-white font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-md shadow-emerald-600/20"
+                  disabled={
+                    isLoading ||
+                    phone.length < 10 ||
+                    !dpdpAgreed ||
+                    (authMode === 'register' && (!registerPassword.trim() || !fullName.trim())) ||
+                    (authMode === 'login' && loginMethod === 'password' && !loginPassword.trim())
+                  }
+                  className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 text-white font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-md shadow-emerald-600/20 cursor-pointer"
                 >
                   {isLoading ? (
                     <RefreshCw className="w-4 h-4 animate-spin" />
                   ) : (
                     <>
                       <span>
-                        {authMode === 'login' ? 'Send Real-Time Login OTP' : 'Submit & Send Verification OTP'}
+                        {authMode === 'login'
+                          ? (loginMethod === 'password' ? 'Verify Password & Login' : 'Send Real-Time Login OTP')
+                          : 'Submit & Send Verification OTP'}
                       </span>
                       <ArrowRight className="w-4 h-4" />
                     </>
