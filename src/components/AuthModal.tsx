@@ -143,7 +143,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
   const [orderFrequency] = useState('Daily (Milk, Veggies, Bread)');
 
   // 4-Digit Secret OTP State (Never spoiled on screen!)
-  const [secretOtp, setSecretOtp] = useState<string>('9544');
+  const [secretOtp, setSecretOtp] = useState<string>('');
   const [otpDigits, setOtpDigits] = useState(['', '', '', '']);
   const [otpError, setOtpError] = useState<string>('');
   const [countdown, setCountdown] = useState<number>(30);
@@ -223,19 +223,36 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     return () => clearInterval(timer);
   }, [step, countdown]);
 
-  // Reset modal state on open (so logout always prompts for fresh OTP)
+  // Comprehensive reset: clears all phone inputs, OTP digits, and error states
+  const resetModalState = () => {
+    setStep('form');
+    setPhone('');
+    setOtpDigits(['', '', '', '']);
+    setSecretOtp('');
+    setOtpError('');
+    setIsLoading(false);
+    setGooglePassword('');
+    setGoogleCustomEmail('');
+    setGoogleCustomName('');
+    setShowGooglePassword(false);
+    setCountdown(30);
+    setNotRegisteredNotice(false);
+    setAlreadyRegisteredNotice(false);
+    setGoogleUnregisteredNotice(null);
+    setGoogleConnectedNotice(null);
+  };
+
+  // Reset modal state whenever isOpen toggles
   useEffect(() => {
     if (isOpen) {
-      setStep('form');
-      setOtpDigits(['', '', '', '']);
-      setOtpError('');
-      setIsLoading(false);
-      setGooglePassword('');
-      setCountdown(30);
-      setNotRegisteredNotice(false);
-      setAlreadyRegisteredNotice(false);
+      resetModalState();
     }
   }, [isOpen]);
+
+  const handleClose = () => {
+    resetModalState();
+    onClose();
+  };
 
 
 
@@ -473,7 +490,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
       const user: UserProfile = {
         id: isFounder ? 'founder_arun' : ('usr_' + Date.now()),
         name: isFounder ? 'Gopagani Arun' : (matchedAccount?.fullName || fullName.trim() || 'Verified Shopper'),
-        phone: '+91 ' + (matchedAccount?.phone || cleanPhone),
+        phone: isFounder ? '+91 9014218406' : ('+91 ' + (matchedAccount?.phone || cleanPhone)),
         email: isFounder ? 'gopaganiarungoud@gmail.com' : (matchedAccount?.email || email.trim() || undefined),
         city: isFounder ? 'Hyderabad' : (matchedAccount?.city || city || 'Hyderabad'),
         society: isFounder ? 'Founder & CEO Office (Ameerpet)' : (matchedAccount?.society || society.trim() || 'Ameerpet'),
@@ -494,7 +511,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         isFounder ? 'Founder' : 'Customer'
       );
       onLoginSuccess(user);
-      onClose();
+      handleClose();
     }, 450);
   };
 
@@ -542,15 +559,16 @@ export const AuthModal: React.FC<AuthModalProps> = ({
       setTimeout(() => {
         setIsLoading(false);
         const user: UserProfile = {
-          id: 'usr_g_' + Date.now(),
-          name: matchedAccount?.fullName || acc.name,
-          email: acc.email,
-          phone: matchedAccount?.phone ? '+91 ' + matchedAccount.phone : '+91 9876543210',
-          city: matchedAccount?.city || 'Hyderabad',
-          society: matchedAccount?.society || 'Ameerpet',
+          id: isFounder ? 'founder_arun' : ('usr_g_' + Date.now()),
+          name: isFounder ? 'Gopagani Arun' : (matchedAccount?.fullName || acc.name),
+          email: isFounder ? 'gopaganiarungoud@gmail.com' : acc.email,
+          phone: isFounder ? '+91 9014218406' : (matchedAccount?.phone ? '+91 ' + matchedAccount.phone : '+91 9014218406'),
+          city: isFounder ? 'Hyderabad' : (matchedAccount?.city || 'Hyderabad'),
+          society: isFounder ? 'Founder & CEO Office (Ameerpet)' : (matchedAccount?.society || 'Ameerpet'),
           lifetimeSavingsRupees: 0,
-          isPro: false,
-          isFounder: false,
+          isPro: true,
+          isFounder: Boolean(isFounder),
+          aadhaarMasked: isFounder ? '•••• •••• 9544' : undefined,
         };
         localStorage.setItem('bachatradar_user', JSON.stringify(user));
         recordLoginAudit(
@@ -563,7 +581,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           isFounder ? 'Founder' : 'Customer'
         );
         onLoginSuccess(user);
-        onClose();
+        handleClose();
       }, 400);
       return;
     }
@@ -594,22 +612,43 @@ export const AuthModal: React.FC<AuthModalProps> = ({
       setIsLoading(false);
       const emailUser = googleCustomEmail.split('@')[0];
       const displayName = emailUser.charAt(0).toUpperCase() + emailUser.slice(1);
+      const lowerEmail = googleCustomEmail.trim().toLowerCase();
+      const isFounder =
+        lowerEmail === 'gopaganiarungoud@gmail.com' ||
+        lowerEmail.includes('gopagani') ||
+        lowerEmail.includes('arun');
+
+      const matchedAccount = registeredAccounts.find(
+        (a) =>
+          a.email.toLowerCase() === lowerEmail ||
+          (isFounder && (a.phone === '9014218406' || a.phone.endsWith('8406')))
+      );
 
       const user: UserProfile = {
-        id: 'usr_g_' + Date.now(),
-        name: displayName,
-        email: googleCustomEmail.trim().toLowerCase(),
-        phone: '+91 9876543210',
-        city: city || 'Hyderabad',
-        society: society || 'Ameerpet',
+        id: isFounder ? 'founder_arun' : ('usr_g_' + Date.now()),
+        name: isFounder ? 'Gopagani Arun' : (matchedAccount?.fullName || displayName),
+        email: isFounder ? 'gopaganiarungoud@gmail.com' : lowerEmail,
+        phone: isFounder ? '+91 9014218406' : (matchedAccount?.phone ? `+91 ${matchedAccount.phone}` : '+91 9014218406'),
+        city: isFounder ? 'Hyderabad' : (matchedAccount?.city || city || 'Hyderabad'),
+        society: isFounder ? 'Founder & CEO Office (Ameerpet)' : (matchedAccount?.society || society || 'Ameerpet'),
         lifetimeSavingsRupees: 0,
         isPro: true,
-        isFounder: false,
+        isFounder: isFounder,
+        aadhaarMasked: isFounder ? '•••• •••• 9544' : undefined,
       };
 
       localStorage.setItem('bachatradar_user', JSON.stringify(user));
+      recordLoginAudit(
+        'Google OAuth 2.0 (Password Verified)',
+        lowerEmail,
+        user.name,
+        user.city,
+        user.society,
+        'SUCCESS',
+        isFounder ? 'Founder' : 'Customer'
+      );
       onLoginSuccess(user);
-      onClose();
+      handleClose();
     }, 400);
   };
 
@@ -632,7 +671,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">
       <div
-        onClick={onClose}
+        onClick={handleClose}
         className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"
       />
 
@@ -642,7 +681,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-amber-400" />
 
           <button
-            onClick={onClose}
+            onClick={handleClose}
             className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1.5 rounded-lg transition-colors"
           >
             <X className="w-5 h-5" />
@@ -1008,7 +1047,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                 </div>
                 <button
                   type="button"
-                  onClick={onClose}
+                  onClick={handleClose}
                   className="text-xs text-slate-400 hover:text-emerald-600 font-bold transition-colors cursor-pointer py-1"
                 >
                   Skip for now & Continue as Guest →
@@ -1199,7 +1238,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                   </svg>
                 </div>
                 <h3 className="font-black text-lg text-slate-900">
-                  {googleView === 'chooser' ? 'Choose a Google Account' : 'Add Google Account'}
+                  Sign in with Google
                 </h3>
                 <p className="text-xs text-slate-500 mt-0.5">
                   to continue to <span className="font-bold text-emerald-700">BachatRadar</span> (

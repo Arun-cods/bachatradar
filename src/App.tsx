@@ -152,11 +152,34 @@ export const App: React.FC = () => {
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        if (parsed && parsed.phone) return parsed;
+        if (parsed && (parsed.phone || parsed.email)) {
+          const rawPhone = (parsed.phone || '').replace(/\D/g, '');
+          const rawEmail = (parsed.email || '').toLowerCase();
+          const isArunFounder =
+            rawPhone.endsWith('8406') ||
+            rawPhone === '9014218406' ||
+            rawEmail.includes('gopagani');
+          if (isArunFounder) {
+            const founderProfile: UserProfile = {
+              ...parsed,
+              id: 'founder_arun',
+              name: 'Gopagani Arun',
+              phone: '+91 9014218406',
+              email: 'gopaganiarungoud@gmail.com',
+              city: 'Hyderabad',
+              society: 'Founder & CEO Office (Ameerpet)',
+              isFounder: true,
+            };
+            localStorage.setItem('bachatradar_user', JSON.stringify(founderProfile));
+            return founderProfile;
+          }
+          return parsed;
+        }
       } catch (e) {}
     }
     return null;
   });
+  const [authModalKey, setAuthModalKey] = useState<number>(0);
   const [homeCategory, setHomeCategory] = useState<string>('all');
   const [homeSearchQuery, setHomeSearchQuery] = useState<string>('');
   const [founderStats, setFounderStats] = useState<FounderStats>(INITIAL_FOUNDER_STATS);
@@ -223,16 +246,28 @@ export const App: React.FC = () => {
     );
   };
 
+  const handleOpenAuth = () => {
+    setAuthModalKey((k) => k + 1);
+    setIsAuthModalOpen(true);
+  };
+
+  const handleCloseAuth = () => {
+    setIsAuthModalOpen(false);
+    setAuthModalKey((k) => k + 1);
+  };
+
   const handleLoginSuccess = (user: UserProfile) => {
     setCurrentUser(user);
     localStorage.setItem('bachatradar_user', JSON.stringify(user));
     setIsAuthModalOpen(false);
+    setAuthModalKey((k) => k + 1);
   };
 
   const handleLogout = () => {
     setCurrentUser(null);
     localStorage.removeItem('bachatradar_user');
-    setIsAuthModalOpen(true);
+    setIsAuthModalOpen(false);
+    setAuthModalKey((k) => k + 1);
   };
 
   const handleUpdateFounderStats = (newStats: Partial<FounderStats>) => {
@@ -336,7 +371,7 @@ export const App: React.FC = () => {
         onComplete={() => {
           const savedUser = localStorage.getItem('bachatradar_user');
           if (!savedUser && !currentUser) {
-            setIsAuthModalOpen(true);
+            handleOpenAuth();
           }
         }}
       />
@@ -356,7 +391,7 @@ export const App: React.FC = () => {
         isFounderMode={isFounderMode}
         onToggleFounderMode={() => setIsPinModalOpen(true)}
         currentUser={currentUser}
-        onOpenAuth={() => setIsAuthModalOpen(true)}
+        onOpenAuth={handleOpenAuth}
         onLogout={handleLogout}
         onOpenHelp={() => setIsHelpModalOpen(true)}
       />
@@ -568,8 +603,9 @@ export const App: React.FC = () => {
 
       {/* User Login / Auth Modal */}
       <AuthModal
+        key={authModalKey}
         isOpen={isAuthModalOpen}
-        onClose={() => setIsAuthModalOpen(false)}
+        onClose={handleCloseAuth}
         onLoginSuccess={handleLoginSuccess}
         onOpenPrivacyPolicy={() => handleOpenPrivacyPolicy('dpdp')}
       />

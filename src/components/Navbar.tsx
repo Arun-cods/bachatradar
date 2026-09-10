@@ -109,17 +109,17 @@ export const Navbar: React.FC<NavbarProps> = ({
               <div className="relative">
                 <button
                   onClick={() => setShowUserMenu(!showUserMenu)}
-                  className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-900 text-xs font-bold hover:bg-emerald-100 transition-colors shadow-sm"
+                  className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-900 text-xs font-bold hover:bg-emerald-100 transition-colors shadow-sm cursor-pointer"
                 >
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <div className="text-left hidden lg:block">
-                    <div className="leading-tight font-extrabold flex items-center gap-1">
-                      <span>{currentUser.name}</span>
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                  <div className="text-left">
+                    <div className="leading-tight font-extrabold flex items-center gap-1 text-[11px] sm:text-xs">
+                      <span className="truncate max-w-[90px] sm:max-w-[130px]">{currentUser.isFounder ? 'Arun (Founder)' : currentUser.name}</span>
                       {currentUser.isFounder && <span className="text-amber-500 text-[10px]">👑</span>}
                     </div>
-                    <div className="text-[9px] text-emerald-700 font-medium truncate max-w-[120px]">{currentUser.society}</div>
+                    <div className="text-[9px] text-emerald-700 font-medium truncate max-w-[120px] hidden lg:block">{currentUser.society}</div>
                   </div>
-                  <span className="bg-emerald-600 text-white px-1.5 py-0.5 rounded-md text-[10px] font-black">
+                  <span className="bg-emerald-600 text-white px-1.5 py-0.5 rounded-md text-[10px] font-black shrink-0 hidden sm:inline-block">
                     ₹{currentUser.lifetimeSavingsRupees} Saved
                   </span>
                 </button>
