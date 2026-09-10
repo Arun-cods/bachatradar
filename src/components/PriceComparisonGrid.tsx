@@ -512,7 +512,7 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
                         return (
                           <a
                             key={platformId}
-                            href={getDirectStoreBuyUrl(platformId, product.name)}
+                            href={offer.affiliateUrl || getDirectStoreBuyUrl(platformId, product.name)}
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => onTrackAffiliateClick(platformId, product)}
@@ -563,7 +563,7 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
               <div className="p-4 sm:p-5 bg-slate-50/70 border-t border-slate-100 flex items-center gap-2">
                 {stats && stats.lowestOffer && (
                   <a
-                    href={getDirectStoreBuyUrl(stats.lowestOffer.platform, product.name)}
+                    href={stats.lowestOffer.affiliateUrl || getDirectStoreBuyUrl(stats.lowestOffer.platform, product.name)}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => onTrackAffiliateClick(stats.lowestOffer.platform, product)}

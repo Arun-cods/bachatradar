@@ -289,7 +289,7 @@ export const SmartBasketDrawer: React.FC<SmartBasketDrawerProps> = ({
                           </div>
 
                           <a
-                            href={getDirectStoreBuyUrl(pId as PlatformId, bucket.items[0]?.product.name || '')}
+                            href={bucket.items[0]?.product.offers[pId as PlatformId]?.affiliateUrl || getDirectStoreBuyUrl(pId as PlatformId, bucket.items[0]?.product.name || '')}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full py-1.5 px-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-1 transition-colors shadow-xs"
@@ -341,8 +341,8 @@ export const SmartBasketDrawer: React.FC<SmartBasketDrawerProps> = ({
               <a
                 href={
                   strategy === 'split-arbitrage'
-                    ? getDirectStoreBuyUrl((Object.keys(splitStoreBuckets)[0] || 'zepto') as PlatformId, items[0]?.product.name || '')
-                    : getDirectStoreBuyUrl(bestSingleStore, items[0]?.product.name || '')
+                    ? (items[0]?.product.offers[(Object.keys(splitStoreBuckets)[0] || 'zepto') as PlatformId]?.affiliateUrl || getDirectStoreBuyUrl((Object.keys(splitStoreBuckets)[0] || 'zepto') as PlatformId, items[0]?.product.name || ''))
+                    : (items[0]?.product.offers[bestSingleStore]?.affiliateUrl || getDirectStoreBuyUrl(bestSingleStore, items[0]?.product.name || ''))
                 }
                 target="_blank"
                 rel="noopener noreferrer"

@@ -94,7 +94,7 @@ export const DailyFlashDeals: React.FC<DailyFlashDealsProps> = ({
                   <div className="text-base font-black text-slate-900">
                     ₹{lowest.price}{' '}
                     <a
-                      href={getDirectStoreBuyUrl(lowest.platform as PlatformId, product.name)}
+                      href={lowest.affiliateUrl || getDirectStoreBuyUrl(lowest.platform as PlatformId, product.name)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[10px] text-emerald-600 hover:text-emerald-700 font-extrabold underline hover:no-underline"

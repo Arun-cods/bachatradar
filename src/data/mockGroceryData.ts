@@ -159,63 +159,77 @@ export const CITIES: CityOption[] = [
 
 // Helper generator for realistic multi-store pricing with guaranteed working direct buy links
 const createOffers = (basePrice: number, mrp: number, category: string, productName: string = ''): Record<PlatformId, any> => {
+  let hash = 0;
+  for (let i = 0; i < (productName || '').length; i++) {
+    hash = (hash << 5) - hash + productName.charCodeAt(i);
+    hash |= 0;
+  }
+  const factor = (Math.abs(hash) % 100) / 1000;
+
+  const zeptoPrice = Math.max(Math.min(basePrice, mrp), Math.round(basePrice * (0.95 + factor * 0.04)));
+  const blinkitPrice = Math.min(mrp, Math.max(basePrice, Math.round(basePrice * (0.99 + factor * 0.03))));
+  const instamartPrice = Math.min(mrp, Math.max(zeptoPrice, Math.round(basePrice * (0.97 + factor * 0.04))));
+  const bbPrice = Math.max(Math.round(basePrice * 0.89), Math.round(basePrice * (0.91 + factor * 0.03)));
+  const amazonPrice = Math.max(Math.round(basePrice * 0.89), Math.round(basePrice * (0.92 + factor * 0.04)));
+  const flipkartPrice = Math.max(Math.round(basePrice * 0.90), Math.round(basePrice * (0.93 + factor * 0.04)));
+
   return {
     zepto: {
       platform: 'zepto',
-      price: Math.round(basePrice * (0.95 + Math.random() * 0.08)),
+      price: zeptoPrice,
       mrp,
       inStock: true,
-      deliveryTimeMin: Math.floor(8 + Math.random() * 4),
+      deliveryTimeMin: 7 + (Math.abs(hash) % 4),
       surgeFee: 0,
       handlingFee: 4,
       affiliateUrl: getDirectStoreBuyUrl('zepto', productName),
     },
     blinkit: {
       platform: 'blinkit',
-      price: Math.round(basePrice * (1.02 + Math.random() * 0.08)),
+      price: blinkitPrice,
       mrp,
       inStock: true,
-      deliveryTimeMin: Math.floor(10 + Math.random() * 5),
-      surgeFee: Math.random() > 0.5 ? 15 : 0,
+      deliveryTimeMin: 10 + (Math.abs(hash) % 4),
+      surgeFee: (Math.abs(hash) % 6 === 0) ? 15 : 0,
       handlingFee: 5,
       affiliateUrl: getDirectStoreBuyUrl('blinkit', productName),
     },
     instamart: {
       platform: 'instamart',
-      price: Math.round(basePrice * (0.98 + Math.random() * 0.07)),
+      price: instamartPrice,
       mrp,
       inStock: true,
-      deliveryTimeMin: Math.floor(12 + Math.random() * 6),
+      deliveryTimeMin: 12 + (Math.abs(hash) % 5),
       surgeFee: 0,
       handlingFee: 6,
       affiliateUrl: getDirectStoreBuyUrl('instamart', productName),
     },
     bigbasket: {
       platform: 'bigbasket',
-      price: Math.round(basePrice * (0.91 + Math.random() * 0.06)),
+      price: bbPrice,
       mrp,
       inStock: true,
-      deliveryTimeMin: Math.floor(18 + Math.random() * 8),
+      deliveryTimeMin: 18 + (Math.abs(hash) % 6),
       surgeFee: 0,
       handlingFee: 3,
       affiliateUrl: getDirectStoreBuyUrl('bigbasket', productName),
     },
     amazon: {
       platform: 'amazon',
-      price: Math.round(basePrice * (0.92 + Math.random() * 0.08)),
+      price: amazonPrice,
       mrp,
-      inStock: Math.random() > 0.15,
-      deliveryTimeMin: Math.floor(30 + Math.random() * 20),
+      inStock: true,
+      deliveryTimeMin: 25 + (Math.abs(hash) % 15),
       surgeFee: 0,
       handlingFee: 0,
       affiliateUrl: getDirectStoreBuyUrl('amazon', productName),
     },
     flipkart: {
       platform: 'flipkart',
-      price: Math.round(basePrice * (0.93 + Math.random() * 0.07)),
+      price: flipkartPrice,
       mrp,
       inStock: true,
-      deliveryTimeMin: Math.floor(9 + Math.random() * 4),
+      deliveryTimeMin: 9 + (Math.abs(hash) % 4),
       surgeFee: 0,
       handlingFee: 4,
       affiliateUrl: getDirectStoreBuyUrl('flipkart', productName),
@@ -239,14 +253,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       brandName: 'Amul',
       tagline: 'Real Milk. The Taste of India.',
     },
-    offers: {
-      zepto: { platform: 'zepto', price: 33, mrp: 34, inStock: true, deliveryTimeMin: 8, surgeFee: 0, handlingFee: 4, affiliateUrl: 'https://zepto.onelink.me/BachatRadar' },
-      blinkit: { platform: 'blinkit', price: 34, mrp: 34, inStock: true, deliveryTimeMin: 12, surgeFee: 10, handlingFee: 5, affiliateUrl: 'https://blinkit.com/r/BachatRadar' },
-      instamart: { platform: 'instamart', price: 34, mrp: 34, inStock: true, deliveryTimeMin: 15, surgeFee: 0, handlingFee: 6, affiliateUrl: 'https://swiggy.onelink.me/BachatRadar' },
-      bigbasket: { platform: 'bigbasket', price: 32.5, mrp: 34, inStock: true, deliveryTimeMin: 22, surgeFee: 0, handlingFee: 3, affiliateUrl: 'https://bigbasket.com/c/BachatRadar' },
-      amazon: { platform: 'amazon', price: 34, mrp: 34, inStock: false, deliveryTimeMin: 45, surgeFee: 0, handlingFee: 0, affiliateUrl: 'https://amazon.in/dp/B00?tag=bachatradar-21' },
-      flipkart: { platform: 'flipkart', price: 33, mrp: 34, inStock: true, deliveryTimeMin: 10, surgeFee: 0, handlingFee: 4, affiliateUrl: 'https://flipkart.com/minutes?affid=BachatRadar' },
-    },
+    offers: createOffers(34, 40, 'grocery', 'Amul Gold Homogenised Toned Milk'),
   },
   {
     id: 'amul-taaza-milk',
@@ -355,14 +362,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     imageUrl: 'https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=300&auto=format&fit=crop&q=80',
     trending: true,
     isDailyEssential: true,
-    offers: {
-      zepto: { platform: 'zepto', price: 36, mrp: 50, inStock: true, deliveryTimeMin: 9, surgeFee: 0, handlingFee: 4, affiliateUrl: 'https://zepto.onelink.me/BachatRadar' },
-      blinkit: { platform: 'blinkit', price: 52, mrp: 55, inStock: true, deliveryTimeMin: 11, surgeFee: 15, handlingFee: 5, affiliateUrl: 'https://blinkit.com/r/BachatRadar' },
-      instamart: { platform: 'instamart', price: 44, mrp: 52, inStock: true, deliveryTimeMin: 14, surgeFee: 0, handlingFee: 6, affiliateUrl: 'https://swiggy.onelink.me/BachatRadar' },
-      bigbasket: { platform: 'bigbasket', price: 34, mrp: 48, inStock: true, deliveryTimeMin: 20, surgeFee: 0, handlingFee: 3, affiliateUrl: 'https://bigbasket.com/c/BachatRadar' },
-      amazon: { platform: 'amazon', price: 48, mrp: 52, inStock: true, deliveryTimeMin: 35, surgeFee: 0, handlingFee: 0, affiliateUrl: 'https://amazon.in/dp/B00?tag=bachatradar-21' },
-      flipkart: { platform: 'flipkart', price: 35, mrp: 50, inStock: true, deliveryTimeMin: 10, surgeFee: 0, handlingFee: 4, affiliateUrl: 'https://flipkart.com/minutes?affid=BachatRadar' },
-    },
+    offers: createOffers(34, 40, 'grocery', 'Fresh Hybrid Tomatoes (Tamatar)'),
   },
   {
     id: 'fresh-onions',
@@ -374,14 +374,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     imageUrl: 'https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=300&auto=format&fit=crop&q=80',
     trending: true,
     isDailyEssential: true,
-    offers: {
-      zepto: { platform: 'zepto', price: 42, mrp: 50, inStock: true, deliveryTimeMin: 8, surgeFee: 0, handlingFee: 4, affiliateUrl: 'https://zepto.onelink.me/BachatRadar' },
-      blinkit: { platform: 'blinkit', price: 46, mrp: 52, inStock: true, deliveryTimeMin: 10, surgeFee: 10, handlingFee: 5, affiliateUrl: 'https://blinkit.com/r/BachatRadar' },
-      instamart: { platform: 'instamart', price: 48, mrp: 55, inStock: true, deliveryTimeMin: 16, surgeFee: 0, handlingFee: 6, affiliateUrl: 'https://swiggy.onelink.me/BachatRadar' },
-      bigbasket: { platform: 'bigbasket', price: 39, mrp: 50, inStock: true, deliveryTimeMin: 19, surgeFee: 0, handlingFee: 3, affiliateUrl: 'https://bigbasket.com/c/BachatRadar' },
-      amazon: { platform: 'amazon', price: 45, mrp: 50, inStock: true, deliveryTimeMin: 30, surgeFee: 0, handlingFee: 0, affiliateUrl: 'https://amazon.in/dp/B00?tag=bachatradar-21' },
-      flipkart: { platform: 'flipkart', price: 41, mrp: 50, inStock: true, deliveryTimeMin: 11, surgeFee: 0, handlingFee: 4, affiliateUrl: 'https://flipkart.com/minutes?affid=BachatRadar' },
-    },
+    offers: createOffers(34, 40, 'grocery', 'Fresh Nashik Red Onions (Pyaaz)'),
   },
   {
     id: 'fresh-potatoes-aloo',
@@ -468,14 +461,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       brandName: 'Aashirvaad',
       tagline: '100% Sampoorna Atta, 4-step purity guaranteed.',
     },
-    offers: {
-      zepto: { platform: 'zepto', price: 475, mrp: 525, inStock: true, deliveryTimeMin: 12, surgeFee: 0, handlingFee: 4, affiliateUrl: 'https://zepto.onelink.me/BachatRadar' },
-      blinkit: { platform: 'blinkit', price: 490, mrp: 525, inStock: true, deliveryTimeMin: 14, surgeFee: 15, handlingFee: 5, affiliateUrl: 'https://blinkit.com/r/BachatRadar' },
-      instamart: { platform: 'instamart', price: 485, mrp: 525, inStock: true, deliveryTimeMin: 18, surgeFee: 0, handlingFee: 6, affiliateUrl: 'https://swiggy.onelink.me/BachatRadar' },
-      bigbasket: { platform: 'bigbasket', price: 449, mrp: 525, inStock: true, deliveryTimeMin: 25, surgeFee: 0, handlingFee: 3, affiliateUrl: 'https://bigbasket.com/c/BachatRadar' },
-      amazon: { platform: 'amazon', price: 440, mrp: 525, inStock: true, deliveryTimeMin: 40, surgeFee: 0, handlingFee: 0, affiliateUrl: 'https://amazon.in/dp/B00?tag=bachatradar-21' },
-      flipkart: { platform: 'flipkart', price: 455, mrp: 525, inStock: true, deliveryTimeMin: 11, surgeFee: 0, handlingFee: 4, affiliateUrl: 'https://flipkart.com/minutes?affid=BachatRadar' },
-    },
+    offers: createOffers(34, 40, 'grocery', 'Aashirvaad Superior MP Chakki Atta'),
   },
   {
     id: 'fortune-atta-5kg',
