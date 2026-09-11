@@ -99,12 +99,28 @@ export const VERIFIED_DIRECT_STORE_LINKS: Record<string, Record<PlatformId, stri
     flipkart: 'https://www.flipkart.com/amul-masti-spiced-buttermilk/p/itma0a1b2c3d4e8c',
   },
   'eggs-pack-of-6': {
-    zepto: 'https://www.zeptonow.com/pn/white-eggs-pack-of-6/pvid/31e08cb4-eecb-4ea5-b9e7-4b95d676ba50',
-    blinkit: 'https://blinkit.com/prn/table-white-eggs-pack-of-6/prid/28451',
-    bigbasket: 'https://www.bigbasket.com/pd/1203678/fresho-regular-eggs-pack-of-6/',
-    amazon: 'https://www.amazon.in/dp/B07BG8EGGS',
-    instamart: 'https://www.swiggy.com/instamart/item/farm-fresh-white-eggs-6-pcs',
-    flipkart: 'https://www.flipkart.com/fresho-eggs/p/itma0a1b2c3d4e5d',
+    zepto: 'https://www.zeptonow.com/search?q=Fresho%20White%20Eggs%206%20pcs',
+    blinkit: 'https://blinkit.com/s/?q=Fresho%20White%20Eggs%206%20pcs',
+    bigbasket: 'https://www.bigbasket.com/pd/150502/fresho-farm-eggs-table-tray-medium-antibiotic-residue-free-30-pcs/',
+    amazon: 'https://www.amazon.in/s?k=farm+eggs+pack+of+6',
+    instamart: 'https://www.swiggy.com/instamart/search?query=Fresho%20White%20Eggs%206%20pcs',
+    flipkart: 'https://www.flipkart.com/search?q=Fresho%20White%20Eggs%206%20pcs&marketplace=GROCERY',
+  },
+  'eggs-tray-30': {
+    zepto: 'https://www.zeptonow.com/search?q=Fresho%20Farm%20Eggs%2030%20pcs',
+    blinkit: 'https://blinkit.com/s/?q=Fresho%20Farm%20Eggs%2030%20pcs',
+    bigbasket: 'https://www.bigbasket.com/pd/150502/fresho-farm-eggs-table-tray-medium-antibiotic-residue-free-30-pcs/',
+    amazon: 'https://www.amazon.in/s?k=farm+eggs+tray+of+30',
+    instamart: 'https://www.swiggy.com/instamart/search?query=Fresho%20Farm%20Eggs%2030%20pcs',
+    flipkart: 'https://www.flipkart.com/search?q=Fresho%20Farm%20Eggs%2030%20pcs&marketplace=GROCERY',
+  },
+  'eggs-pack-of-12': {
+    zepto: 'https://www.zeptonow.com/search?q=Fresho%20White%20Eggs%2012%20pcs',
+    blinkit: 'https://blinkit.com/s/?q=Fresho%20White%20Eggs%2012%20pcs',
+    bigbasket: 'https://www.bigbasket.com/pd/40348875/fresho-premium-white-eggs-12-pcs/',
+    amazon: 'https://www.amazon.in/s?k=farm+eggs+pack+of+12',
+    instamart: 'https://www.swiggy.com/instamart/search?query=Fresho%20White%20Eggs%2012%20pcs',
+    flipkart: 'https://www.flipkart.com/search?q=Fresho%20White%20Eggs%2012%20pcs&marketplace=GROCERY',
   },
   'britannia-wheat-bread': {
     zepto: 'https://www.zeptonow.com/pn/britannia-100-whole-wheat-bread/pvid/21e08cb4-eecb-4ea5-b9e7-4b95d676ba50',
@@ -402,6 +418,8 @@ export function findVerifiedProductKey(name: string): string | null {
   if (norm.includes('paneer')) return 'amul-paneer-200g';
   if (norm.includes('buttermilk') || norm.includes('chhach') || norm.includes('chaas')) return 'amul-masti-buttermilk';
   if (norm.includes('dahi') || norm.includes('curd')) return 'amul-masti-dahi';
+  if (norm.includes('egg') && (norm.includes('30') || norm.includes('tray'))) return 'eggs-tray-30';
+  if (norm.includes('egg') && (norm.includes('12') || norm.includes('dozen'))) return 'eggs-pack-of-12';
   if (norm.includes('egg')) return 'eggs-pack-of-6';
   if (norm.includes('bread')) return 'britannia-wheat-bread';
 
@@ -454,7 +472,8 @@ export function findVerifiedProductKey(name: string): string | null {
 export function getDirectStoreBuyUrl(
   platformId: PlatformId,
   productName: string,
-  existingOfferUrl?: string
+  existingOfferUrl?: string,
+  unit?: string
 ): string {
   // If a valid, non-placeholder direct URL already exists on the offer, use it directly!
   if (

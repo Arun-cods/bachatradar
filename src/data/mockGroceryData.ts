@@ -726,14 +726,14 @@ export const INITIAL_PRODUCTS: Product[] = [
   },
   {
     id: 'eggs-pack-of-12',
-    name: 'Fresh Farm Table Eggs (Pack of 12)',
-    nameHindi: 'ताजा फॉर्म अंडे (12 पीस)',
-    brand: 'Eggoz / Farm Made',
+    name: 'Fresho Premium Large White Eggs (12 pcs)',
+    nameHindi: 'फ्रेशो प्रीमियम लार्ज सफेद अंडे (12 पीस)',
+    brand: 'Fresho',
     category: 'dairy',
-    unit: 'Pack of 12',
-    imageUrl: 'https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&auto=format&fit=crop&q=80',
+    unit: '12 pcs Pack',
+    imageUrl: 'https://www.bbassets.com/media/uploads/p/l/40348875_8-fresho-premium-white-eggs.jpg',
     trending: true,
-    offers: createOffers(88, 110, 'dairy', 'Fresh Farm Table Eggs Pack of 12'),
+    offers: createOffers(115, 200, 'dairy', 'Fresho White Eggs 12 pcs'),
   },
 
   // 2. VEGETABLES & FRUITS (Grams & Half Kgs)

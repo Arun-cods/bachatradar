@@ -96,9 +96,14 @@ const BLUEPRINTS: Record<string, Blueprint[]> = {
       category: 'dairy',
       basePrice: 54,
       mrpRatio: 1.15,
-      brands: ['Eggoz Nutri-Rich', 'Fresho Farm Fresh', 'Country Delight Free Range', 'Hen Fruit Golden Eggs'],
+      brands: ['Fresho Farm Fresh', 'Eggoz Nutri-Rich', 'Country Delight Free Range', 'Hello Eggs'],
       variants: [{ unit: 'Pack of 6', mult: 1 }, { unit: 'Pack of 10 Saver', mult: 1.55 }, { unit: 'Pack of 12', mult: 1.85 }, { unit: 'Pack of 30 Tray', mult: 4.4 }],
-      images: ['https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&auto=format&fit=crop&q=80'],
+      images: [
+        'https://www.bbassets.com/media/uploads/p/l/150502_11-fresho-farm-eggs-table-tray-medium-antibiotic-residue-free.jpg',
+        'https://www.bbassets.com/media/uploads/p/l/40211592_7-eggoz-white-farm-fresh-eggs-omega-3-rich-with-no-ddgs-hormone-steroids.jpg',
+        'https://www.bbassets.com/media/uploads/p/l/40348875_8-fresho-premium-white-eggs.jpg',
+        'https://www.bbassets.com/media/uploads/p/l/40374433_1-hello-eggs-brown-eggs.jpg',
+      ],
       isEssential: true,
     },
     {
