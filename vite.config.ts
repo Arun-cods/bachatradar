@@ -15,7 +15,7 @@ function getSmsApiKey(apiKey?: string): string {
       if (match && match[1]) return match[1].trim();
     }
   } catch (e) {}
-  return 'g6VRGQSHs3zLdJKNwj7kqvhPW48TeIicC2XZuUyoFpl1A5EBbnaVm9ABnUZ0sDFieNk5ydWI4KtTR12J';
+  return '';
 }
 
 function realSmsGatewayPlugin(): Plugin {
@@ -75,7 +75,7 @@ function realSmsGatewayPlugin(): Plugin {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/bachatradar/',
   plugins: [react(), realSmsGatewayPlugin()],
   server: {
     port: 3000,
