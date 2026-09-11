@@ -1,104 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  
-  <!-- Homepage -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://arungopagani.is-a.dev/bachatradar/</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>hourly</changefreq>
-    <priority>1.00</priority>
-  </url>
-
-  <!-- City Locations -->
-  <url>
-    <loc>https://arungopagani.is-a.dev/bachatradar/#hyderabad</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.90</priority>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://arungopagani.is-a.dev/bachatradar/#bengaluru</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://arungopagani.is-a.dev/bachatradar/#delhi-ncr</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://arungopagani.is-a.dev/bachatradar/#mumbai</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://arungopagani.is-a.dev/bachatradar/#pune</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://arungopagani.is-a.dev/bachatradar/#chennai</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://arungopagani.is-a.dev/bachatradar/#suryapet</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Product Categories -->
-  <url>
-    <loc>https://arungopagani.is-a.dev/bachatradar/#dairy-breakfast</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>hourly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://arungopagani.is-a.dev/bachatradar/#atta-rice-dal</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>hourly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://arungopagani.is-a.dev/bachatradar/#edible-oils-ghee</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>hourly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://arungopagani.is-a.dev/bachatradar/#fruits-vegetables</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>hourly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://arungopagani.is-a.dev/bachatradar/#snacks-beverages</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>hourly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- Store Arbitrage Feeds -->
-  <url>
-    <loc>https://arungopagani.is-a.dev/bachatradar/#blinkit-vs-zepto</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>hourly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://arungopagani.is-a.dev/bachatradar/#instamart-vs-bigbasket</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>hourly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://arungopagani.is-a.dev/bachatradar/founder/gopagani-arun/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
