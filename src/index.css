@@ -2,6 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color__gro1: #ccad00;
+  --color__gro2: #f5d000;
+  --color__gro3: #f8cb46;
+  --color__gro4: #ffea70;
+  --color__gro5: #fff099;
+  --color__gro6: #fff3ab;
+  --color__gro7: #fff6c2;
+  --color__gro8: #fffceb;
+  --color__grc1: #000000;
+  --color__grc2: #666666;
+  --color__grc3: #999999;
+  --color__grc4: #cccccc;
+  --color__grc5: #dddddd;
+  --color__grc6: #eeeeee;
+  --color__grc7: #f2f2f2;
+  --color__grc8: #fcfcfc;
+  --color__grc9: #ffffff;
+  --color__grc10: #f7f7f7;
+  --color__grg1: #0c831f;
+  --color__grg2: #459220;
+  --color__grg3: #54b226;
+  --color__grg4: #73c04d;
+  --color__grg5: #92ce74;
+  --color__grg6: #b1dc9c;
+  --color__grg7: #d0eac3;
+  --color__grg8: #ecffec;
+  --color__grr1: #be2e2e;
+  --color__grr2: #d23333;
+  --color__grr3: #e73838;
+  --colors-base-green: #318616;
+  --colors-base-yellow: #F8CB46;
+  --colors-base-black: #1F1F1F;
+  --colors-base-white: #ffffff;
+  --colors-base-appbase: #F5F8FA;
+}
+
 @layer base {
   html, body {
     width: 100%;
@@ -9,6 +46,8 @@
     overflow-x: hidden;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    background-color: var(--colors-base-appbase, #F5F8FA);
+    color: var(--colors-base-black, #1F1F1F);
   }
   
   #root {

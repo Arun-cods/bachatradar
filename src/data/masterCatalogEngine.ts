@@ -18,6 +18,7 @@ export const CATEGORY_TOTALS: Record<string, number> = {
   instant: 2110,
   household: 2620,
   personal: 1640,
+  paan: 1280,
 };
 
 // Seed blueprints for each Indian grocery category

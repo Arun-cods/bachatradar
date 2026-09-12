@@ -442,9 +442,11 @@ export const App: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white border-t border-slate-800 mt-16 py-12">
+      <footer className="bg-slate-900 text-white border-t border-slate-800 mt-16 pt-12 pb-24 sm:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          
+          {/* Main Footer Header */}
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-slate-800">
             <div>
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center text-slate-950 font-black">
@@ -452,56 +454,112 @@ export const App: React.FC = () => {
                 </div>
                 <span className="font-extrabold text-lg text-white">BachatRadar India</span>
               </div>
-              <p className="text-xs text-slate-400 mt-1 max-w-sm">
-                An India-focused quick-commerce price comparison and savings platform.
+              <p className="text-xs text-slate-400 mt-1 max-w-md">
+                India's real-time quick-commerce price comparison & darkstore savings engine across Blinkit, Zepto, Swiggy Instamart, BigBasket Now, and Flipkart Minutes.
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-slate-400 font-semibold">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs font-semibold">
               <button
                 onClick={() => setIsHelpModalOpen(true)}
-                className="hover:text-amber-400 text-amber-400 font-bold transition-colors flex items-center gap-1 cursor-pointer"
+                className="bg-amber-400/10 hover:bg-amber-400/20 text-amber-400 px-3 py-1.5 rounded-lg border border-amber-400/30 transition-colors flex items-center gap-1.5 cursor-pointer"
               >
                 <span>💬 Help & Problem Desk</span>
               </button>
-              <span>•</span>
-              <button onClick={handleShareApp} className="hover:text-emerald-400 font-bold transition-colors cursor-pointer">
+              <button
+                onClick={handleShareApp}
+                className="bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 px-3 py-1.5 rounded-lg border border-emerald-500/30 transition-colors cursor-pointer"
+              >
                 Share BachatRadar
               </button>
-              <span>•</span>
-              <button
-                onClick={() => handleOpenPrivacyPolicy('affiliate')}
-                className="hover:text-white transition-colors"
-              >
-                Affiliate Disclosure
-              </button>
-              <span>•</span>
-              <button
-                onClick={() => handleOpenPrivacyPolicy('dpdp')}
-                className="hover:text-white transition-colors flex items-center gap-1"
-              >
-                <span>Privacy Policy & DPDP</span>
-                <span className="text-[10px] text-emerald-400">✓</span>
-              </button>
-              <span>•</span>
               <button
                 onClick={() => setIsPinModalOpen(true)}
-                className="text-slate-500 hover:text-amber-400 text-[11px] flex items-center gap-1 transition-colors"
-                title="Restricted Founder Access"
+                className="text-slate-400 hover:text-white px-2 py-1.5 rounded-lg transition-colors flex items-center gap-1 cursor-pointer text-[11px]"
+                title="Executive Founder Portal"
               >
                 <span>🔒 Executive Portal</span>
               </button>
             </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+          {/* Quick Commerce Directory & Categories Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 py-8 border-b border-slate-800 text-xs">
             <div>
-              © 2026 BachatRadar. Founded by <span className="text-slate-300 font-bold">Gopagani Arun</span> (Founder & CEO). All store names and logos are trademarks of their respective owners.
+              <h4 className="font-bold text-slate-200 uppercase tracking-wider mb-3 text-[11px]">Dairy & Breakfast</h4>
+              <ul className="space-y-2 text-slate-400">
+                <li><button onClick={() => { setHomeCategory('dairy'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Milk & Cream</button></li>
+                <li><button onClick={() => { setHomeCategory('dairy'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Bread, Pav & Buns</button></li>
+                <li><button onClick={() => { setHomeCategory('dairy'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Paneer & Tofu</button></li>
+                <li><button onClick={() => { setHomeCategory('dairy'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Curd & Yogurt</button></li>
+                <li><button onClick={() => { setHomeCategory('dairy'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Butter & Cheese</button></li>
+                <li><button onClick={() => { setHomeCategory('dairy'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Oats & Muesli</button></li>
+                <li><button onClick={() => { setHomeCategory('dairy'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Peanut Butter & Batter</button></li>
+              </ul>
             </div>
-            <div className="mt-2 sm:mt-0 font-medium text-emerald-400">
+
+            <div>
+              <h4 className="font-bold text-slate-200 uppercase tracking-wider mb-3 text-[11px]">Staples & Grains</h4>
+              <ul className="space-y-2 text-slate-400">
+                <li><button onClick={() => { setHomeCategory('staples'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Atta & Flours</button></li>
+                <li><button onClick={() => { setHomeCategory('staples'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Rice & Basmati</button></li>
+                <li><button onClick={() => { setHomeCategory('staples'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Poha, Daliya & Millets</button></li>
+                <li><button onClick={() => { setHomeCategory('staples'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Dals & Pulses</button></li>
+                <li><button onClick={() => { setHomeCategory('staples'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Oils, Ghee & Masalas</button></li>
+                <li><button onClick={() => { setHomeCategory('staples'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Vermicelli & Sabudana</button></li>
+                <li><button onClick={() => { setHomeCategory('staples'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Honey & Chyawanprash</button></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-slate-200 uppercase tracking-wider mb-3 text-[11px]">Snacks & Drinks</h4>
+              <ul className="space-y-2 text-slate-400">
+                <li><button onClick={() => { setHomeCategory('snacks'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Chips, Namkeen & Wafers</button></li>
+                <li><button onClick={() => { setHomeCategory('snacks'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Biscuits & Cookies</button></li>
+                <li><button onClick={() => { setHomeCategory('snacks'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Protein & Energy Bars</button></li>
+                <li><button onClick={() => { setHomeCategory('beverages'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Cold Drinks & Juices</button></li>
+                <li><button onClick={() => { setHomeCategory('beverages'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Tea, Coffee & Shakes</button></li>
+                <li><button onClick={() => { setHomeCategory('instant'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Instant Noodles & Pasta</button></li>
+                <li><button onClick={() => { setHomeCategory('instant'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Breakfast Mixes & Sauces</button></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-slate-200 uppercase tracking-wider mb-3 text-[11px]">Paan Corner & Fresh</h4>
+              <ul className="space-y-2 text-slate-400">
+                <li><button onClick={() => { setHomeCategory('paan'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Cigarettes & Rolling Papers</button></li>
+                <li><button onClick={() => { setHomeCategory('paan'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Rolling Tobacco & Cones</button></li>
+                <li><button onClick={() => { setHomeCategory('paan'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Chewing Gums & Mints</button></li>
+                <li><button onClick={() => { setHomeCategory('paan'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Smoking Cessation Aids</button></li>
+                <li><button onClick={() => { setHomeCategory('veggies'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Fresh Vegetables & Fruits</button></li>
+                <li><button onClick={() => { setHomeCategory('household'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Detergents & Cleaners</button></li>
+                <li><button onClick={() => { setHomeCategory('personal'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Bath, Body & Grooming</button></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-slate-200 uppercase tracking-wider mb-3 text-[11px]">Useful Links</h4>
+              <ul className="space-y-2 text-slate-400">
+                <li><button onClick={() => setIsHelpModalOpen(true)} className="hover:text-amber-400 transition-colors text-left">Customer Help Desk</button></li>
+                <li><button onClick={() => handleOpenPrivacyPolicy('dpdp')} className="hover:text-white transition-colors text-left">Privacy Policy (DPDP 2023)</button></li>
+                <li><button onClick={() => handleOpenPrivacyPolicy('affiliate')} className="hover:text-white transition-colors text-left">Affiliate & Pricing Disclosure</button></li>
+                <li><button onClick={() => setIsLocationModalOpen(true)} className="hover:text-white transition-colors text-left">Darkstore City Coverage</button></li>
+                <li><button onClick={handleShareApp} className="hover:text-emerald-400 transition-colors text-left">Share with Neighbors</button></li>
+                <li><button onClick={() => setIsPinModalOpen(true)} className="hover:text-slate-300 transition-colors text-left">Executive Management</button></li>
+                <li><span className="text-emerald-400 font-medium">Balkampet 500016 Darkstore</span></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Copyright & Disclaimer */}
+          <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+            <div>
+              © 2026 BachatRadar. Founded by <span className="text-slate-300 font-bold">Gopagani Arun</span> (Founder & CEO). Blinkit, Zepto, Swiggy Instamart, BigBasket, and Flipkart are trademarks of their respective owners.
+            </div>
+            <div className="font-medium text-emerald-400 shrink-0">
               Proudly Made for Indian Households 🇮🇳
             </div>
           </div>
+
         </div>
       </footer>
 
