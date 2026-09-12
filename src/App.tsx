@@ -436,50 +436,6 @@ export const App: React.FC = () => {
           onSearchChange={(q) => setHomeSearchQuery(q)}
         />
 
-        {/* Official Founder / Brand Identity Section */}
-        <section
-          id="about-bachatradar"
-          className="mt-10 mb-10 rounded-3xl border border-emerald-200 bg-white p-6 sm:p-8 shadow-sm"
-          aria-labelledby="about-bachatradar-title"
-        >
-          <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
-            <div>
-              <p className="text-xs font-black uppercase tracking-[0.18em] text-emerald-700">Official BachatRadar</p>
-              <h2 id="about-bachatradar-title" className="mt-2 text-2xl sm:text-3xl font-black text-slate-900">
-                BachatRadar (बचत रडार)
-              </h2>
-              <p className="mt-3 text-sm sm:text-base leading-7 text-slate-600">
-                BachatRadar is an India-focused quick-commerce price comparison platform that helps shoppers compare grocery prices and potential savings across major quick-commerce services.
-              </p>
-              <p className="mt-3 text-sm text-slate-600">
-                <span className="font-bold text-slate-900">Founded by Gopagani Arun</span> — Founder &amp; CEO.
-              </p>
-              <div className="mt-5 flex flex-wrap gap-3 text-sm font-bold">
-                <a
-                  href="https://arungopagani.is-a.dev/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-xl bg-slate-900 px-4 py-2.5 text-white hover:bg-slate-800 transition-colors"
-                >
-                  Founder: Gopagani Arun
-                </a>
-                <a
-                  href="https://github.com/Arun-cods/bachatradar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-xl border border-slate-200 px-4 py-2.5 text-slate-800 hover:border-emerald-400 hover:text-emerald-700 transition-colors"
-                >
-                  BachatRadar on GitHub
-                </a>
-              </div>
-            </div>
-            <div className="rounded-2xl bg-emerald-50 border border-emerald-100 px-5 py-4 text-sm text-emerald-950">
-              <div className="font-black">Official identity</div>
-              <div className="mt-1 text-emerald-800">BachatRadar → Gopagani Arun</div>
-            </div>
-          </div>
-        </section>
-
         {/* How It Works Formula */}
         <HowItWorks />
 

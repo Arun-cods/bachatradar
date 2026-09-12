@@ -87,10 +87,10 @@ export const CITIES: CityOption[] = [
     id: 'hyd',
     name: 'Hyderabad',
     state: 'Telangana',
-    pincode: '500081',
+    pincode: '500016',
     lat: 17.3850,
     lon: 78.4867,
-    popularAreas: ['Ameerpet (Founder Hub)', 'Hitec City', 'Madhapur', 'Gachibowli', 'Banjara Hills', 'Kukatpally', 'Begumpet', 'Secunderabad'],
+    popularAreas: ['Balkampet / Ameerpet', 'Hitec City', 'Madhapur', 'Gachibowli', 'Banjara Hills', 'Kukatpally', 'Begumpet', 'Secunderabad'],
   },
   {
     id: 'blr',

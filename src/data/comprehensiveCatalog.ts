@@ -1,9 +1,7 @@
 import { Product, PlatformId } from '../types';
 import { getDirectStoreBuyUrl } from '../utils/storeLinks';
 
-// Helper to create realistic multi-platform pricing with exact Indian darkstore pricing nuances & direct buy links
 export const generateStoreOffers = (basePrice: number, mrp: number, productName: string = '', unit: string = ''): Record<PlatformId, any> => {
-  // Deterministic seed based on product name to keep prices authentic and stable
   let hash = 0;
   for (let i = 0; i < (productName || '').length; i++) {
     hash = (hash << 5) - hash + productName.charCodeAt(i);
@@ -95,6 +93,298 @@ export const MASTER_CATALOG_CATEGORIES = [
 ];
 
 export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
+  {
+    "id": "zepto-rin-matic-top-load-2kg",
+    "name": "Rin Matic Top Load Detergent Liquid | Pouch (2 kg)",
+    "nameHindi": "रिन मैटिक टॉप लोड लिक्विड डिटर्जेंट",
+    "brand": "Rin",
+    "category": "household",
+    "unit": "2 kg Pouch",
+    "imageUrl": "https://www.bbassets.com/media/uploads/p/l/40320190_10-surf-excel-matic-front-load-liquid-detergent-refill.jpg",
+    "trending": true,
+    "isDailyEssential": true,
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 215,
+        "mrp": 260,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.zepto.com/pn/rin-matic-top-load-detergent-liquid-pouch/pvid/5f54bb83-f3e0-4d8d-89b0-6339f3312089"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 220,
+        "mrp": 260,
+        "inStock": true,
+        "deliveryTimeMin": 11,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://blinkit.com/s/?q=Rin%20Matic%20Top%20Load%20Liquid%202kg"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 218,
+        "mrp": 260,
+        "inStock": true,
+        "deliveryTimeMin": 14,
+        "surgeFee": 0,
+        "handlingFee": 6,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Rin%20Matic%20Top%20Load%20Liquid%202kg"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 214,
+        "mrp": 260,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 3,
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Rin%20Matic%20Top%20Load%20Liquid%202kg"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 218,
+        "mrp": 260,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Rin+Matic+Top+Load+Liquid+2kg&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 215,
+        "mrp": 260,
+        "inStock": true,
+        "deliveryTimeMin": 10,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Rin%20Matic%20Top%20Load%20Liquid%202kg&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "zepto-tide-plus-lemon-mint-2kg",
+    "name": "Tide Plus Lemon & Mint Detergent Powder (2 kg)",
+    "nameHindi": "टाइड प्लस लेमन व मिंट डिटर्जेंट पाउडर",
+    "brand": "Tide",
+    "category": "household",
+    "unit": "2 kg Pack",
+    "imageUrl": "https://www.bbassets.com/media/uploads/p/l/40320190_10-surf-excel-matic-front-load-liquid-detergent-refill.jpg",
+    "trending": true,
+    "isDailyEssential": true,
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 270,
+        "mrp": 280,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.zepto.com/pn/tide-plus-lemon-mint-detergent-powder/pvid/5562d0cc-ace3-4c62-aa38-81c8b1d0f645"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 275,
+        "mrp": 280,
+        "inStock": true,
+        "deliveryTimeMin": 11,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://blinkit.com/s/?q=Tide%20Plus%20Lemon%20Mint%202kg"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 272,
+        "mrp": 280,
+        "inStock": true,
+        "deliveryTimeMin": 14,
+        "surgeFee": 0,
+        "handlingFee": 6,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Tide%20Plus%20Lemon%20Mint%202kg"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 269,
+        "mrp": 280,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 3,
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Tide%20Plus%20Lemon%20Mint%202kg"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 270,
+        "mrp": 280,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Tide+Plus+Lemon+Mint+2kg&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 270,
+        "mrp": 280,
+        "inStock": true,
+        "deliveryTimeMin": 10,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Tide%20Plus%20Lemon%20Mint%202kg&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "zepto-india-gate-dubar-basmati-1kg",
+    "name": "India Gate Dubar Basmati Rice | Long Slender Grains (1 kg)",
+    "nameHindi": "इंडिया गेट दुबार बासमती चावल",
+    "brand": "India Gate",
+    "category": "staples",
+    "unit": "1 kg Pack",
+    "imageUrl": "https://www.bbassets.com/media/uploads/p/l/40075897_15-bb-royal-sona-masoori-rice-raw-rice-super-premium.jpg",
+    "trending": true,
+    "isDailyEssential": true,
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 130,
+        "mrp": 167,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.zepto.com/pn/india-gate-dubar-basmati-rice-long-slender-grains/pvid/ca22643f-69a5-4e44-88ca-0a13ec97f149"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 138,
+        "mrp": 167,
+        "inStock": true,
+        "deliveryTimeMin": 11,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://blinkit.com/s/?q=India%20Gate%20Dubar%20Basmati%20Rice%201kg"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 135,
+        "mrp": 167,
+        "inStock": true,
+        "deliveryTimeMin": 14,
+        "surgeFee": 0,
+        "handlingFee": 6,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=India%20Gate%20Dubar%20Basmati%20Rice%201kg"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 129,
+        "mrp": 167,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 3,
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=India%20Gate%20Dubar%20Basmati%20Rice%201kg"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 132,
+        "mrp": 167,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=India+Gate+Dubar+Basmati+Rice+1kg&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 130,
+        "mrp": 167,
+        "inStock": true,
+        "deliveryTimeMin": 10,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=India%20Gate%20Dubar%20Basmati%20Rice%201kg&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "zepto-daawat-rozana-super-basmati-1kg",
+    "name": "Daawat Rozana Super Basmati Rice | Medium Grain (1 kg)",
+    "nameHindi": "दावत रोज़ाना सुपर बासमती चावल",
+    "brand": "Daawat",
+    "category": "staples",
+    "unit": "1 kg Pack",
+    "imageUrl": "https://www.bbassets.com/media/uploads/p/l/40075897_15-bb-royal-sona-masoori-rice-raw-rice-super-premium.jpg",
+    "trending": true,
+    "isDailyEssential": true,
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 87,
+        "mrp": 100,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.zepto.com/pn/daawat-rozana-super-basmati-rice-medium-grain/pvid/6b78d070-ba4c-459c-9d4d-fe058f71d5cf"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 92,
+        "mrp": 100,
+        "inStock": true,
+        "deliveryTimeMin": 11,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://blinkit.com/s/?q=Daawat%20Rozana%20Super%20Basmati%20Rice%201kg"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 89,
+        "mrp": 100,
+        "inStock": true,
+        "deliveryTimeMin": 14,
+        "surgeFee": 0,
+        "handlingFee": 6,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Daawat%20Rozana%20Super%20Basmati%20Rice%201kg"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 86,
+        "mrp": 100,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 3,
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Daawat%20Rozana%20Super%20Basmati%20Rice%201kg"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 88,
+        "mrp": 100,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Daawat+Rozana+Super+Basmati+Rice+1kg&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 87,
+        "mrp": 100,
+        "inStock": true,
+        "deliveryTimeMin": 10,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Daawat%20Rozana%20Super%20Basmati%20Rice%201kg&marketplace=GROCERY"
+      }
+    }
+  },
   {
     "id": "fresho-farm-eggs-regular-30",
     "name": "Fresho Farm Eggs, Regular (Table Tray - 30 pcs)",
