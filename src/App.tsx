@@ -418,88 +418,8 @@ export const App: React.FC = () => {
       {/* Main Content */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-6 w-full max-w-full overflow-x-hidden">
         
-        {/* Hero Section */}
-        <section className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Never Overpay for Milk, Veggies & Groceries Again</span>
-          </div>
-
-          <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-            Stop Losing ₹100–₹300 on{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">
-              Daily Quick-Commerce.
-            </span>
-          </h1>
-
-          <p className="mt-3 text-sm sm:text-base text-slate-600 font-medium">
-            Compare live prices, surge fees, and platform charges across <strong className="text-slate-900">Blinkit, Zepto, Swiggy Instamart, Flipkart Minutes & BB Now</strong> in your pincode. Use our <strong className="text-emerald-700">Smart Basket Splitter</strong> to get the cheapest deal automatically.
-          </p>
-
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-            <button
-              onClick={() => setIsCartOpen(true)}
-              className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-black text-sm flex items-center gap-2 transition-all shadow-lg shadow-emerald-600/25"
-            >
-              <span>Optimize My Daily Basket ({totalCartItemCount} Items)</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-            <button
-              onClick={handleDirectWhatsAppShare}
-              className="px-5 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-slate-950 font-black text-sm flex items-center gap-2 transition-all shadow-md active:scale-95 cursor-pointer"
-            >
-              <Share2 className="w-4 h-4" />
-              <span>Share Deal on WhatsApp</span>
-            </button>
-          </div>
-        </section>
-
-        {/* Live Darkstore Telemetry & Real-Time Sync Bar */}
-        <div className="mb-6 p-3 sm:p-3.5 rounded-2xl bg-gradient-to-r from-emerald-950/80 via-slate-900 to-teal-950/80 border border-emerald-500/40 text-white flex flex-col sm:flex-row items-center justify-between gap-2.5 shadow-md">
-          <div className="flex items-center gap-2.5 text-xs">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-            <div className="leading-tight">
-              <span className="font-extrabold text-white">LIVE TELEMETRY:</span>{' '}
-              <span className="text-emerald-300">Real-Time Darkstore Rates Synced ({selectedCity.name} • {selectedArea})</span>
-              <span className="text-[10px] text-slate-400 block sm:inline sm:ml-2">
-                Blinkit, Zepto, Swiggy Instamart, BigBasket • Synced {lastSyncSeconds}s ago
-              </span>
-            </div>
-          </div>
-          <div className="flex items-center gap-2 self-end sm:self-auto">
-            <button
-              type="button"
-              onClick={() => setIsLocationModalOpen(true)}
-              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-300 text-[11px] font-bold border border-slate-700 transition-colors flex items-center gap-1 cursor-pointer"
-            >
-              <MapPin className="w-3 h-3 text-amber-400" />
-              <span>Change Area</span>
-            </button>
-            <button
-              type="button"
-              onClick={handleTriggerLivePriceRefresh}
-              className="px-2.5 py-1 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-slate-950 text-[11px] font-black transition-colors flex items-center gap-1 cursor-pointer shadow-sm active:scale-95"
-            >
-              <RefreshCw className="w-3 h-3" />
-              <span>⚡ Sync Live Rates</span>
-            </button>
-          </div>
-        </div>
-
-        {/* Live Surge & Platform Fee Radar */}
+        {/* Live Surge & Platform Fee Radar (Compact) */}
         <SurgeFeeRadar city={selectedCity} />
-
-        {/* Daily Flash Deals & Steepest Arbitrage Drops */}
-        <DailyFlashDeals
-          products={products}
-          onAddToCart={handleAddToCart}
-          onUpdateQuantity={handleUpdateQuantity}
-          onTrackAffiliate={handleTrackAffiliateClick}
-          cartQuantities={cartQuantities}
-        />
-
-        {/* The Daily Indian Thali & Breakfast Index */}
-        <DailyThaliIndex />
 
         {/* Real-time Multi-Store Price Grid across 24,580 SKUs */}
         <PriceComparisonGrid

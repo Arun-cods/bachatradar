@@ -146,38 +146,8 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
 
   return (
     <section className="mb-12" id="catalog-section">
-      
-      {/* Master Data Metrics Badge */}
-      <div className="mb-4 bg-slate-900 text-white rounded-2xl p-3.5 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border border-slate-800 shadow-md w-full max-w-full min-w-0">
-        <div className="flex items-center gap-3 min-w-0">
-          <div className="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold shrink-0">
-            <Database className="w-4 h-4" />
-          </div>
-          <div className="min-w-0">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="font-extrabold text-white text-xs sm:text-base">
-                24,580 Active Quick-Commerce SKUs Synced
-              </span>
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                100% LIVE
-              </span>
-            </div>
-            <div className="text-slate-400 text-[11px] sm:text-xs mt-0.5 break-words">
-              Zepto (9,840) • Blinkit (11,450) • Swiggy Instamart (12,100) • Flipkart Minutes (10,500) • BigBasket (24,000) • Amazon Fresh (18,500)
-            </div>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-2 self-start sm:self-auto shrink-0">
-          <div className="flex items-center gap-1.5 text-[11px] font-bold bg-slate-800 text-emerald-400 px-3 py-1.5 rounded-xl border border-slate-700">
-            <Zap className="w-3.5 h-3.5 text-amber-400" />
-            <span>Multi-App Arbitrage Active</span>
-          </div>
-        </div>
-      </div>
-
       {/* Search, Filter & Category Bar */}
-      <div className="bg-white rounded-3xl p-3.5 sm:p-6 shadow-sm border border-slate-200 mb-6 space-y-4 w-full max-w-full min-w-0 overflow-hidden">
+      <div className="bg-white rounded-2xl p-3 sm:p-5 shadow-sm border border-slate-200 mb-6 space-y-4 w-full max-w-full min-w-0 overflow-hidden">
         
         {/* Top Controls: Search Input + Sorting */}
         <div className="flex flex-col md:flex-row gap-3 md:items-center justify-between w-full max-w-full">
@@ -189,8 +159,8 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
               type="text"
               value={searchQuery}
               onChange={(e) => handleSearchChange(e.target.value)}
-              placeholder="Search across 24,580 items: Nutella, Atta, Amul Gold, Tomatoes, Surf Excel..."
-              className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all placeholder:text-slate-400 text-slate-900 font-medium"
+              placeholder="Search products: Milk, Eggs, Atta, Tomatoes, Butter, Maggi, Surf Excel..."
+              className="w-full pl-10 pr-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all placeholder:text-slate-400 text-slate-900 font-medium"
             />
             {searchQuery && (
               <button

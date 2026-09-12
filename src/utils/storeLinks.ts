@@ -475,17 +475,14 @@ export function getDirectStoreBuyUrl(
   existingOfferUrl?: string,
   unit?: string
 ): string {
-  // If a valid, non-placeholder direct URL already exists on the offer, use it directly!
+  // If a valid, non-placeholder direct or search URL already exists on the offer, use it directly!
   if (
     existingOfferUrl &&
     existingOfferUrl.startsWith('https://') &&
     !existingOfferUrl.includes('.onelink.me') &&
     !existingOfferUrl.includes('/r/BachatRadar') &&
     !existingOfferUrl.includes('/c/BachatRadar') &&
-    !existingOfferUrl.includes('affid=BachatRadar') &&
-    !existingOfferUrl.includes('/search?') &&
-    !existingOfferUrl.includes('/s/?q=') &&
-    !existingOfferUrl.includes('/ps/?q=')
+    !existingOfferUrl.includes('affid=BachatRadar')
   ) {
     return existingOfferUrl;
   }
@@ -499,33 +496,30 @@ export function getDirectStoreBuyUrl(
     }
   }
 
-  // Fallback direct product URL generation for any dynamic catalog item
-  const slug = slugify(productName) || 'item';
-  const hash = hashString(productName);
-  const idNum = 10000 + (hash % 90000);
-  const hexPart = hash.toString(16).padStart(8, '0');
+  // Working deep-search query URL preserving exact product title and unit weight
+  const query = `${productName}${unit ? ' ' + unit : ''}`.trim();
+  const qEnc = encodeURIComponent(query);
 
   switch (platformId) {
     case 'zepto':
-      return `https://www.zeptonow.com/pn/${slug}/pvid/${hexPart}-8e10-410d-8380-60ea8d11c039`;
+      return `https://www.zeptonow.com/search?q=${qEnc}`;
 
     case 'blinkit':
-      return `https://blinkit.com/prn/${slug}/prid/${idNum}`;
+      return `https://blinkit.com/s/?q=${qEnc}`;
 
     case 'bigbasket':
-      return `https://www.bigbasket.com/pd/${1200000 + (hash % 800000)}/${slug}/`;
+      return `https://www.bigbasket.com/ps/?q=${qEnc}`;
 
     case 'amazon':
-      // Return direct Amazon product detail page
-      return `https://www.amazon.in/dp/B0${hexPart.slice(0, 8).toUpperCase()}`;
+      return `https://www.amazon.in/s?k=${qEnc}&i=nowstore`;
 
     case 'instamart':
-      return `https://www.swiggy.com/instamart/item/${slug}`;
+      return `https://www.swiggy.com/instamart/search?query=${qEnc}`;
 
     case 'flipkart':
-      return `https://www.flipkart.com/${slug}/p/itm${hexPart.slice(0, 10)}`;
+      return `https://www.flipkart.com/search?q=${qEnc}&marketplace=GROCERY`;
 
     default:
-      return `https://www.bigbasket.com/pd/${idNum}/${slug}/`;
+      return `https://www.bigbasket.com/ps/?q=${qEnc}`;
   }
 }
