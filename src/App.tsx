@@ -54,6 +54,16 @@ export const App: React.FC = () => {
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState<boolean>(false);
   const [privacyModalTab, setPrivacyModalTab] = useState<'dpdp' | 'affiliate' | 'terms'>('dpdp');
 
+  // Check URL query param or hash for executive-portal trigger
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('action') === 'executive-portal' || window.location.hash === '#executive-portal') {
+        setIsPinModalOpen(true);
+      }
+    } catch (e) {}
+  }, []);
+
   // Auto-detect live GPS location on first visit if not explicitly set
   useEffect(() => {
     const savedCityId = localStorage.getItem('bachatradar_selected_city');
@@ -544,6 +554,7 @@ export const App: React.FC = () => {
                 <li><button onClick={() => handleOpenPrivacyPolicy('affiliate')} className="hover:text-white transition-colors text-left">Affiliate & Pricing Disclosure</button></li>
                 <li><button onClick={() => setIsLocationModalOpen(true)} className="hover:text-white transition-colors text-left">Darkstore City Coverage</button></li>
                 <li><button onClick={handleShareApp} className="hover:text-emerald-400 transition-colors text-left">Share with Neighbors</button></li>
+                <li><a href="./founder/gopagani-arun/" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-300 transition-colors text-left flex items-center gap-1 font-medium text-slate-300"><span>👤 Founder Profile</span></a></li>
                 <li><button onClick={() => setIsPinModalOpen(true)} className="hover:text-slate-300 transition-colors text-left">Executive Management</button></li>
                 <li><span className="text-emerald-400 font-medium">Balkampet 500016 Darkstore</span></li>
               </ul>
@@ -553,7 +564,7 @@ export const App: React.FC = () => {
           {/* Copyright & Disclaimer */}
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
             <div>
-              © 2026 NestBasket. Founded by <span className="text-slate-300 font-bold">Gopagani Arun</span> (Founder & CEO). Blinkit, Zepto, Swiggy Instamart, BigBasket, and Flipkart are trademarks of their respective owners.
+              © 2026 NestBasket. Founded by <a href="./founder/gopagani-arun/" target="_blank" rel="noopener noreferrer" className="text-slate-200 hover:text-emerald-400 underline font-bold">Gopagani Arun</a> (Founder & CEO). Blinkit, Zepto, Swiggy Instamart, BigBasket, and Flipkart are trademarks of their respective owners.
             </div>
             <div className="font-medium text-emerald-400 shrink-0">
               Proudly Made for Indian Households 🇮🇳
