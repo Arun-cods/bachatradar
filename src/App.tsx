@@ -12,6 +12,7 @@ import { FounderAdminHub } from './components/FounderAdminHub';
 import { AuthModal } from './components/AuthModal';
 import { FounderPinModal } from './components/FounderPinModal';
 import { DailyFlashDeals } from './components/DailyFlashDeals';
+import { BlinkitHeroPromo } from './components/BlinkitHeroPromo';
 import { HowItWorks } from './components/HowItWorks';
 import { PrivacyPolicyModal } from './components/PrivacyPolicyModal';
 import { DpdpConsentBanner } from './components/DpdpConsentBanner';
@@ -431,6 +432,14 @@ export const App: React.FC = () => {
       {/* Main Content */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-6 w-full max-w-full overflow-x-hidden">
         
+        {/* Blinkit Homepage Hero Banner, 3 Feature Promo Cards & 20 Category Grid */}
+        <BlinkitHeroPromo
+          onSelectCategory={(cat, q) => {
+            setHomeCategory(cat);
+            setHomeSearchQuery(q || '');
+          }}
+        />
+
         {/* Live Surge & Platform Fee Radar (Compact) */}
         <SurgeFeeRadar city={selectedCity} />
 
