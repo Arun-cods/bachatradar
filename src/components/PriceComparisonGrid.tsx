@@ -42,7 +42,8 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
   const [selectedWeightFilter, setSelectedWeightFilter] = useState<'all' | 'grams' | 'half-kg' | '1kg-plus' | 'packs'>('all');
   const [onlyEssentials, setOnlyEssentials] = useState<boolean>(false);
   const [sortBy, setSortBy] = useState<'savings' | 'price-asc' | 'price-desc'>('savings');
-  const [mobileLayout, setMobileLayout] = useState<'single' | 'double' | 'scroll'>('scroll');
+  type LayoutMode = '1' | '2' | '3' | '4' | 'scroll';
+  const [layoutMode, setLayoutMode] = useState<LayoutMode>('2');
 
   React.useEffect(() => {
     if (externalCategory !== undefined && externalCategory !== selectedCategory) {
@@ -67,6 +68,32 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
     'Amul Milk', 'Tomatoes 500g', 'Onions 1kg', 'Atta 10kg', 'Toor Dal 500g',
     'Butter 100g', 'Sunflower Oil', 'Eggs 12s', 'Maggi 70g', 'Surf Excel 1kg'
   ];
+
+  const ROTATING_SEARCH_ITEMS = [
+    'butter',
+    'milk',
+    'atta',
+    'paneer',
+    'eggs',
+    'maggi',
+    'tomatoes',
+    'curd',
+    'bread',
+    'surf excel',
+    'toor dal',
+    'ghee',
+    'chips',
+  ];
+  const [placeholderIndex, setPlaceholderIndex] = useState(0);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setPlaceholderIndex((prev) => (prev + 1) % ROTATING_SEARCH_ITEMS.length);
+    }, 2400);
+    return () => clearInterval(timer);
+  }, []);
+
+  const currentPlaceholder = `Search "${ROTATING_SEARCH_ITEMS[placeholderIndex]}" (e.g. Milk, Eggs, Atta, Tomatoes...)`;
 
   // Query the Master Catalog Engine across all 24,580 SKUs
   const catalogResponse = useMemo(() => {
@@ -159,7 +186,7 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
               type="text"
               value={searchQuery}
               onChange={(e) => handleSearchChange(e.target.value)}
-              placeholder="Search products: Milk, Eggs, Atta, Tomatoes, Butter, Maggi, Surf Excel..."
+              placeholder={currentPlaceholder}
               className="w-full pl-10 pr-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all placeholder:text-slate-400 text-slate-900 font-medium"
             />
             {searchQuery && (
@@ -353,40 +380,62 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
               </button>
             </div>
 
-            {/* Layout Toggle: Scroll in 1 Line vs Full Section vs 2 in 1 Line */}
+            {/* Layout Toggle: 1 in 1 Line, 2 in 1 Line, 3 in 1 Line, 4 in 1 Line, Scrolling */}
             <div className="flex items-center bg-slate-100 rounded-xl p-0.5 text-[11px] font-bold shrink-0">
               <button
                 type="button"
-                onClick={() => setMobileLayout('scroll')}
-                className={`px-2.5 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
-                  mobileLayout === 'scroll' ? 'bg-white text-emerald-700 shadow-sm font-black' : 'text-slate-600 hover:text-slate-900'
+                onClick={() => setLayoutMode('1')}
+                className={`px-2 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
+                  layoutMode === '1' ? 'bg-white text-emerald-700 shadow-xs font-black' : 'text-slate-600 hover:text-slate-900'
                 }`}
-                title="Horizontal Scroll: Multiple items in 1 line"
+                title="1 in 1 Line: Full width items"
               >
-                <MoveHorizontal className="w-3.5 h-3.5 text-emerald-600" />
-                <span>Scroll (1 Line)</span>
+                <List className="w-3.5 h-3.5 text-emerald-600" />
+                <span>1 in 1 Line</span>
               </button>
               <button
                 type="button"
-                onClick={() => setMobileLayout('double')}
-                className={`px-2.5 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
-                  mobileLayout === 'double' ? 'bg-white text-emerald-700 shadow-sm font-black' : 'text-slate-600 hover:text-slate-900'
+                onClick={() => setLayoutMode('2')}
+                className={`px-2 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
+                  layoutMode === '2' ? 'bg-white text-emerald-700 shadow-xs font-black' : 'text-slate-600 hover:text-slate-900'
                 }`}
-                title="2 in 1 Line"
+                title="2 in 1 Line: 2 items per row"
               >
-                <LayoutGrid className="w-3.5 h-3.5" />
+                <LayoutGrid className="w-3.5 h-3.5 text-emerald-600" />
                 <span>2 in 1 Line</span>
               </button>
               <button
                 type="button"
-                onClick={() => setMobileLayout('single')}
-                className={`px-2.5 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
-                  mobileLayout === 'single' ? 'bg-white text-emerald-700 shadow-sm font-black' : 'text-slate-600 hover:text-slate-900'
+                onClick={() => setLayoutMode('3')}
+                className={`px-2 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
+                  layoutMode === '3' ? 'bg-white text-emerald-700 shadow-xs font-black' : 'text-slate-600 hover:text-slate-900'
                 }`}
-                title="1 Full Section per product"
+                title="3 in 1 Line: 3 items per row"
               >
-                <List className="w-3.5 h-3.5" />
-                <span>Full Section</span>
+                <Layers className="w-3.5 h-3.5 text-emerald-600" />
+                <span>3 in 1 Line</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setLayoutMode('4')}
+                className={`px-2 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
+                  layoutMode === '4' ? 'bg-white text-emerald-700 shadow-xs font-black' : 'text-slate-600 hover:text-slate-900'
+                }`}
+                title="4 in 1 Line: 4 items per row"
+              >
+                <SlidersHorizontal className="w-3.5 h-3.5 text-emerald-600" />
+                <span>4 in 1 Line</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setLayoutMode('scroll')}
+                className={`px-2 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
+                  layoutMode === 'scroll' ? 'bg-white text-emerald-700 shadow-xs font-black' : 'text-slate-600 hover:text-slate-900'
+                }`}
+                title="Scrolling: Horizontal ribbon"
+              >
+                <MoveHorizontal className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Scrolling</span>
               </button>
             </div>
           </div>
@@ -396,24 +445,31 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
 
       {/* 24,580 Multi-Store Products Grid */}
       <div className={
-        mobileLayout === 'scroll'
-          ? 'flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 overflow-x-auto sm:overflow-x-visible scrollbar-none pb-4 sm:pb-0 pt-1 w-full max-w-full snap-x'
-          : mobileLayout === 'double'
-          ? 'grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-6 w-full max-w-full'
-          : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full max-w-full'
+        layoutMode === 'scroll'
+          ? 'flex gap-3 sm:gap-4 overflow-x-auto scrollbar-none pb-4 pt-1 w-full max-w-full snap-x'
+          : layoutMode === '1'
+          ? 'grid grid-cols-1 gap-4 sm:gap-6 w-full max-w-full'
+          : layoutMode === '2'
+          ? 'grid grid-cols-2 gap-2.5 sm:gap-4 lg:gap-6 w-full max-w-full'
+          : layoutMode === '3'
+          ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 w-full max-w-full'
+          : 'grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-3.5 lg:gap-4 w-full max-w-full'
       }>
         {displayedProducts.map((product) => {
           const stats = getProductStats(product);
           const isAddedToCart = cartProductIds.has(product.id);
           const itemQuantity = cartQuantities ? (cartQuantities[product.id] || 0) : (isAddedToCart ? 1 : 0);
+          const isCompact = layoutMode === '2' || layoutMode === '4';
 
           return (
             <div
               key={product.id}
               className={
-                mobileLayout === 'scroll'
-                  ? 'w-[84vw] max-w-[340px] shrink-0 snap-start sm:w-auto sm:max-w-none bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between hover:border-slate-300'
-                  : 'bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between hover:border-slate-300 w-full max-w-full'
+                layoutMode === 'scroll'
+                  ? 'w-[84vw] max-w-[340px] shrink-0 snap-start bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between hover:border-slate-300'
+                  : layoutMode === '1'
+                  ? 'bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between hover:border-slate-300 w-full max-w-full'
+                  : 'bg-white rounded-2xl sm:rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between hover:border-slate-300 w-full max-w-full'
               }
             >
               {/* Product Header & Image */}
@@ -429,14 +485,14 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
                   </div>
                 )}
 
-                <div className={mobileLayout === 'double' ? 'p-3 sm:p-5' : 'p-4 sm:p-5'}>
-                  <div className={mobileLayout === 'double' ? 'flex flex-col sm:flex-row gap-2 sm:gap-4 items-start' : 'flex gap-4 items-start'}>
+                <div className={isCompact ? 'p-3 sm:p-5' : 'p-4 sm:p-5'}>
+                  <div className={isCompact ? 'flex flex-col sm:flex-row gap-2 sm:gap-4 items-start' : 'flex gap-4 items-start'}>
                     <img
                       src={product.imageUrl}
                       alt={product.name}
                       className={
-                        mobileLayout === 'double'
-                          ? 'w-full h-24 sm:w-24 sm:h-24 object-cover rounded-xl border border-slate-100 shrink-0 bg-slate-50'
+                        isCompact
+                          ? 'w-full h-24 sm:w-24 sm:h-24 object-contain sm:object-cover rounded-xl border border-slate-100 shrink-0 bg-slate-50'
                           : 'w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-2xl border border-slate-100 shrink-0 bg-slate-50'
                       }
                       loading="lazy"
@@ -530,7 +586,7 @@ export const PriceComparisonGrid: React.FC<PriceComparisonGridProps> = ({
               </div>
 
               {/* Action Buttons: External Buy + Smart Basket */}
-              <div className="p-4 sm:p-5 bg-slate-50/70 border-t border-slate-100 flex items-center gap-2">
+              <div className={`p-3 sm:p-5 bg-slate-50/70 border-t border-slate-100 flex ${isCompact ? 'flex-col sm:flex-row' : 'flex-row'} items-stretch sm:items-center gap-2`}>
                 {stats && stats.lowestOffer && (
                   <a
                     href={stats.lowestOffer.affiliateUrl || getDirectStoreBuyUrl(stats.lowestOffer.platform, product.name)}

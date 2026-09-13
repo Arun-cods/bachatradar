@@ -405,6 +405,8 @@ export const App: React.FC = () => {
         onOpenAuth={handleOpenAuth}
         onLogout={handleLogout}
         onOpenHelp={() => setIsHelpModalOpen(true)}
+        searchQuery={homeSearchQuery}
+        onSearchChange={(q) => setHomeSearchQuery(q)}
       />
 
       {/* Real-Time Rate Update Toast Notification */}
