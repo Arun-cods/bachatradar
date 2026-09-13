@@ -75,7 +75,7 @@ export const AppSplash: React.FC<AppSplashProps> = ({
       {/* Top Brand Header */}
       <div className="w-full flex justify-between items-center max-w-sm mx-auto pt-2">
         <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-          BachatRadar OS 2.0
+          OneBasket OS 2.0
         </span>
         <span className="text-[11px] font-mono font-bold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded-full border border-emerald-800/50">
           Live Sync
@@ -87,23 +87,23 @@ export const AppSplash: React.FC<AppSplashProps> = ({
         {/* Animated 3D Logo */}
         <div className="relative mb-5">
           <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-br from-emerald-400 via-emerald-600 to-teal-800 flex items-center justify-center text-white text-4xl sm:text-5xl font-black shadow-2xl shadow-emerald-500/40 border border-emerald-300/50 animate-pulse">
-            ₹
+            🛒
           </div>
           <div className="absolute -inset-2 rounded-[2rem] bg-emerald-500/20 blur-lg -z-10 animate-ping opacity-60" />
         </div>
 
         {/* Brand Name */}
         <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-white flex items-center justify-center gap-1.5">
-          <span>Bachat</span>
+          <span>One</span>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
-            Radar
+            Basket
           </span>
         </h1>
         <p className="text-emerald-400 text-xs font-bold mt-1 tracking-wider uppercase">
-          बचत रडार • 100% Free Public Utility
+          ONE BASKET • ALL-IN-ONE SHOPPING
         </p>
         <p className="text-slate-400 text-xs mt-2 font-medium px-4">
-          India's Real-Time Quick-Commerce Price Comparison Engine
+          India's All-In-One Quick-Commerce Shopping & Price Comparison Engine
         </p>
 
         {/* 100% Progress Bar with Animated Percentage Counter */}

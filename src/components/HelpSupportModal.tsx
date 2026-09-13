@@ -412,7 +412,7 @@ export const HelpSupportModal: React.FC<HelpSupportModalProps> = ({
 
               <div className="text-[11px] text-slate-400 text-center flex items-center justify-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                <span>Reviewed directly by Gopagani Arun (Founder & CEO, BachatRadar)</span>
+                <span>Reviewed directly by Gopagani Arun (Founder & CEO, OneBasket)</span>
               </div>
             </form>
           )}

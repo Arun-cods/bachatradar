@@ -44,19 +44,19 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Logo & Brand */}
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 text-xl font-black tracking-wider">
-              ₹
+              🛒
             </div>
             <div>
               <div className="flex items-center gap-1.5">
                 <span className="font-extrabold text-xl text-slate-900 tracking-tight">
-                  Bachat<span className="text-emerald-600">Radar</span>
+                  One<span className="text-emerald-600">Basket</span>
                 </span>
                 <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-emerald-100 text-emerald-800 rounded-full border border-emerald-300">
-                  LIVE INDIA
+                  ALL-IN-ONE
                 </span>
               </div>
               <p className="text-[11px] text-slate-500 hidden sm:block font-medium">
-                Blinkit vs Zepto vs Instamart vs BB Now
+                All Stores in One Basket: Blinkit • Zepto • Instamart • BigBasket
               </p>
             </div>
           </div>
