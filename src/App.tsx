@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { AppSplash } from './components/AppSplash';
+import { NestBasketLogo } from './components/NestBasketLogo';
 import { SavingsTicker } from './components/SavingsTicker';
 import { SurgeFeeRadar } from './components/SurgeFeeRadar';
 import { PriceComparisonGrid } from './components/PriceComparisonGrid';
@@ -459,9 +460,7 @@ export const App: React.FC = () => {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-slate-800">
             <div>
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center text-slate-950 font-black">
-                  🛒
-                </div>
+                <NestBasketLogo size="sm" />
                 <span className="font-extrabold text-lg text-white">NestBasket India</span>
               </div>
               <p className="text-xs text-slate-400 mt-1 max-w-md">
