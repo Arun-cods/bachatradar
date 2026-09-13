@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 );
 
 try {
-  localStorage.removeItem('bachatradar_google_accounts');
+  localStorage.removeItem('nestbasket_google_accounts');
 } catch (e) {}
 
 // Force update Service Worker to ensure fresh build is loaded

@@ -35,7 +35,7 @@ export const FounderPinModal: React.FC<FounderPinModalProps> = ({
   const [cameraActive, setCameraActive] = useState(false);
   const [cameraError, setCameraError] = useState('');
   const [capturedPhoto, setCapturedPhoto] = useState<string | null>(() => {
-    return localStorage.getItem('bachatradar_founder_biometric_photo') || null;
+    return localStorage.getItem('nestbasket_founder_biometric_photo') || null;
   });
 
   // Credentials State
@@ -132,8 +132,8 @@ export const FounderPinModal: React.FC<FounderPinModalProps> = ({
       if (snapshot) {
         setCapturedPhoto(snapshot);
         try {
-          localStorage.setItem('bachatradar_founder_biometric_photo', snapshot);
-          window.dispatchEvent(new CustomEvent('bachatradar_founder_photo_updated', { detail: snapshot }));
+          localStorage.setItem('nestbasket_founder_biometric_photo', snapshot);
+          window.dispatchEvent(new CustomEvent('nestbasket_founder_photo_updated', { detail: snapshot }));
         } catch (e) {
           console.warn('LocalStorage photo save error:', e);
         }
@@ -192,7 +192,7 @@ export const FounderPinModal: React.FC<FounderPinModalProps> = ({
         'SUCCESS',
         'Founder'
       );
-      localStorage.setItem('bachatradar_founder_unlocked', 'true');
+      localStorage.setItem('nestbasket_founder_unlocked', 'true');
       onSuccess();
       handleClose();
     }, 600);

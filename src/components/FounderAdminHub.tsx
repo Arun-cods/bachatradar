@@ -27,7 +27,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
   const [activeTab, setActiveTab] = useState<'payouts' | 'metrics' | 'members' | 'problems' | 'billing' | 'security' | 'scrapers' | 'acquisition'>('payouts');
   const [commissionRate, setCommissionRate] = useState<number>(stats.affiliateCommissionRate || 4.5);
   const [isScrapingRunning, setIsScrapingRunning] = useState<boolean>(false);
-  const [smsGatewayKey, setSmsGatewayKey] = useState(() => localStorage.getItem('bachatradar_sms_key') || '');
+  const [smsGatewayKey, setSmsGatewayKey] = useState(() => localStorage.getItem('nestbasket_sms_key') || '');
   const [smsGatewaySaved, setSmsGatewaySaved] = useState(false);
   const [memberSearchQuery, setMemberSearchQuery] = useState('');
   const [memberCityFilter, setMemberCityFilter] = useState('all');
@@ -38,7 +38,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
   // Customer Problems & Help Desk State (All customer reported issues go directly to Owner desk)
   const [customerIssues, setCustomerIssues] = useState<CustomerProblemTicket[]>(() => {
     try {
-      const stored = localStorage.getItem('bachatradar_customer_issues');
+      const stored = localStorage.getItem('nestbasket_customer_issues');
       if (stored) {
         const parsed = JSON.parse(stored);
         if (Array.isArray(parsed) && parsed.length > 0) return parsed;
@@ -53,7 +53,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
 
   // Founder Biometric Photo (Gopagani Arun Only)
   const [founderPhoto, setFounderPhoto] = useState<string | null>(() => {
-    return localStorage.getItem('bachatradar_founder_biometric_photo') || null;
+    return localStorage.getItem('nestbasket_founder_biometric_photo') || null;
   });
 
   // Listen for real-time customer problem submissions & photo updates
@@ -68,11 +68,11 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
         setFounderPhoto(e.detail);
       }
     };
-    window.addEventListener('bachatradar_new_problem', handleNewProblem);
-    window.addEventListener('bachatradar_founder_photo_updated', handlePhotoUpdated);
+    window.addEventListener('nestbasket_new_problem', handleNewProblem);
+    window.addEventListener('nestbasket_founder_photo_updated', handlePhotoUpdated);
     return () => {
-      window.removeEventListener('bachatradar_new_problem', handleNewProblem);
-      window.removeEventListener('bachatradar_founder_photo_updated', handlePhotoUpdated);
+      window.removeEventListener('nestbasket_new_problem', handleNewProblem);
+      window.removeEventListener('nestbasket_founder_photo_updated', handlePhotoUpdated);
     };
   }, []);
 
@@ -90,7 +90,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
         return t;
       });
       try {
-        localStorage.setItem('bachatradar_customer_issues', JSON.stringify(updated));
+        localStorage.setItem('nestbasket_customer_issues', JSON.stringify(updated));
       } catch (err) {}
       return updated;
     });
@@ -105,7 +105,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
         return t;
       });
       try {
-        localStorage.setItem('bachatradar_customer_issues', JSON.stringify(updated));
+        localStorage.setItem('nestbasket_customer_issues', JSON.stringify(updated));
       } catch (err) {}
       return updated;
     });
@@ -117,7 +117,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
     setCustomerIssues((prev) => {
       const updated = prev.filter((t) => t.id !== ticketId);
       try {
-        localStorage.setItem('bachatradar_customer_issues', JSON.stringify(updated));
+        localStorage.setItem('nestbasket_customer_issues', JSON.stringify(updated));
       } catch (err) {}
       return updated;
     });
@@ -126,7 +126,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
   // Load registered shoppers from persistent localStorage
   const [registeredMembers, setRegisteredMembers] = useState<any[]>(() => {
     try {
-      const stored = localStorage.getItem('bachatradar_registered_accounts');
+      const stored = localStorage.getItem('nestbasket_registered_accounts');
       if (stored) {
         const parsed = JSON.parse(stored);
         if (Array.isArray(parsed) && parsed.length > 0) return parsed;
@@ -184,7 +184,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
   // Load login audit stream from persistent localStorage
   const [loginAudits, setLoginAudits] = useState<any[]>(() => {
     try {
-      const stored = localStorage.getItem('bachatradar_login_audit');
+      const stored = localStorage.getItem('nestbasket_login_audit');
       if (stored) {
         const parsed = JSON.parse(stored);
         if (Array.isArray(parsed) && parsed.length > 0) return parsed;
@@ -232,12 +232,12 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
 
   const refreshMembersData = () => {
     try {
-      const mem = localStorage.getItem('bachatradar_registered_accounts');
+      const mem = localStorage.getItem('nestbasket_registered_accounts');
       if (mem) {
         const parsed = JSON.parse(mem);
         if (Array.isArray(parsed) && parsed.length > 0) setRegisteredMembers(parsed);
       }
-      const logs = localStorage.getItem('bachatradar_login_audit');
+      const logs = localStorage.getItem('nestbasket_login_audit');
       if (logs) {
         const parsed = JSON.parse(logs);
         if (Array.isArray(parsed) && parsed.length > 0) setLoginAudits(parsed);
@@ -249,7 +249,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
     setTestSmsLoading(true);
     setTestSmsStatus(null);
     try {
-      const key = localStorage.getItem('bachatradar_sms_key') || smsGatewayKey;
+      const key = localStorage.getItem('nestbasket_sms_key') || smsGatewayKey;
       const res = await fetch('/api/send-sms', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -297,14 +297,14 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
 
   // Merchant Gateway Configuration & Unlock State
   const [gatewayMode, setGatewayMode] = useState<'sandbox' | 'live'>(() => {
-    return (localStorage.getItem('bachatradar_gateway_mode') as 'sandbox' | 'live') || 'sandbox';
+    return (localStorage.getItem('nestbasket_gateway_mode') as 'sandbox' | 'live') || 'sandbox';
   });
   const [gatewayProvider, setGatewayProvider] = useState<'razorpay' | 'cashfree' | 'stripe'>(() => {
-    return (localStorage.getItem('bachatradar_gateway_provider') as any) || 'razorpay';
+    return (localStorage.getItem('nestbasket_gateway_provider') as any) || 'razorpay';
   });
-  const [razorpayKeyId, setRazorpayKeyId] = useState(() => localStorage.getItem('bachatradar_rzp_key') || 'rzp_live_9014218406_arun');
-  const [razorpayKeySecret, setRazorpayKeySecret] = useState(() => localStorage.getItem('bachatradar_rzp_secret') || 'sec_live_9544_baroda');
-  const [webhookSecret, setWebhookSecret] = useState(() => localStorage.getItem('bachatradar_wh_secret') || 'whsec_baroda_58478100015868');
+  const [razorpayKeyId, setRazorpayKeyId] = useState(() => localStorage.getItem('nestbasket_rzp_key') || 'rzp_live_9014218406_arun');
+  const [razorpayKeySecret, setRazorpayKeySecret] = useState(() => localStorage.getItem('nestbasket_rzp_secret') || 'sec_live_9544_baroda');
+  const [webhookSecret, setWebhookSecret] = useState(() => localStorage.getItem('nestbasket_wh_secret') || 'whsec_baroda_58478100015868');
   const [showGatewayModal, setShowGatewayModal] = useState(false);
   const [gatewayPinInput, setGatewayPinInput] = useState('9544');
   const [gatewayPinError, setGatewayPinError] = useState('');
@@ -488,9 +488,9 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
     setTimeout(() => {
       setIsActivatingGateway(false);
       setGatewayMode('live');
-      localStorage.setItem('bachatradar_gateway_mode', 'live');
-      localStorage.setItem('bachatradar_gateway_provider', 'razorpay');
-      localStorage.setItem('bachatradar_rzp_key', razorpayKeyId);
+      localStorage.setItem('nestbasket_gateway_mode', 'live');
+      localStorage.setItem('nestbasket_gateway_provider', 'razorpay');
+      localStorage.setItem('nestbasket_rzp_key', razorpayKeyId);
       setGatewaySuccessMsg('✓ Live Razorpay Merchant Gateway unlocked! Direct settlements active to Bank of Baroda (58478100015868).');
       setTimeout(() => setGatewaySuccessMsg(''), 4500);
     }, 500);
@@ -503,9 +503,9 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
       setTimeout(() => {
         setIsActivatingGateway(false);
         setGatewayMode('live');
-        localStorage.setItem('bachatradar_gateway_mode', 'live');
-        localStorage.setItem('bachatradar_gateway_provider', gatewayProvider);
-        localStorage.setItem('bachatradar_rzp_key', razorpayKeyId);
+        localStorage.setItem('nestbasket_gateway_mode', 'live');
+        localStorage.setItem('nestbasket_gateway_provider', gatewayProvider);
+        localStorage.setItem('nestbasket_rzp_key', razorpayKeyId);
         setGatewayPinError('');
         setGatewaySuccessMsg('✓ Founder PIN Verified! Live Merchant Gateway unlocked & linked to Bank of Baroda.');
         setTimeout(() => {
@@ -524,10 +524,10 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
     setTimeout(() => {
       setIsActivatingGateway(false);
       setGatewayMode('live');
-      localStorage.setItem('bachatradar_gateway_mode', 'live');
-      localStorage.setItem('bachatradar_gateway_provider', gatewayProvider);
-      localStorage.setItem('bachatradar_rzp_key', razorpayKeyId);
-      localStorage.setItem('bachatradar_rzp_secret', razorpayKeySecret);
+      localStorage.setItem('nestbasket_gateway_mode', 'live');
+      localStorage.setItem('nestbasket_gateway_provider', gatewayProvider);
+      localStorage.setItem('nestbasket_rzp_key', razorpayKeyId);
+      localStorage.setItem('nestbasket_rzp_secret', razorpayKeySecret);
       setGatewaySuccessMsg('✓ Live API credentials verified & saved! Gateway set to Live Production.');
       setTimeout(() => {
         setGatewaySuccessMsg('');
@@ -946,7 +946,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
                           type="button"
                           onClick={() => {
                             setGatewayMode('sandbox');
-                            localStorage.setItem('bachatradar_gateway_mode', 'sandbox');
+                            localStorage.setItem('nestbasket_gateway_mode', 'sandbox');
                           }}
                           className="py-1.5 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 text-xs font-semibold"
                         >
@@ -1524,7 +1524,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
                     <button
                       type="button"
                       onClick={() => {
-                        localStorage.setItem('bachatradar_sms_key', smsGatewayKey);
+                        localStorage.setItem('nestbasket_sms_key', smsGatewayKey);
                         setSmsGatewaySaved(true);
                         setTimeout(() => setSmsGatewaySaved(false), 2500);
                       }}
@@ -1620,7 +1620,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
                       };
                       setCustomerIssues((prev) => [sampleTicket, ...prev]);
                       try {
-                        localStorage.setItem('bachatradar_customer_issues', JSON.stringify([sampleTicket, ...customerIssues]));
+                        localStorage.setItem('nestbasket_customer_issues', JSON.stringify([sampleTicket, ...customerIssues]));
                       } catch (e) {}
                     }}
                     className="px-3 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-black text-xs flex items-center gap-1.5 transition-colors shadow-xs cursor-pointer"
@@ -2460,7 +2460,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
                 type="button"
                 onClick={() => {
                   setGatewayMode('sandbox');
-                  localStorage.setItem('bachatradar_gateway_mode', 'sandbox');
+                  localStorage.setItem('nestbasket_gateway_mode', 'sandbox');
                 }}
                 className={`py-2 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all ${
                   gatewayMode === 'sandbox'
@@ -2476,7 +2476,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
                 type="button"
                 onClick={() => {
                   setGatewayMode('live');
-                  localStorage.setItem('bachatradar_gateway_mode', 'live');
+                  localStorage.setItem('nestbasket_gateway_mode', 'live');
                 }}
                 className={`py-2 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all ${
                   gatewayMode === 'live'

@@ -10,7 +10,7 @@ export const DpdpConsentBanner: React.FC<DpdpConsentBannerProps> = ({ onOpenPriv
 
   useEffect(() => {
     try {
-      const saved = localStorage.getItem('bachatradar_dpdp_consent');
+      const saved = localStorage.getItem('nestbasket_dpdp_consent');
       if (!saved) {
         // Show after small delay so it doesn't pop up abruptly
         const timer = setTimeout(() => setIsVisible(true), 800);
@@ -26,7 +26,7 @@ export const DpdpConsentBanner: React.FC<DpdpConsentBannerProps> = ({ onOpenPriv
       status: 'PERMISSION_GRANTED',
       dpdpActVersion: '2023',
     };
-    localStorage.setItem('bachatradar_dpdp_consent', JSON.stringify(consentPayload));
+    localStorage.setItem('nestbasket_dpdp_consent', JSON.stringify(consentPayload));
     setIsVisible(false);
   };
 

@@ -142,13 +142,13 @@ export const HelpSupportModal: React.FC<HelpSupportModalProps> = ({
     };
 
     try {
-      const stored = localStorage.getItem('bachatradar_customer_issues');
+      const stored = localStorage.getItem('nestbasket_customer_issues');
       const existing: CustomerProblemTicket[] = stored ? JSON.parse(stored) : INITIAL_CUSTOMER_ISSUES;
       const updated = [newTicket, ...existing];
-      localStorage.setItem('bachatradar_customer_issues', JSON.stringify(updated));
+      localStorage.setItem('nestbasket_customer_issues', JSON.stringify(updated));
 
       // Dispatch global event so Owner section updates in real time
-      window.dispatchEvent(new CustomEvent('bachatradar_new_problem', { detail: newTicket }));
+      window.dispatchEvent(new CustomEvent('nestbasket_new_problem', { detail: newTicket }));
     } catch (err) {
       console.warn('Failed to save issue locally:', err);
     }

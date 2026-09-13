@@ -26,7 +26,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
 
   useEffect(() => {
     try {
-      const saved = localStorage.getItem('bachatradar_dpdp_consent');
+      const saved = localStorage.getItem('nestbasket_dpdp_consent');
       if (saved) {
         const parsed = JSON.parse(saved);
         if (parsed?.agreed) {
@@ -46,7 +46,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
       status: 'PERMISSION_GRANTED',
       dpdpActVersion: '2023',
     };
-    localStorage.setItem('bachatradar_dpdp_consent', JSON.stringify(consentPayload));
+    localStorage.setItem('nestbasket_dpdp_consent', JSON.stringify(consentPayload));
     setHasConsented(true);
     setConsentDate(new Date().toLocaleDateString('en-IN'));
     onConsentGranted?.();
@@ -54,7 +54,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
   };
 
   const handleRevokeConsent = () => {
-    localStorage.removeItem('bachatradar_dpdp_consent');
+    localStorage.removeItem('nestbasket_dpdp_consent');
     setHasConsented(false);
     setConsentDate(null);
   };

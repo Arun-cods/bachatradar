@@ -24,7 +24,7 @@ import { Sparkles, ArrowRight, MapPin, Search, ShoppingBag, Share2, HelpCircle, 
 
 export const App: React.FC = () => {
   const [selectedCity, setSelectedCity] = useState<CityOption>(() => {
-    const saved = localStorage.getItem('bachatradar_selected_city');
+    const saved = localStorage.getItem('nestbasket_selected_city');
     if (saved) {
       const found = CITIES.find((c) => c.id === saved);
       if (found) return found;
@@ -32,7 +32,7 @@ export const App: React.FC = () => {
     return CITIES[0]; // Hyderabad by default!
   });
   const [selectedArea, setSelectedArea] = useState<string>(() => {
-    return localStorage.getItem('bachatradar_selected_area') || CITIES[0].popularAreas[0];
+    return localStorage.getItem('nestbasket_selected_area') || CITIES[0].popularAreas[0];
   });
   const [isLocationModalOpen, setIsLocationModalOpen] = useState(false);
   const [realtimeUpdateToast, setRealtimeUpdateToast] = useState<string | null>(null);
@@ -66,7 +66,7 @@ export const App: React.FC = () => {
 
   // Auto-detect live GPS location on first visit if not explicitly set
   useEffect(() => {
-    const savedCityId = localStorage.getItem('bachatradar_selected_city');
+    const savedCityId = localStorage.getItem('nestbasket_selected_city');
     if (!savedCityId && navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (pos) => {
@@ -90,8 +90,8 @@ export const App: React.FC = () => {
           setSelectedCity(closest);
           const area = closest.popularAreas[0];
           setSelectedArea(area);
-          localStorage.setItem('bachatradar_selected_city', closest.id);
-          localStorage.setItem('bachatradar_selected_area', area);
+          localStorage.setItem('nestbasket_selected_city', closest.id);
+          localStorage.setItem('nestbasket_selected_area', area);
           setCityToast(`📍 Live Location Auto-Detected: ${closest.name} (${area})`);
           setTimeout(() => setCityToast(null), 4000);
         },
@@ -158,7 +158,7 @@ export const App: React.FC = () => {
   
   // User profile state: remembers logged-in shoppers & founders
   const [currentUser, setCurrentUser] = useState<UserProfile | null>(() => {
-    const saved = localStorage.getItem('bachatradar_user');
+    const saved = localStorage.getItem('nestbasket_user');
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -180,7 +180,7 @@ export const App: React.FC = () => {
               society: 'Founder & CEO Office (Ameerpet)',
               isFounder: true,
             };
-            localStorage.setItem('bachatradar_user', JSON.stringify(founderProfile));
+            localStorage.setItem('nestbasket_user', JSON.stringify(founderProfile));
             return founderProfile;
           }
           return parsed;
@@ -199,8 +199,8 @@ export const App: React.FC = () => {
     setSelectedCity(city);
     const chosenArea = area || city.popularAreas[0];
     setSelectedArea(chosenArea);
-    localStorage.setItem('bachatradar_selected_city', city.id);
-    localStorage.setItem('bachatradar_selected_area', chosenArea);
+    localStorage.setItem('nestbasket_selected_city', city.id);
+    localStorage.setItem('nestbasket_selected_area', chosenArea);
     
     // Dynamic city pricing variance simulation
     const cityMultipliers: Record<string, number> = {
@@ -268,14 +268,14 @@ export const App: React.FC = () => {
 
   const handleLoginSuccess = (user: UserProfile) => {
     setCurrentUser(user);
-    localStorage.setItem('bachatradar_user', JSON.stringify(user));
+    localStorage.setItem('nestbasket_user', JSON.stringify(user));
     setIsAuthModalOpen(false);
     setAuthModalKey((k) => k + 1);
   };
 
   const handleLogout = () => {
     setCurrentUser(null);
-    localStorage.removeItem('bachatradar_user');
+    localStorage.removeItem('nestbasket_user');
     setIsAuthModalOpen(false);
     setAuthModalKey((k) => k + 1);
   };
@@ -308,7 +308,7 @@ export const App: React.FC = () => {
         lifetimeSavingsRupees: currentUser.lifetimeSavingsRupees + 45,
       };
       setCurrentUser(updatedUser);
-      localStorage.setItem('bachatradar_user', JSON.stringify(updatedUser));
+      localStorage.setItem('nestbasket_user', JSON.stringify(updatedUser));
     }
   };
 
@@ -379,7 +379,7 @@ export const App: React.FC = () => {
       <AppSplash
         currentUser={currentUser}
         onComplete={() => {
-          const savedUser = localStorage.getItem('bachatradar_user');
+          const savedUser = localStorage.getItem('nestbasket_user');
           if (!savedUser && !currentUser) {
             handleOpenAuth();
           }

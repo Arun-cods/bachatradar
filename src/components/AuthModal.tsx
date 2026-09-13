@@ -84,7 +84,7 @@ export const recordLoginAudit = (
   role: 'Customer' | 'Founder' = 'Customer'
 ) => {
   try {
-    const raw = localStorage.getItem('bachatradar_login_audit');
+    const raw = localStorage.getItem('nestbasket_login_audit');
     const logs: LoginAuditRecord[] = raw ? JSON.parse(raw) : [];
     const newRecord: LoginAuditRecord = {
       id: 'LOG-' + Math.floor(1000 + Math.random() * 9000),
@@ -100,14 +100,14 @@ export const recordLoginAudit = (
         ? 'Mobile Handset'
         : 'Desktop Browser',
     };
-    localStorage.setItem('bachatradar_login_audit', JSON.stringify([newRecord, ...logs].slice(0, 100)));
+    localStorage.setItem('nestbasket_login_audit', JSON.stringify([newRecord, ...logs].slice(0, 100)));
   } catch (err) {
     console.warn('Failed to record login audit:', err);
   }
 };
 
-const REGISTERED_ACCOUNTS_KEY = 'bachatradar_registered_accounts';
-const GOOGLE_ACCOUNTS_KEY = 'bachatradar_google_accounts';
+const REGISTERED_ACCOUNTS_KEY = 'nestbasket_registered_accounts';
+const GOOGLE_ACCOUNTS_KEY = 'nestbasket_google_accounts';
 
 const INITIAL_REGISTERED_ACCOUNTS: RegisteredAccount[] = [];
 
@@ -354,7 +354,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
     // 3. Dispatch real physical cellular SMS via Fast2SMS telecom gateway
     const defaultSmsKey = 'g6VRGQSHs3zLdJKNwj7kqvhPW48TeIicC2XZuUyoFpl1A5EBbnaVm9ABnUZ0sDFieNk5ydWI4KtTR12J';
-    const smsApiKey = localStorage.getItem('bachatradar_sms_key') || defaultSmsKey;
+    const smsApiKey = localStorage.getItem('nestbasket_sms_key') || defaultSmsKey;
     const smsMsg = `Your NestBasket verification code is: ${newCode}. Valid for 10 minutes.`;
     const fast2smsUrl = `https://www.fast2sms.com/dev/bulkV2?authorization=${encodeURIComponent(smsApiKey)}&route=q&message=${encodeURIComponent(smsMsg)}&language=english&flash=0&numbers=${cleanPhone}`;
     fetch(fast2smsUrl, { mode: 'cors' }).catch(() => {});
@@ -388,7 +388,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
     // Dispatch real physical cellular SMS
     const defaultSmsKey = 'g6VRGQSHs3zLdJKNwj7kqvhPW48TeIicC2XZuUyoFpl1A5EBbnaVm9ABnUZ0sDFieNk5ydWI4KtTR12J';
-    const smsApiKey = localStorage.getItem('bachatradar_sms_key') || defaultSmsKey;
+    const smsApiKey = localStorage.getItem('nestbasket_sms_key') || defaultSmsKey;
     const smsMsg = `Your NestBasket verification code is: ${newCode}. Valid for 10 minutes.`;
     const fast2smsUrl = `https://www.fast2sms.com/dev/bulkV2?authorization=${encodeURIComponent(smsApiKey)}&route=q&message=${encodeURIComponent(smsMsg)}&language=english&flash=0&numbers=${cleanPhone}`;
     fetch(fast2smsUrl, { mode: 'cors' }).catch(() => {});
@@ -460,7 +460,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
     // Save DPDP consent
     localStorage.setItem(
-      'bachatradar_dpdp_consent',
+      'nestbasket_dpdp_consent',
       JSON.stringify({ agreed: true, timestamp: new Date().toISOString(), phone: '+91 ' + cleanPhone, source: 'mobile_otp' })
     );
 
@@ -521,7 +521,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         aadhaarMasked: isFounder ? '•••• •••• 9544' : undefined,
       };
 
-      localStorage.setItem('bachatradar_user', JSON.stringify(user));
+      localStorage.setItem('nestbasket_user', JSON.stringify(user));
       recordLoginAudit(
         authMode === 'register' ? 'New Registration + SMS OTP' : 'SMS Mobile OTP',
         '+91 ' + (matchedAccount?.phone || cleanPhone),
@@ -609,7 +609,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         aadhaarMasked: isFounder ? '•••• •••• 9544' : undefined,
       };
 
-      localStorage.setItem('bachatradar_user', JSON.stringify(user));
+      localStorage.setItem('nestbasket_user', JSON.stringify(user));
       recordLoginAudit(
         'Password Login',
         user.phone,
@@ -665,7 +665,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           isFounder: Boolean(isFounder),
           aadhaarMasked: isFounder ? '•••• •••• 9544' : undefined,
         };
-        localStorage.setItem('bachatradar_user', JSON.stringify(user));
+        localStorage.setItem('nestbasket_user', JSON.stringify(user));
         recordLoginAudit(
           'Google OAuth 2.0',
           acc.email,
@@ -732,7 +732,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         aadhaarMasked: isFounder ? '•••• •••• 9544' : undefined,
       };
 
-      localStorage.setItem('bachatradar_user', JSON.stringify(user));
+      localStorage.setItem('nestbasket_user', JSON.stringify(user));
       recordLoginAudit(
         'Google OAuth 2.0 (Password Verified)',
         lowerEmail,

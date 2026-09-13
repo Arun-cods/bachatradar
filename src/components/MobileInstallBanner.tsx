@@ -6,7 +6,7 @@ export const MobileInstallBanner: React.FC = () => {
   const [isInstallable, setIsInstallable] = useState(false);
   const [isIos, setIsIos] = useState(false);
   const [isDismissed, setIsDismissed] = useState(() => {
-    return localStorage.getItem('bachatradar_install_dismissed') === 'true';
+    return localStorage.getItem('nestbasket_install_dismissed') === 'true';
   });
   const [isInstalled, setIsInstalled] = useState(false);
   const [showInstallGuide, setShowInstallGuide] = useState(false);
@@ -64,7 +64,7 @@ export const MobileInstallBanner: React.FC = () => {
 
   const handleDismiss = () => {
     setIsDismissed(true);
-    localStorage.setItem('bachatradar_install_dismissed', 'true');
+    localStorage.setItem('nestbasket_install_dismissed', 'true');
   };
 
   return (
