@@ -48,6 +48,7 @@
     -webkit-overflow-scrolling: touch;
     background-color: var(--colors-base-appbase, #F5F8FA);
     color: var(--colors-base-black, #1F1F1F);
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
   
   #root {

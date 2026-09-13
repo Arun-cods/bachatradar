@@ -1,5 +1,5 @@
 {
-  "name": "onebasket",
+  "name": "nestbasket",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -22,5 +22,6 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2",
     "vite": "^6.2.0"
-  }
+  },
+  "description": "NestBasket — India’s #1 Real-Time Quick-Commerce Price Comparison Engine"
 }

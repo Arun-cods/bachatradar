@@ -78,7 +78,7 @@ export const MobileInstallBanner: React.FC = () => {
             </div>
             <div className="min-w-0">
               <div className="font-extrabold text-white flex items-center gap-1.5 truncate">
-                <span className="truncate">Install OneBasket App</span>
+                <span className="truncate">Install NestBasket App</span>
                 <span className="text-[9px] px-1.5 py-0.2 rounded-full bg-emerald-500/30 text-emerald-300 font-bold border border-emerald-400/40 shrink-0">
                   PHYSICAL APP
                 </span>
@@ -129,10 +129,10 @@ export const MobileInstallBanner: React.FC = () => {
                 🛒
               </div>
               <h3 className="text-xl font-black text-slate-900">
-                Install OneBasket App
+                Install NestBasket App
               </h3>
               <p className="text-xs text-slate-500 mt-1 font-medium">
-                Run OneBasket directly on your phone like Zepto, Blinkit & Swiggy!
+                Run NestBasket directly on your phone like Zepto, Blinkit & Swiggy!
               </p>
             </div>
 
@@ -187,7 +187,7 @@ export const MobileInstallBanner: React.FC = () => {
 
               <div className="pt-2 border-t border-slate-200 text-[11px] text-emerald-700 font-bold flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
-                <span>OneBasket will appear on your phone home screen as a physical standalone app!</span>
+                <span>NestBasket will appear on your phone home screen as a physical standalone app!</span>
               </div>
             </div>
 

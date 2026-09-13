@@ -324,18 +324,18 @@ export const App: React.FC = () => {
     setCartItems([]);
   };
 
-  const LIVE_URL = 'https://arungopagani.is-a.dev/onebasket/';
+  const LIVE_URL = 'https://arungopagani.is-a.dev/nestbasket/';
 
   const handleDirectWhatsAppShare = () => {
-    const text = `🛒 *OneBasket — India's #1 All-In-One Quick-Commerce Shopping App!*\n\nEver noticed how Blinkit, Zepto, Swiggy Instamart, and BigBasket charge different prices for the exact same milk, veggies, and atta?\n\nFamilies are saving *₹1,500 to ₹3,500 every month* using OneBasket!\n⚡ All quick-commerce stores in One Basket\n🥦 Avoid surge charges & find secret discounts\n🎉 *100% FREE for all Indian families*\n\nCheck live rates now:\n${LIVE_URL}`;
+    const text = `🛒 *NestBasket — India's #1 All-In-One Quick-Commerce Shopping App!*\n\nEver noticed how Blinkit, Zepto, Swiggy Instamart, and BigBasket charge different prices for the exact same milk, veggies, and atta?\n\nFamilies are saving *₹1,500 to ₹3,500 every month* using NestBasket!\n⚡ All quick-commerce stores in NestBasket\n🥦 Avoid surge charges & find secret discounts\n🎉 *100% FREE for all Indian families*\n\nCheck live rates now:\n${LIVE_URL}`;
     window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   const handleShareApp = () => {
     if (typeof navigator !== 'undefined' && navigator.share) {
       navigator.share({
-        title: 'OneBasket — All-In-One Quick-Commerce Price Comparison',
-        text: 'Compare live rates across Blinkit, Zepto, Swiggy Instamart & BigBasket! Save ₹1,500+ monthly in One Basket:',
+        title: 'NestBasket — All-In-One Quick-Commerce Price Comparison',
+        text: 'Compare live rates across Blinkit, Zepto, Swiggy Instamart & BigBasket! Save ₹1,500+ monthly in NestBasket:',
         url: LIVE_URL,
       }).catch(() => {
         setIsShareModalOpen(true);
@@ -452,7 +452,7 @@ export const App: React.FC = () => {
                 <div className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center text-slate-950 font-black">
                   🛒
                 </div>
-                <span className="font-extrabold text-lg text-white">OneBasket India</span>
+                <span className="font-extrabold text-lg text-white">NestBasket India</span>
               </div>
               <p className="text-xs text-slate-400 mt-1 max-w-md">
                 India's all-in-one quick-commerce shopping app & price comparison engine across Blinkit, Zepto, Swiggy Instamart, BigBasket Now, and Flipkart Minutes.
@@ -470,7 +470,7 @@ export const App: React.FC = () => {
                 onClick={handleShareApp}
                 className="bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 px-3 py-1.5 rounded-lg border border-emerald-500/30 transition-colors cursor-pointer"
               >
-                Share OneBasket
+                Share NestBasket
               </button>
               <button
                 onClick={() => setIsPinModalOpen(true)}
@@ -553,7 +553,7 @@ export const App: React.FC = () => {
           {/* Copyright & Disclaimer */}
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
             <div>
-              © 2026 OneBasket. Founded by <span className="text-slate-300 font-bold">Gopagani Arun</span> (Founder & CEO). Blinkit, Zepto, Swiggy Instamart, BigBasket, and Flipkart are trademarks of their respective owners.
+              © 2026 NestBasket. Founded by <span className="text-slate-300 font-bold">Gopagani Arun</span> (Founder & CEO). Blinkit, Zepto, Swiggy Instamart, BigBasket, and Flipkart are trademarks of their respective owners.
             </div>
             <div className="font-medium text-emerald-400 shrink-0">
               Proudly Made for Indian Households 🇮🇳

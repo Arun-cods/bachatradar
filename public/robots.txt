@@ -1,6 +1,5 @@
-# OneBasket Robots Exclusion Standard
+# NestBasket Robots Exclusion Standard
 User-agent: *
 Allow: /
 
-Sitemap: https://arungopagani.is-a.dev/onebasket/sitemap.xml
-Sitemap: https://arungopagani.is-a.dev/bachatradar/sitemap.xml
+Sitemap: https://arungopagani.is-a.dev/nestbasket/sitemap.xml

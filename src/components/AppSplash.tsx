@@ -75,7 +75,7 @@ export const AppSplash: React.FC<AppSplashProps> = ({
       {/* Top Brand Header */}
       <div className="w-full flex justify-between items-center max-w-sm mx-auto pt-2">
         <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-          OneBasket OS 2.0
+          NestBasket OS 2.0
         </span>
         <span className="text-[11px] font-mono font-bold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded-full border border-emerald-800/50">
           Live Sync

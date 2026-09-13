@@ -33,7 +33,7 @@ export const INITIAL_CUSTOMER_ISSUES: CustomerProblemTicket[] = [
     category: 'Price Mismatch',
     storeAffected: 'Zepto',
     subject: 'Amul Taaza 500ml price difference',
-    description: 'OneBasket listed Zepto price as ₹27, but on Zepto app checkout it was ₹28. Please sync live darkstore prices.',
+    description: 'NestBasket listed Zepto price as ₹27, but on Zepto app checkout it was ₹28. Please sync live darkstore prices.',
     status: 'OPEN',
     priority: 'HIGH',
     ownerNotes: 'Checking Zepto Nallagandla darkstore API endpoint.',
@@ -412,7 +412,7 @@ export const HelpSupportModal: React.FC<HelpSupportModalProps> = ({
 
               <div className="text-[11px] text-slate-400 text-center flex items-center justify-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                <span>Reviewed directly by Gopagani Arun (Founder & CEO, OneBasket)</span>
+                <span>Reviewed directly by Gopagani Arun (Founder & CEO, NestBasket)</span>
               </div>
             </form>
           )}

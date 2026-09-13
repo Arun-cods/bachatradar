@@ -36,7 +36,7 @@ function realSmsGatewayPlugin(): Plugin {
               if (key) {
                 try {
                   let provider = 'Fast2SMS';
-                  const msgText = encodeURIComponent(`Your OneBasket 4-digit verification code is: ${code}. Valid for 10 minutes. Do not share this OTP.`);
+                  const msgText = encodeURIComponent(`Your NestBasket 4-digit verification code is: ${code}. Valid for 10 minutes. Do not share this OTP.`);
                   let apiUrl = `https://www.fast2sms.com/dev/bulkV2?authorization=${encodeURIComponent(key)}&route=q&message=${msgText}&language=english&flash=0&numbers=${cleanPhone}`;
                   if (key.length >= 30 && key.includes('-')) {
                     provider = '2Factor';

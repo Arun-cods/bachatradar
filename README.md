@@ -1,4 +1,4 @@
-# OneBasket (??? ????) ???
+# NestBasket (??? ????) ???
 
 > **India's #1 Real-Time Multi-Store Quick-Commerce Price Aggregator & Grocery Arbitrage Engine**  
 > *100% Free For All Indian Shoppers & Families � Zero Platform Fees � Zero Hidden Commissions*
@@ -12,13 +12,13 @@
 
 ---
 
-## ?? About OneBasket
+## ?? About NestBasket
 
 Across India (Hyderabad, Bengaluru, Delhi NCR, Mumbai, Pune, Chennai, and tier-2 hubs like Suryapet), millions of families order daily essentials from quick-commerce apps like **Blinkit**, **Zepto**, **Swiggy Instamart**, **BigBasket Now**, and **Flipkart Minutes**.
 
 However, dynamic darkstore pricing, stealth surge charges, and variable delivery fees cause Indian families to **overpay by ?1,500 to ?3,500 every single month**.
 
-**OneBasket** solves this in 1 tap:
+**NestBasket** solves this in 1 tap:
 - ? **Real-Time Price Arbitrage**: Instantly compares exact MRP, discounted rates, pack sizes, and delivery times across all quick-commerce platforms.
 - ?? **Multi-Store Basket Splitter**: Automatically suggests splitting your order (e.g., milk on Zepto, atta on Blinkit) to maximize your total monthly savings.
 - ?? **Hyperlocal Darkstore Locator**: Pinpoint pricing down to your city and housing society (e.g., Ameerpet, Hitec City, Koramangala, Indiranagar, Gurugram Cyber Hub).
@@ -51,10 +51,10 @@ However, dynamic darkstore pricing, stealth surge charges, and variable delivery
 
 `ash
 # Clone the repository
-git clone https://github.com/ArunGoud/onebasket.git
+git clone https://github.com/ArunGoud/nestbasket.git
 
 # Navigate to project folder
-cd onebasket
+cd nestbasket
 
 # Install dependencies
 npm install
@@ -98,5 +98,5 @@ Drag and drop the dist/ folder to [Netlify Drop](https://app.netlify.com/drop) o
 
 ## ?? License & Intellectual Property
 
-� 2026 **OneBasket Technologies Pvt. Ltd.** Founded and 100% Owned by **Gopagani Arun**.  
+� 2026 **NestBasket Technologies Pvt. Ltd.** Founded and 100% Owned by **Gopagani Arun**.  
 All quick-commerce store trademarks (Blinkit, Zepto, Swiggy Instamart, BigBasket, Flipkart) belong to their respective owners.

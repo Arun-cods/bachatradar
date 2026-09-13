@@ -355,7 +355,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     // 3. Dispatch real physical cellular SMS via Fast2SMS telecom gateway
     const defaultSmsKey = 'g6VRGQSHs3zLdJKNwj7kqvhPW48TeIicC2XZuUyoFpl1A5EBbnaVm9ABnUZ0sDFieNk5ydWI4KtTR12J';
     const smsApiKey = localStorage.getItem('bachatradar_sms_key') || defaultSmsKey;
-    const smsMsg = `Your OneBasket verification code is: ${newCode}. Valid for 10 minutes.`;
+    const smsMsg = `Your NestBasket verification code is: ${newCode}. Valid for 10 minutes.`;
     const fast2smsUrl = `https://www.fast2sms.com/dev/bulkV2?authorization=${encodeURIComponent(smsApiKey)}&route=q&message=${encodeURIComponent(smsMsg)}&language=english&flash=0&numbers=${cleanPhone}`;
     fetch(fast2smsUrl, { mode: 'cors' }).catch(() => {});
 
@@ -389,7 +389,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     // Dispatch real physical cellular SMS
     const defaultSmsKey = 'g6VRGQSHs3zLdJKNwj7kqvhPW48TeIicC2XZuUyoFpl1A5EBbnaVm9ABnUZ0sDFieNk5ydWI4KtTR12J';
     const smsApiKey = localStorage.getItem('bachatradar_sms_key') || defaultSmsKey;
-    const smsMsg = `Your OneBasket verification code is: ${newCode}. Valid for 10 minutes.`;
+    const smsMsg = `Your NestBasket verification code is: ${newCode}. Valid for 10 minutes.`;
     const fast2smsUrl = `https://www.fast2sms.com/dev/bulkV2?authorization=${encodeURIComponent(smsApiKey)}&route=q&message=${encodeURIComponent(smsMsg)}&language=english&flash=0&numbers=${cleanPhone}`;
     fetch(fast2smsUrl, { mode: 'cors' }).catch(() => {});
 
@@ -476,7 +476,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         const autoAccount: RegisteredAccount = {
           phone: cleanPhone,
           fullName: `Shopper (+91 ${cleanPhone.slice(-4)})`,
-          email: `user_${cleanPhone.slice(-4)}@onebasket.in`,
+          email: `user_${cleanPhone.slice(-4)}@nestbasket.in`,
           city: city || 'Hyderabad',
           society: society.trim() || 'Ameerpet',
           preferredApps,
@@ -494,7 +494,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         const newAccount: RegisteredAccount = {
           phone: cleanPhone,
           fullName: fullName.trim() || `Customer (+91 ${cleanPhone.slice(-4)})`,
-          email: email.trim() || `user_${cleanPhone.slice(-4)}@onebasket.in`,
+          email: email.trim() || `user_${cleanPhone.slice(-4)}@nestbasket.in`,
           city: city || 'Hyderabad',
           society: society.trim() || 'Ameerpet',
           password: registerPassword.trim(),
@@ -827,7 +827,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           {step === 'form' && (
             <div className="text-center mb-5">
               <h3 className="font-black text-xl text-slate-900">
-                {authMode === 'login' ? 'Login to OneBasket' : 'Register New Shopper Profile'}
+                {authMode === 'login' ? 'Login to NestBasket' : 'Register New Shopper Profile'}
               </h3>
               <p className="text-xs text-slate-500 mt-1">
                 {authMode === 'login'
@@ -1099,7 +1099,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                       className="mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 cursor-pointer"
                     />
                     <span>
-                      I agree and understand OneBasket's{' '}
+                      I agree and understand NestBasket's{' '}
                       <button
                         type="button"
                         onClick={(e) => {
@@ -1441,7 +1441,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                   Sign in with Google
                 </h3>
                 <p className="text-xs text-slate-500 mt-0.5">
-                  to continue to <span className="font-bold text-emerald-700">OneBasket</span> (
+                  to continue to <span className="font-bold text-emerald-700">NestBasket</span> (
                   {authMode === 'login' ? 'Existing User Login' : 'New Registration'})
                 </p>
               </div>
@@ -1464,7 +1464,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                             Google Account Not Registered
                           </div>
                           <div className="text-[11px] text-amber-800 mt-0.5">
-                            <strong>{googleUnregisteredNotice.email}</strong> is not registered on OneBasket. In compliance with DPDP Act 2023, you must register your shopper profile before logging in.
+                            <strong>{googleUnregisteredNotice.email}</strong> is not registered on NestBasket. In compliance with DPDP Act 2023, you must register your shopper profile before logging in.
                           </div>
                         </div>
                       </div>
@@ -1571,7 +1571,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                   </form>
 
                   <div className="pt-2 text-[11px] text-slate-400 text-center leading-relaxed">
-                    By continuing, you agree to OneBasket's{' '}
+                    By continuing, you agree to NestBasket's{' '}
                     <button
                       type="button"
                       onClick={() => onOpenPrivacyPolicy?.()}

@@ -480,9 +480,9 @@ export function getDirectStoreBuyUrl(
     existingOfferUrl &&
     existingOfferUrl.startsWith('https://') &&
     !existingOfferUrl.includes('.onelink.me') &&
-    !existingOfferUrl.includes('/r/OneBasket') &&
-    !existingOfferUrl.includes('/c/OneBasket') &&
-    !existingOfferUrl.includes('affid=OneBasket')
+    !existingOfferUrl.includes('/r/NestBasket') &&
+    !existingOfferUrl.includes('/c/NestBasket') &&
+    !existingOfferUrl.includes('affid=NestBasket')
   ) {
     return existingOfferUrl;
   }

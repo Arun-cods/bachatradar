@@ -312,7 +312,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
   const [isActivatingGateway, setIsActivatingGateway] = useState(false);
   const [webhookTested, setWebhookTested] = useState(false);
 
-  // Real-time live member activity stream (how shoppers and clients use OneBasket across India)
+  // Real-time live member activity stream (how shoppers and clients use NestBasket across India)
   const [liveMemberActivity, setLiveMemberActivity] = useState([
     { id: 'ACT-982', city: 'Bengaluru', area: 'Koramangala', action: 'Added Amul Taaza Milk 500ml', store: 'Zepto', saved: 6, time: 'Just now' },
     { id: 'ACT-981', city: 'Delhi NCR', area: 'Gurugram Cyber Hub', action: 'Compared 10kg Aashirvaad Atta', store: 'BB Now', saved: 41, time: '4s ago' },
@@ -576,7 +576,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
               </span>
             </div>
             <h1 className="text-xl sm:text-2xl font-black text-white mt-1">
-              OneBasket Executive Command Hub
+              NestBasket Executive Command Hub
             </h1>
           </div>
 
@@ -818,7 +818,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
                     100% Real Accounting Policy — Zero Fake Balances
                   </h3>
                   <p className="text-xs text-slate-300">
-                    OneBasket strictly adheres to genuine financial integrity. No mock money, simulated remittances, or fictional UTR receipts.
+                    NestBasket strictly adheres to genuine financial integrity. No mock money, simulated remittances, or fictional UTR receipts.
                   </p>
                 </div>
               </div>
@@ -1033,7 +1033,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
                   </div>
                   <h4 className="font-extrabold text-white text-sm">Sign Quick-Commerce B2B Agreements</h4>
                   <p className="text-slate-400 leading-relaxed">
-                    Submit the OneBasket B2B Commercial Proposal (found in the B2B tab) to business development teams at Zepto, Blinkit, and BigBasket to activate affiliate commission tracking.
+                    Submit the NestBasket B2B Commercial Proposal (found in the B2B tab) to business development teams at Zepto, Blinkit, and BigBasket to activate affiliate commission tracking.
                   </p>
                 </div>
 
@@ -1266,7 +1266,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
                   Registered Members & Login Telemetry
                 </h2>
                 <p className="text-xs text-slate-400 mt-0.5">
-                  Live database of every shopper who registered or authenticated on OneBasket, their preferred grocery apps, store requests, and login audit trail.
+                  Live database of every shopper who registered or authenticated on NestBasket, their preferred grocery apps, store requests, and login audit trail.
                 </p>
               </div>
 
@@ -1289,7 +1289,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
                     const encodedUri = encodeURI(csvContent);
                     const link = document.createElement("a");
                     link.setAttribute("href", encodedUri);
-                    link.setAttribute("download", `onebasket_members_${new Date().toISOString().slice(0,10)}.csv`);
+                    link.setAttribute("download", `nestbasket_members_${new Date().toISOString().slice(0,10)}.csv`);
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
@@ -1911,7 +1911,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
                           <a
                             href={`https://wa.me/${cleanPhone}?text=Hi%20${encodeURIComponent(
                               ticket.customerName
-                            )},%20this%20is%20Gopagani%20Arun%20(Founder%20%26%20CEO%20of%20OneBasket).%20Regarding%20your%20issue%20%23${
+                            )},%20this%20is%20Gopagani%20Arun%20(Founder%20%26%20CEO%20of%20NestBasket).%20Regarding%20your%20issue%20%23${
                               ticket.id
                             }%20(${encodeURIComponent(ticket.subject)}):`}
                             target="_blank"
@@ -1962,7 +1962,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
               </div>
               <p className="text-xs text-slate-300 leading-relaxed">
                 <strong>Founder Business Model by Gopagani Arun:</strong> Public shoppers and families never pay any fees or commissions.
-                OneBasket monetizes strictly by charging quick-commerce darkstore companies (Zepto, Blinkit, Swiggy, BigBasket) for qualified cart conversions, and FMCG brands (Amul, ITC, Fortune) for sponsored placement CPCs.
+                NestBasket monetizes strictly by charging quick-commerce darkstore companies (Zepto, Blinkit, Swiggy, BigBasket) for qualified cart conversions, and FMCG brands (Amul, ITC, Fortune) for sponsored placement CPCs.
               </p>
             </div>
 
@@ -2055,7 +2055,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono bg-slate-950 p-4 rounded-2xl border border-slate-800">
                   <div className="space-y-1">
                     <div className="text-slate-400 font-bold uppercase text-[10px]">Service Provider (Owner & Founder):</div>
-                    <div className="text-white font-bold text-sm">OneBasket Technologies</div>
+                    <div className="text-white font-bold text-sm">NestBasket Technologies</div>
                     <div className="text-slate-300">100% Owned by <strong>Gopagani Arun (Founder & CEO)</strong></div>
                     <div className="text-slate-400 text-[11px]">Phone: +91 9014218406 • Email: gopaganiarungoud@gmail.com</div>
                   </div>
@@ -2216,7 +2216,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
                 <div className="text-xs">
                   <div className="font-extrabold text-emerald-300">Biometric Privacy Isolation • Owner Exclusive</div>
                   <p className="text-slate-300 text-[11px] mt-0.5 leading-relaxed">
-                    Live face biometric authentication (99.8% Match) is strictly active and calibrated <strong className="text-white">only for Founder & CEO Gopagani Arun</strong>. Public shoppers and members are authenticated purely via cellular phone and SMS OTP. <span className="text-emerald-300 font-bold">Zero customer photos</span> are captured, stored, or processed anywhere on OneBasket.
+                    Live face biometric authentication (99.8% Match) is strictly active and calibrated <strong className="text-white">only for Founder & CEO Gopagani Arun</strong>. Public shoppers and members are authenticated purely via cellular phone and SMS OTP. <span className="text-emerald-300 font-bold">Zero customer photos</span> are captured, stored, or processed anywhere on NestBasket.
                   </p>
                 </div>
               </div>
@@ -2595,7 +2595,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
                   <span className="text-emerald-400">STATUS: 200 OK</span>
                 </div>
                 <div className="text-emerald-300 text-[11px] select-all break-all">
-                  https://api.onebasket.in/v1/webhooks/{gatewayProvider}
+                  https://api.nestbasket.in/v1/webhooks/{gatewayProvider}
                 </div>
               </div>
 
@@ -2645,7 +2645,7 @@ export const FounderAdminHub: React.FC<FounderAdminHubProps> = ({
           <div className="bg-slate-900 border border-slate-700 max-w-2xl w-full rounded-3xl p-6 text-white space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-slate-800">
               <h3 className="font-black text-base text-white">
-                📄 OneBasket Acquisition Memo — Gopagani Arun (Founder & CEO)
+                📄 NestBasket Acquisition Memo — Gopagani Arun (Founder & CEO)
               </h3>
               <button onClick={() => setShowDeckModal(false)} className="text-slate-400 hover:text-white">✕</button>
             </div>

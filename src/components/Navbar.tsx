@@ -56,7 +56,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </span>
               </div>
               <p className="text-[11px] text-slate-500 hidden sm:block font-medium">
-                All Stores in One Basket: Blinkit • Zepto • Instamart • BigBasket
+                All Stores in NestBasket: Blinkit • Zepto • Instamart • BigBasket
               </p>
             </div>
           </div>
@@ -98,7 +98,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               onClick={onOpenShare}
               className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white transition-all shadow-sm shadow-emerald-600/20 cursor-pointer"
-              title="Share OneBasket with friends & family"
+              title="Share NestBasket with friends & family"
             >
               <Share2 className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">Share</span>
@@ -185,7 +185,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       >
                         <div className="flex items-center gap-2">
                           <Share2 className="w-3.5 h-3.5 text-emerald-600" />
-                          <span>Share OneBasket</span>
+                          <span>Share NestBasket</span>
                         </div>
                         <span className="text-[10px] text-slate-400">→</span>
                       </button>

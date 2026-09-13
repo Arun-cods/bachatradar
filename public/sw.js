@@ -1,5 +1,5 @@
-// OneBasket Service Worker - Cache-Buster & Network-First
-const CACHE_NAME = 'onebasket-v1-fresh';
+// NestBasket Service Worker - Cache-Buster & Network-First
+const CACHE_NAME = 'nestbasket-v1-fresh';
 
 self.addEventListener('install', (event) => {
   // Immediately take over from older service workers

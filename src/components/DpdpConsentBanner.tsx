@@ -63,7 +63,7 @@ export const DpdpConsentBanner: React.FC<DpdpConsentBannerProps> = ({ onOpenPriv
         </div>
 
         <p className="text-xs text-slate-300 leading-relaxed">
-          OneBasket collects minimal phone and darkstore location data solely to discover real-time grocery prices, and participates in merchant affiliate programs at <strong>zero extra markup to you</strong>. Do you agree and grant permission to use this service?
+          NestBasket collects minimal phone and darkstore location data solely to discover real-time grocery prices, and participates in merchant affiliate programs at <strong>zero extra markup to you</strong>. Do you agree and grant permission to use this service?
         </p>
 
         <div className="flex items-center gap-2 pt-1">
