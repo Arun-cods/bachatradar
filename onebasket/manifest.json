@@ -1,7 +1,7 @@
 {
-  "short_name": "OneBasket",
-  "name": "OneBasket — All-In-One Quick-Commerce App",
-  "description": "Compare Blinkit, Zepto, Swiggy Instamart, and BigBasket prices in real time. Save ₹1,500 - ₹3,500 every month in One Basket. Founded by Gopagani Arun.",
+  "short_name": "NestBasket",
+  "name": "NestBasket — All-In-One Quick-Commerce Price Comparison",
+  "description": "Compare live grocery prices across Blinkit, Zepto, Swiggy Instamart and BigBasket in NestBasket. Founded by Gopagani Arun.",
   "icons": [
     {
       "src": "./icon-192.png",
