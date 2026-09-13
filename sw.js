@@ -1,5 +1,5 @@
-// BachatRadar Service Worker - Cache-Buster & Network-First
-const CACHE_NAME = 'bachatradar-v8-fresh';
+// OneBasket Service Worker - Cache-Buster & Network-First
+const CACHE_NAME = 'onebasket-v1-fresh';
 
 self.addEventListener('install', (event) => {
   // Immediately take over from older service workers
