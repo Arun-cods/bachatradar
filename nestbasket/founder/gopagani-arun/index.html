@@ -51,6 +51,13 @@
     .btn:hover{background:#10b981;color:#0f172a;border-color:#10b981;transform:translateY(-1px)}
     .btn-primary{background:#10b981;color:#0f172a;border-color:#10b981}
     .btn-primary:hover{background:#059669;color:#ffffff}
+    .portal-card{background:rgba(15,23,42,0.85);border:1px solid rgba(16,185,129,0.4);border-radius:18px;padding:22px;margin:28px 0;box-shadow:0 10px 25px -5px rgba(0,0,0,0.3)}
+    .portal-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:10px}
+    .portal-title{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;color:#f8fafc}
+    .portal-tag{background:rgba(16,185,129,0.2);color:#34d399;font-size:11px;font-weight:800;padding:3px 10px;border-radius:999px;border:1px solid rgba(16,185,129,0.3);text-transform:uppercase;letter-spacing:.05em}
+    .portal-desc{font-size:14px;color:#94a3b8;line-height:1.6;margin:0}
+    .btn-portal{background:linear-gradient(135deg,#10b981 0%,#059669 100%);color:#ffffff;border:none;font-weight:800;padding:10px 22px;border-radius:12px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;box-shadow:0 4px 14px rgba(16,185,129,0.35);transition:all .2s ease}
+    .btn-portal:hover{background:linear-gradient(135deg,#059669 0%,#047857 100%);transform:translateY(-1px);box-shadow:0 6px 20px rgba(16,185,129,0.45)}
   </style>
 </head>
 <body>
@@ -60,8 +67,22 @@
     <h1>Gopagani Arun</h1>
     <div class="subtitle">Founder &amp; CEO — NestBasket</div>
     <p>Gopagani Arun is the founder and CEO of <strong>NestBasket</strong>, India's real-time all-in-one quick-commerce price comparison and cart intelligence platform. NestBasket empowers Indian consumers to compare live darkstore grocery rates across Blinkit, Zepto, Swiggy Instamart, BigBasket Now, and Flipkart Minutes in a single tap.</p>
+
+    <!-- Executive Management & Founder Portal Access -->
+    <div class="portal-card">
+      <div class="portal-header">
+        <div class="portal-title">
+          <span>🔒 Executive Portal</span>
+          <span class="portal-tag">Founder Access</span>
+        </div>
+        <a class="btn-portal" href="../../?action=executive-portal">Launch Portal ⚡</a>
+      </div>
+      <p class="portal-desc">Direct access to the executive command hub: live darkstore sync telemetry, shopper audit logs, biometric &amp; PIN authentication, and B2B affiliate revenue management.</p>
+    </div>
+
     <div class="links">
       <a class="btn btn-primary" href="../../">Open NestBasket App 🛒</a>
+      <a class="btn-portal" href="../../?action=executive-portal">🔒 Executive Portal</a>
       <a class="btn" href="https://arungopagani.is-a.dev/">Personal Portfolio</a>
       <a class="btn" href="https://github.com/Arun-cods">GitHub</a>
       <a class="btn" href="https://www.linkedin.com/in/gopagani-arun-024856326/">LinkedIn</a>
