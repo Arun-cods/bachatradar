@@ -74,11 +74,11 @@ export const MobileInstallBanner: React.FC = () => {
         <div className="bg-gradient-to-r from-slate-950 via-emerald-950 to-slate-950 text-white px-3 sm:px-4 py-2 border-b border-emerald-500/40 flex items-center justify-between gap-2 text-xs shadow-md w-full max-w-full overflow-hidden">
           <div className="flex items-center gap-2 min-w-0">
             <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-emerald-500 text-slate-950 font-black flex items-center justify-center text-xs sm:text-sm shadow-md shrink-0">
-              ₹
+              🛒
             </div>
             <div className="min-w-0">
               <div className="font-extrabold text-white flex items-center gap-1.5 truncate">
-                <span className="truncate">Install BachatRadar App</span>
+                <span className="truncate">Install OneBasket App</span>
                 <span className="text-[9px] px-1.5 py-0.2 rounded-full bg-emerald-500/30 text-emerald-300 font-bold border border-emerald-400/40 shrink-0">
                   PHYSICAL APP
                 </span>
@@ -126,13 +126,13 @@ export const MobileInstallBanner: React.FC = () => {
             {/* App Icon & Header */}
             <div className="text-center mb-5">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white text-3xl font-black shadow-xl shadow-emerald-600/30 mx-auto mb-3 border-2 border-emerald-400">
-                ₹
+                🛒
               </div>
               <h3 className="text-xl font-black text-slate-900">
-                Install BachatRadar App
+                Install OneBasket App
               </h3>
               <p className="text-xs text-slate-500 mt-1 font-medium">
-                Run BachatRadar directly on your phone like Zepto, Blinkit & Swiggy!
+                Run OneBasket directly on your phone like Zepto, Blinkit & Swiggy!
               </p>
             </div>
 
@@ -187,7 +187,7 @@ export const MobileInstallBanner: React.FC = () => {
 
               <div className="pt-2 border-t border-slate-200 text-[11px] text-emerald-700 font-bold flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
-                <span>BachatRadar will appear on your phone home screen as a physical standalone app!</span>
+                <span>OneBasket will appear on your phone home screen as a physical standalone app!</span>
               </div>
             </div>
 

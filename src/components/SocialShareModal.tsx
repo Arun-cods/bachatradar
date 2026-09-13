@@ -32,11 +32,11 @@ export const SocialShareModal: React.FC<SocialShareModalProps> = ({ isOpen, onCl
   const localNetworkUrl = 'http://10.133.8.198:3000/';
 
   // Viral WhatsApp message
-  const whatsAppMessage = `🛒 *BachatRadar (बचत रडार) — India's #1 Daily Quick-Commerce Price Tracker!*
+  const whatsAppMessage = `🛒 *OneBasket — India's #1 All-In-One Quick-Commerce Shopping & Price Comparison App!*
 
 Ever noticed how Blinkit, Zepto, Swiggy Instamart, and BigBasket charge totally different prices for the exact same milk, vegetables, and atta?
 
-Families are saving *₹1,500 to ₹3,500 every month* using BachatRadar!
+Families are saving *₹1,500 to ₹3,500 every month* putting everything in OneBasket!
 ⚡ Compare 10-minute darkstores in 1 tap
 🥦 Avoid surge charges & find secret discounts
 🎉 *100% FREE for all Indian families*
@@ -44,7 +44,7 @@ Families are saving *₹1,500 to ₹3,500 every month* using BachatRadar!
 Check live prices now:
 ${siteUrl}`;
 
-  const twitterText = `Tired of overpaying on grocery apps? Compare Blinkit, Zepto, Swiggy Instamart & BigBasket in 1 tap on BachatRadar! Save ₹2,000+ monthly. 100% Free: ${siteUrl} #QuickCommerce #BachatRadar`;
+  const twitterText = `Tired of overpaying on grocery apps? Compare Blinkit, Zepto, Swiggy Instamart & BigBasket in 1 tap on OneBasket! Save ₹2,000+ monthly. 100% Free: ${siteUrl} #OneBasket #QuickCommerce`;
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(siteUrl);
@@ -104,7 +104,7 @@ ${siteUrl}`;
             </div>
             <div>
               <h3 className="text-lg font-black text-white">
-                Share BachatRadar
+                Share OneBasket
               </h3>
               <p className="text-xs text-slate-400 mt-0.5">
                 Help friends & family save ₹1,500 – ₹3,500 on daily groceries

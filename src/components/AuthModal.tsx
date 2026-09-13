@@ -476,7 +476,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         const autoAccount: RegisteredAccount = {
           phone: cleanPhone,
           fullName: `Shopper (+91 ${cleanPhone.slice(-4)})`,
-          email: `user_${cleanPhone.slice(-4)}@bachatradar.in`,
+          email: `user_${cleanPhone.slice(-4)}@onebasket.in`,
           city: city || 'Hyderabad',
           society: society.trim() || 'Ameerpet',
           preferredApps,
@@ -494,7 +494,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         const newAccount: RegisteredAccount = {
           phone: cleanPhone,
           fullName: fullName.trim() || `Customer (+91 ${cleanPhone.slice(-4)})`,
-          email: email.trim() || `user_${cleanPhone.slice(-4)}@bachatradar.in`,
+          email: email.trim() || `user_${cleanPhone.slice(-4)}@onebasket.in`,
           city: city || 'Hyderabad',
           society: society.trim() || 'Ameerpet',
           password: registerPassword.trim(),

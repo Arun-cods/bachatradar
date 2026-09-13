@@ -33,7 +33,7 @@ export const INITIAL_CUSTOMER_ISSUES: CustomerProblemTicket[] = [
     category: 'Price Mismatch',
     storeAffected: 'Zepto',
     subject: 'Amul Taaza 500ml price difference',
-    description: 'BachatRadar listed Zepto price as ₹27, but on Zepto app checkout it was ₹28. Please sync live darkstore prices.',
+    description: 'OneBasket listed Zepto price as ₹27, but on Zepto app checkout it was ₹28. Please sync live darkstore prices.',
     status: 'OPEN',
     priority: 'HIGH',
     ownerNotes: 'Checking Zepto Nallagandla darkstore API endpoint.',

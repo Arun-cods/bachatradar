@@ -126,7 +126,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
             <div className="space-y-4">
               <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 font-medium">
                 <strong>Digital Personal Data Protection (DPDP) Act 2023 Compliance:</strong>{' '}
-                Under India's DPDP Act, you have full ownership of your personal data. BachatRadar collects only the bare minimum data (mobile phone number and locality) necessary to compare darkstore grocery prices within your delivery zone.
+                Under India's DPDP Act, you have full ownership of your personal data. OneBasket collects only the bare minimum data (mobile phone number and locality) necessary to compare darkstore grocery prices within your delivery zone.
               </div>
 
               <div>
@@ -155,7 +155,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
                   3. Data Fiduciary Identity
                 </h3>
                 <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-[11px] space-y-1 font-medium text-slate-700">
-                  <div><strong>Data Fiduciary Entity:</strong> BachatRadar Technologies Pvt. Ltd.</div>
+                  <div><strong>Data Fiduciary Entity:</strong> OneBasket Technologies Pvt. Ltd.</div>
                   <div><strong>Founder, Owner & CEO:</strong> Gopagani Arun</div>
                   <div><strong>Grievance & Privacy Officer:</strong> gopaganiarungoud@gmail.com</div>
                   <div><strong>Data Storage Jurisdiction:</strong> Mumbai & Bengaluru Data Centers (Republic of India)</div>
@@ -168,15 +168,15 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
           {activeTab === 'affiliate' && (
             <div className="space-y-4">
               <div className="p-3.5 rounded-2xl bg-amber-50 border border-amber-200 text-amber-950 font-medium">
-                <strong>ASCI & Consumer Protection Disclosure:</strong> Transparency is our founding principle. BachatRadar operates on a zero-markup model. You pay the exact same price (or lower) as ordering directly on store apps.
+                <strong>ASCI & Consumer Protection Disclosure:</strong> Transparency is our founding principle. OneBasket operates on a zero-markup model. You pay the exact same price (or lower) as ordering directly on store apps.
               </div>
 
               <div>
                 <h3 className="font-extrabold text-sm text-slate-900 mb-1">
-                  1. How BachatRadar Generates Revenue
+                  1. How OneBasket Generates Revenue
                 </h3>
                 <p>
-                  BachatRadar is free for all Indian consumers. To support darkstore scraping infrastructure, server bandwidth, and real-time syncing engines, we participate in affiliate partner programs with merchant platforms including <em>Amazon Associates, EarnKaro, BigBasket Partner Program, and Zepto / Blinkit promotional links</em>.
+                  OneBasket is free for all Indian consumers. To support darkstore scraping infrastructure, server bandwidth, and real-time syncing engines, we participate in affiliate partner programs with merchant platforms including <em>Amazon Associates, EarnKaro, BigBasket Partner Program, and Zepto / Blinkit promotional links</em>.
                 </p>
               </div>
 
@@ -185,7 +185,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
                   2. Zero Cost to You Guarantee
                 </h3>
                 <p>
-                  When you click on an external link or smart basket deal and complete an order, the merchant may pay BachatRadar a small referral commission (typically 2% to 4.5%). This fee is paid entirely by the store from their marketing budget. <strong>There is zero extra charge, zero surge, and zero hidden markup added to your bill.</strong>
+                  When you click on an external link or smart basket deal and complete an order, the merchant may pay OneBasket a small referral commission (typically 2% to 4.5%). This fee is paid entirely by the store from their marketing budget. <strong>There is zero extra charge, zero surge, and zero hidden markup added to your bill.</strong>
                 </p>
               </div>
 
@@ -208,7 +208,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
                   1. Independent Price Aggregator Status
                 </h3>
                 <p>
-                  BachatRadar is an independent aggregator operated by <strong>Gopagani Arun</strong>. <em>Blinkit (Zomato Ltd), Zepto (KiranaKart Technologies), Swiggy Instamart (Bundl Technologies), BigBasket (Innovative Retail Concepts / Tata Neu), and Amazon Fresh</em> are trademarks of their respective owners. BachatRadar has no direct corporate ownership or endorsement with these entities.
+                  OneBasket is an independent aggregator operated by <strong>Gopagani Arun</strong>. <em>Blinkit (Zomato Ltd), Zepto (KiranaKart Technologies), Swiggy Instamart (Bundl Technologies), BigBasket (Innovative Retail Concepts / Tata Neu), and Amazon Fresh</em> are trademarks of their respective owners. OneBasket has no direct corporate ownership or endorsement with these entities.
                 </p>
               </div>
 
@@ -228,7 +228,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
                 <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-[11px] space-y-1 font-medium text-slate-700">
                   <div><strong>Designated Grievance Officer:</strong> Gopagani Arun (Founder & CEO)</div>
                   <div><strong>Official Redressal:</strong> In-App Help & Problem Desk</div>
-                  <div><strong>Official Support:</strong> support@bachatradar.com</div>
+                  <div><strong>Official Support:</strong> support@onebasket.in</div>
                   <div><strong>Jurisdiction:</strong> Hyderabad & Suryapet, Telangana, India</div>
                 </div>
               </div>

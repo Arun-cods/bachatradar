@@ -164,7 +164,7 @@ export const SmartBasketDrawer: React.FC<SmartBasketDrawerProps> = ({
                     }`}
                   >
                     <Sparkles className="w-3.5 h-3.5" />
-                    <span>Split Arbitrage (Max Bachat)</span>
+                    <span>Split Arbitrage (Max Savings)</span>
                   </button>
                   <button
                     onClick={() => setStrategy('single-cheapest')}

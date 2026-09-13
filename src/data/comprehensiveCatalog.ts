@@ -95,6 +95,3556 @@ export const MASTER_CATALOG_CATEGORIES = [
 
 export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
   {
+    "id": "candy-chupa-chups-sour-belt",
+    "name": "Chupa Chups Sour Belt Mixed Fruit Sour Candy",
+    "nameHindi": "चुपा चुप्स सौर बेल्ट कैंडी",
+    "category": "snacks",
+    "subCategory": "Candies & Mints",
+    "unit": "55 g",
+    "image": "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 36,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Chupa%20Chups%20Sour%20Belt%20Mixed%20Fruit%20Sour%20Candy"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 35,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/chupa-chups-sour-belt-mixed-fruit-sour-candy/prid/368393"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 35,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Chupa%20Chups%20Sour%20Belt%20Mixed%20Fruit%20Sour%20Candy"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 35,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40126026/chupa-chups-sour-bites-strawberry-flavour-soft-chewy-candies-55-g/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 34,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Chupa%20Chups%20Sour%20Belt%20Mixed%20Fruit%20Sour%20Candy&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 35,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Chupa%20Chups%20Sour%20Belt%20Mixed%20Fruit%20Sour%20Candy&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "candy-orbit-mixed-fruit",
+    "name": "Orbit Mixed Fruit Flavour Chewing Gum (Sugar Free)",
+    "nameHindi": "ऑर्बिट मिक्स्ड फ्रूट च्युइंग गम",
+    "category": "snacks",
+    "subCategory": "Candies & Mints",
+    "unit": "19.8 g",
+    "image": "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 51,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Orbit%20Mixed%20Fruit%20Flavour%20Chewing%20Gum%20(Sugar%20Free)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 50,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/orbit-mixed-fruit-flavour-chewing-gum-sugar-free/prid/440073"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 51,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Orbit%20Mixed%20Fruit%20Flavour%20Chewing%20Gum%20(Sugar%20Free)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 50,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40050518/orbit-mixed-fruit-flavour-chewing-gum-sugar-free-22-g/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 49,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Orbit%20Mixed%20Fruit%20Flavour%20Chewing%20Gum%20(Sugar%20Free)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 50,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Orbit%20Mixed%20Fruit%20Flavour%20Chewing%20Gum%20(Sugar%20Free)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "candy-kopiko-cappuccino",
+    "name": "Kopiko Cappuccino Candy - Family Pack",
+    "nameHindi": "कोपिको कैपुचिनो कैंडी फैमिली पैक",
+    "category": "snacks",
+    "subCategory": "Candies & Mints",
+    "unit": "150 g",
+    "image": "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 51,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Kopiko%20Cappuccino%20Candy%20-%20Family%20Pack"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 50,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/kopiko-cappuccino-candy-family-pack/prid/285599"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 51,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Kopiko%20Cappuccino%20Candy%20-%20Family%20Pack"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 50,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40101905/kopiko-cappuccino-candy-150-g-pouch/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 49,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Kopiko%20Cappuccino%20Candy%20-%20Family%20Pack&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 50,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Kopiko%20Cappuccino%20Candy%20-%20Family%20Pack&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "candy-chupa-chups-sour-bites",
+    "name": "Chupa Chups Sour Bites Mixed Fruit Sour Candy",
+    "nameHindi": "चुपा चुप्स खट्टी बाइट्स कैंडी",
+    "category": "snacks",
+    "subCategory": "Candies & Mints",
+    "unit": "61.6 g",
+    "image": "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 36,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Chupa%20Chups%20Sour%20Bites%20Mixed%20Fruit%20Sour%20Candy"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 35,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/chupa-chups-sour-bites-mixed-fruit-sour-candy/prid/361832"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 35,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Chupa%20Chups%20Sour%20Bites%20Mixed%20Fruit%20Sour%20Candy"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 35,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40126027/chupa-chups-sour-bites-mixed-fruit-flavour-soft-chewy-candies-616-g/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 34,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Chupa%20Chups%20Sour%20Bites%20Mixed%20Fruit%20Sour%20Candy&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 35,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Chupa%20Chups%20Sour%20Bites%20Mixed%20Fruit%20Sour%20Candy&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "candy-parle-melody",
+    "name": "Parle Melody Bigger Chocolaty Toffee",
+    "nameHindi": "पारले मेलोडी टॉफ़ी",
+    "category": "snacks",
+    "subCategory": "Candies & Mints",
+    "unit": "195.5 g",
+    "image": "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 51,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Parle%20Melody%20Bigger%20Chocolaty%20Toffee"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 50,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/parle-melody-bigger-chocolaty-toffee/prid/753988"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 51,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Parle%20Melody%20Bigger%20Chocolaty%20Toffee"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 50,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40071372/parle-melody-chocolaty-candy-1955-g-pouch/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 49,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Parle%20Melody%20Bigger%20Chocolaty%20Toffee&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 50,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Parle%20Melody%20Bigger%20Chocolaty%20Toffee&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "candy-orbit-spearmint",
+    "name": "Orbit Spearmint Flavour Sugar Free Chewing Gum",
+    "nameHindi": "ऑर्बिट स्पीयरमिंट च्युइंग गम",
+    "category": "snacks",
+    "subCategory": "Candies & Mints",
+    "unit": "22 g",
+    "image": "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 51,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Orbit%20Spearmint%20Flavour%20Sugar%20Free%20Chewing%20Gum"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 50,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/orbit-spearmint-flavour-sugar-free-chewing-gum/prid/482995"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 51,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Orbit%20Spearmint%20Flavour%20Sugar%20Free%20Chewing%20Gum"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 50,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40050519/orbit-spearmint-flavour-sugar-free-chewing-gum-22-g/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 49,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Orbit%20Spearmint%20Flavour%20Sugar%20Free%20Chewing%20Gum&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 50,
+        "mrp": 50,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Orbit%20Spearmint%20Flavour%20Sugar%20Free%20Chewing%20Gum&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "batter-mtr-minute-fresh",
+    "name": "MTR Minute Fresh Rice Rava Idli Batter",
+    "nameHindi": "एमटीआर मिनट फ्रेश राइस रवा इडली बैटर",
+    "category": "dairy",
+    "subCategory": "Batters",
+    "unit": "750 g",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 92,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=MTR%20Minute%20Fresh%20Rice%20Rava%20Idli%20Batter"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 90,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/mtr-minute-fresh-rice-rava-idli-batter/prid/777087"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 91,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=MTR%20Minute%20Fresh%20Rice%20Rava%20Idli%20Batter"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 90,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40217522/mtr-minute-fresh-rice-idli-batter-1-kg/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 88,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=MTR%20Minute%20Fresh%20Rice%20Rava%20Idli%20Batter&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 89,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=MTR%20Minute%20Fresh%20Rice%20Rava%20Idli%20Batter&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "batter-id-brown-rice-oats",
+    "name": "iD Fresh High Fibre Brown Rice & Oats Dosa Batter",
+    "nameHindi": "आईडी ब्राउन राइस और ओट्स डोसा बैटर",
+    "category": "dairy",
+    "subCategory": "Batters",
+    "unit": "500 g",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 92,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=iD%20Fresh%20High%20Fibre%20Brown%20Rice%20%26%20Oats%20Dosa%20Batter"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 90,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/id-fresh-high-fibre-brown-rice-oats-dosa-batter/prid/800787"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 91,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=iD%20Fresh%20High%20Fibre%20Brown%20Rice%20%26%20Oats%20Dosa%20Batter"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 90,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=id+fresh+brown+rice+oats+dosa+batter"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 88,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=iD%20Fresh%20High%20Fibre%20Brown%20Rice%20%26%20Oats%20Dosa%20Batter&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 89,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=iD%20Fresh%20High%20Fibre%20Brown%20Rice%20%26%20Oats%20Dosa%20Batter&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "batter-id-protein-rich",
+    "name": "iD Protein-Rich Idli Dosa Batter",
+    "nameHindi": "आईडी प्रोटीन युक्त इडली डोसा बैटर",
+    "category": "dairy",
+    "subCategory": "Batters",
+    "unit": "500 g",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 97,
+        "mrp": 95,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=iD%20Protein-Rich%20Idli%20Dosa%20Batter"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 95,
+        "mrp": 95,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/id-protein-rich-idli-dosa-batter/prid/686922"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 96,
+        "mrp": 95,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=iD%20Protein-Rich%20Idli%20Dosa%20Batter"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 95,
+        "mrp": 95,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=id+protein+rich+batter"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 93,
+        "mrp": 95,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=iD%20Protein-Rich%20Idli%20Dosa%20Batter&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 94,
+        "mrp": 95,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=iD%20Protein-Rich%20Idli%20Dosa%20Batter&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "batter-ammammas-dosa-idly",
+    "name": "Ammamma's Dosa-Idly Batter",
+    "nameHindi": "अम्मम्मा का डोसा इडली बैटर",
+    "category": "dairy",
+    "subCategory": "Batters",
+    "unit": "1 kg",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 92,
+        "mrp": 99,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Ammamma's%20Dosa-Idly%20Batter"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 90,
+        "mrp": 99,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/ammammas-dosa-idly-batter/prid/548440"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 91,
+        "mrp": 99,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Ammamma's%20Dosa-Idly%20Batter"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 90,
+        "mrp": 99,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=ammammas+dosa+idly+batter"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 88,
+        "mrp": 99,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Ammamma's%20Dosa-Idly%20Batter&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 89,
+        "mrp": 99,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Ammamma's%20Dosa-Idly%20Batter&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "batter-id-ragi-millet",
+    "name": "iD Ragi Millet Idly & Dosa Batter",
+    "nameHindi": "आईडी रागी बाजरा इडली डोसा बैटर",
+    "category": "dairy",
+    "subCategory": "Batters",
+    "unit": "500 g",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 66,
+        "mrp": 74,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=iD%20Ragi%20Millet%20Idly%20%26%20Dosa%20Batter"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 65,
+        "mrp": 74,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/id-ragi-millet-idly-dosa-batter/prid/602057"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 66,
+        "mrp": 74,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=iD%20Ragi%20Millet%20Idly%20%26%20Dosa%20Batter"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 65,
+        "mrp": 74,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40179929/id-fresh-ragi-idly-dosa-batter-1-kg/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 64,
+        "mrp": 74,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=iD%20Ragi%20Millet%20Idly%20%26%20Dosa%20Batter&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 64,
+        "mrp": 74,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=iD%20Ragi%20Millet%20Idly%20%26%20Dosa%20Batter&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "batter-khetika-fresh-idli-dosa",
+    "name": "Khetika Fresh Idli Dosa Batter",
+    "nameHindi": "खेतीका ताजा इडली डोसा बैटर",
+    "category": "dairy",
+    "subCategory": "Batters",
+    "unit": "1 kg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 81,
+        "mrp": 99,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Khetika%20Fresh%20Idli%20Dosa%20Batter"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 79,
+        "mrp": 99,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/khetika-fresh-idli-dosa-batter/prid/557380"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 80,
+        "mrp": 99,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Khetika%20Fresh%20Idli%20Dosa%20Batter"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 79,
+        "mrp": 99,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=khetika+fresh+idli+dosa+batter"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 77,
+        "mrp": 99,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Khetika%20Fresh%20Idli%20Dosa%20Batter&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 78,
+        "mrp": 99,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Khetika%20Fresh%20Idli%20Dosa%20Batter&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "batter-id-rice-rava-idli",
+    "name": "iD Rice Rava Idli Batter",
+    "nameHindi": "आईडी चावल रवा इडली बैटर",
+    "category": "dairy",
+    "subCategory": "Batters",
+    "unit": "1 kg",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 70,
+        "mrp": 69,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=iD%20Rice%20Rava%20Idli%20Batter"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 69,
+        "mrp": 69,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/id-rice-rava-idli-batter/prid/268259"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 70,
+        "mrp": 69,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=iD%20Rice%20Rava%20Idli%20Batter"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 69,
+        "mrp": 69,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40149955/id-fresh-rice-rava-idly-batter-1-kg/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 68,
+        "mrp": 69,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=iD%20Rice%20Rava%20Idli%20Batter&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 68,
+        "mrp": 69,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=iD%20Rice%20Rava%20Idli%20Batter&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "batter-khetika-sprouted-moong",
+    "name": "Khetika Sprouted Moong Chilla Batter",
+    "nameHindi": "खेतीका अंकुरित मूंग चीला बैटर",
+    "category": "dairy",
+    "subCategory": "Batters",
+    "unit": "1 kg",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 117,
+        "mrp": 125,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Khetika%20Sprouted%20Moong%20Chilla%20Batter"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 115,
+        "mrp": 125,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/khetika-sprouted-moong-chilla-batter/prid/558902"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 116,
+        "mrp": 125,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Khetika%20Sprouted%20Moong%20Chilla%20Batter"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 115,
+        "mrp": 125,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=moong+chilla+batter"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 113,
+        "mrp": 125,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Khetika%20Sprouted%20Moong%20Chilla%20Batter&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 114,
+        "mrp": 125,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Khetika%20Sprouted%20Moong%20Chilla%20Batter&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "fruit-peeled-pomegranate-pack",
+    "name": "Peeled Pomegranate - Snack Pack",
+    "nameHindi": "छिले हुए अनार के दाने",
+    "category": "veggies",
+    "subCategory": "Fruits",
+    "unit": "80 g",
+    "image": "https://images.unsplash.com/photo-1615485290382-441e4d049cbd5?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 75,
+        "mrp": 94,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Peeled%20Pomegranate%20-%20Snack%20Pack"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 74,
+        "mrp": 94,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/peeled-pomegranate-snack-pack/prid/735411"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 75,
+        "mrp": 94,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Peeled%20Pomegranate%20-%20Snack%20Pack"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 74,
+        "mrp": 94,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/20000709/fresho-pomegranate-500-g/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 73,
+        "mrp": 94,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Peeled%20Pomegranate%20-%20Snack%20Pack&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 73,
+        "mrp": 94,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Peeled%20Pomegranate%20-%20Snack%20Pack&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "fruit-banana-aratipandu",
+    "name": "Banana (Aratipandu)",
+    "nameHindi": "ताजा केला",
+    "category": "veggies",
+    "subCategory": "Fruits",
+    "unit": "3 pcs",
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 26,
+        "mrp": 31,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Banana%20(Aratipandu)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 25,
+        "mrp": 31,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/banana-aratipandu/prid/3874"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 25,
+        "mrp": 31,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Banana%20(Aratipandu)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 25,
+        "mrp": 31,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/10000031/fresho-banana-robusta-1-kg/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 25,
+        "mrp": 31,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Banana%20(Aratipandu)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 25,
+        "mrp": 31,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Banana%20(Aratipandu)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-veggie-green-capsicum",
+    "name": "Fresh Shimla Green Capsicum (Shimla Mirch)",
+    "nameHindi": "ताजा शिमला मिर्च",
+    "category": "veggies",
+    "subCategory": "Daily Veggies",
+    "unit": "500 g Pack",
+    "image": "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 36,
+        "mrp": 55,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Fresh%20Shimla%20Green%20Capsicum%20(Shimla%20Mirch)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 35,
+        "mrp": 55,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Green+Capsicum+Shimla+Mirch+500g"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 35,
+        "mrp": 55,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Fresh%20Shimla%20Green%20Capsicum%20(Shimla%20Mirch)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 35,
+        "mrp": 55,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/10000067/fresho-capsicum-green-500-g/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 34,
+        "mrp": 55,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Fresh%20Shimla%20Green%20Capsicum%20(Shimla%20Mirch)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 35,
+        "mrp": 55,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Fresh%20Shimla%20Green%20Capsicum%20(Shimla%20Mirch)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-veggie-tender-baby-spinach",
+    "name": "Fresh Tender Baby Spinach (Palak)",
+    "nameHindi": "ताजा कोमल पालक पत्ता",
+    "category": "veggies",
+    "subCategory": "Daily Veggies",
+    "unit": "250 g Bunch",
+    "image": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 22,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Fresh%20Tender%20Baby%20Spinach%20(Palak)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 22,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Baby+Spinach+Palak+250g"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 22,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Fresh%20Tender%20Baby%20Spinach%20(Palak)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 22,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/1379264/fresh-tender-baby-spinach/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 22,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Fresh%20Tender%20Baby%20Spinach%20(Palak)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 22,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Fresh%20Tender%20Baby%20Spinach%20(Palak)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-veggie-coriander-chilli-combo",
+    "name": "Fresh Green Coriander (Dhaniya) & Green Chilli Combo",
+    "nameHindi": "ताजा हरा धनिया और हरी मिर्च कॉम्बो",
+    "category": "veggies",
+    "subCategory": "Daily Veggies",
+    "unit": "100g Dhaniya + 100g Mirch",
+    "image": "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 22,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Fresh%20Green%20Coriander%20(Dhaniya)%20%26%20Green%20Chilli%20Combo"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 22,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Coriander+and+Green+Chilli+Combo"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 22,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Fresh%20Green%20Coriander%20(Dhaniya)%20%26%20Green%20Chilli%20Combo"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 22,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/10000326/fresho-coriander-leaves-chilli-combo/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 22,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Fresh%20Green%20Coriander%20(Dhaniya)%20%26%20Green%20Chilli%20Combo&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 22,
+        "mrp": 35,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Fresh%20Green%20Coriander%20(Dhaniya)%20%26%20Green%20Chilli%20Combo&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-eggoz-brown-6",
+    "name": "Eggoz Brown Farm Fresh Eggs - High Bio-Available Protein (6 pcs)",
+    "nameHindi": "एगोज़ ब्राउन फार्म फ्रेश अंडे (6 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "6 pcs",
+    "image": "https://images.unsplash.com/photo-1506976785307-8732e854ad03?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 105,
+        "mrp": 125,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Eggoz%20Brown%20Farm%20Fresh%20Eggs%20-%20High%20Bio-Available%20Protein%20(6%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 103,
+        "mrp": 125,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Eggoz+Brown+Eggs+6+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 104,
+        "mrp": 125,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Eggoz%20Brown%20Farm%20Fresh%20Eggs%20-%20High%20Bio-Available%20Protein%20(6%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 103,
+        "mrp": 125,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40211593/eggoz-brown-farm-fresh-eggs-high-bio-available-protein-with-no-ddgs-hormone-steroids-6-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 101,
+        "mrp": 125,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Eggoz%20Brown%20Farm%20Fresh%20Eggs%20-%20High%20Bio-Available%20Protein%20(6%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 102,
+        "mrp": 125,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Eggoz%20Brown%20Farm%20Fresh%20Eggs%20-%20High%20Bio-Available%20Protein%20(6%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-hello-brown-18",
+    "name": "Hello Eggs Brown Eggs (18 pcs)",
+    "nameHindi": "हेलो एग्स ब्राउन अंडे (18 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "18 pcs",
+    "image": "https://images.unsplash.com/photo-1506976785307-8732e854ad03?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 234,
+        "mrp": 270,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Hello%20Eggs%20Brown%20Eggs%20(18%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 229,
+        "mrp": 270,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Hello+Eggs+Brown+18+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 231,
+        "mrp": 270,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Hello%20Eggs%20Brown%20Eggs%20(18%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 229,
+        "mrp": 270,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40374432/hello-eggs-brown-eggs-18-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 224,
+        "mrp": 270,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Hello%20Eggs%20Brown%20Eggs%20(18%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 227,
+        "mrp": 270,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Hello%20Eggs%20Brown%20Eggs%20(18%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-skm-fresh-6",
+    "name": "SKM Best Fresh Eggs (6 pcs)",
+    "nameHindi": "एसकेएम बेस्ट फ्रेश अंडे (6 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "6 pcs",
+    "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 86,
+        "mrp": 84,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=SKM%20Best%20Fresh%20Eggs%20(6%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 84,
+        "mrp": 84,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=SKM+Best+Fresh+Eggs+6+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 85,
+        "mrp": 84,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=SKM%20Best%20Fresh%20Eggs%20(6%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 84,
+        "mrp": 84,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40348991/skm-best-fresh-eggs-6-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 82,
+        "mrp": 84,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=SKM%20Best%20Fresh%20Eggs%20(6%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 83,
+        "mrp": 84,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=SKM%20Best%20Fresh%20Eggs%20(6%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-hello-golden-brown-6",
+    "name": "Hello Eggs Golden Rich Protein Brown Eggs (6 pcs)",
+    "nameHindi": "हेलो एग्स गोल्डन रिच प्रोटीन ब्राउन अंडे (6 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "6 pcs",
+    "image": "https://images.unsplash.com/photo-1506976785307-8732e854ad03?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 78,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Hello%20Eggs%20Golden%20Rich%20Protein%20Brown%20Eggs%20(6%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 76,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Hello+Eggs+Golden+Brown+6+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 77,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Hello%20Eggs%20Golden%20Rich%20Protein%20Brown%20Eggs%20(6%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 76,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40374431/hello-eggs-golden-rich-protein-brown-eggs-6-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 74,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Hello%20Eggs%20Golden%20Rich%20Protein%20Brown%20Eggs%20(6%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 75,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Hello%20Eggs%20Golden%20Rich%20Protein%20Brown%20Eggs%20(6%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-skm-white-liquid-250ml",
+    "name": "SKM Best Egg White Liquid (250 ml)",
+    "nameHindi": "एसकेएम बेस्ट एग व्हाइट लिक्विड (250 मिली)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "250 ml",
+    "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 107,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=SKM%20Best%20Egg%20White%20Liquid%20(250%20ml)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 105,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=SKM+Egg+White+Liquid+250ml"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 106,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=SKM%20Best%20Egg%20White%20Liquid%20(250%20ml)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 105,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40122451/skm-best-egg-white-liquid-250-ml/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 103,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=SKM%20Best%20Egg%20White%20Liquid%20(250%20ml)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 104,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=SKM%20Best%20Egg%20White%20Liquid%20(250%20ml)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-skm-white-cube-200g",
+    "name": "SKM Best Egg White - Cube (200 g)",
+    "nameHindi": "एसकेएम बेस्ट एग व्हाइट क्यूब (200 ग्राम)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "200 g",
+    "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 66,
+        "mrp": 65,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=SKM%20Best%20Egg%20White%20-%20Cube%20(200%20g)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 65,
+        "mrp": 65,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=SKM+Egg+White+Cube+200g"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 66,
+        "mrp": 65,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=SKM%20Best%20Egg%20White%20-%20Cube%20(200%20g)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 65,
+        "mrp": 65,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40122449/skm-best-egg-white-cube-200-g/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 64,
+        "mrp": 65,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=SKM%20Best%20Egg%20White%20-%20Cube%20(200%20g)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 64,
+        "mrp": 65,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=SKM%20Best%20Egg%20White%20-%20Cube%20(200%20g)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-fresho-country-desi-6",
+    "name": "Fresho Country/Desi Eggs - Small (6 pcs)",
+    "nameHindi": "फ्रेशो देशी अंडे (6 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "6 pcs",
+    "image": "https://images.unsplash.com/photo-1506976785307-8732e854ad03?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 97,
+        "mrp": 115,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Fresho%20Country%2FDesi%20Eggs%20-%20Small%20(6%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 95,
+        "mrp": 115,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Fresho+Country+Desi+Eggs+6+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 96,
+        "mrp": 115,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Fresho%20Country%2FDesi%20Eggs%20-%20Small%20(6%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 95,
+        "mrp": 115,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40094160/fresho-country-desi-eggs-small-antibiotic-residue-free-6-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 93,
+        "mrp": 115,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Fresho%20Country%2FDesi%20Eggs%20-%20Small%20(6%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 94,
+        "mrp": 115,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Fresho%20Country%2FDesi%20Eggs%20-%20Small%20(6%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-abhi-dose-6",
+    "name": "Abhi Eggs D.O.S.E with Immunity Boosters, Antibiotic Free (6 pcs)",
+    "nameHindi": "अभि एग्स डी.ओ.एस.ई. अंडे (6 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "6 pcs",
+    "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 124,
+        "mrp": 130,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Abhi%20Eggs%20D.O.S.E%20with%20Immunity%20Boosters%2C%20Antibiotic%20Free%20(6%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 122,
+        "mrp": 130,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Abhi+Eggs+DOSE+6+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 123,
+        "mrp": 130,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Abhi%20Eggs%20D.O.S.E%20with%20Immunity%20Boosters%2C%20Antibiotic%20Free%20(6%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 122,
+        "mrp": 130,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40213680/abhi-eggs-eggs-dose-with-immunity-boosters-6-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 120,
+        "mrp": 130,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Abhi%20Eggs%20D.O.S.E%20with%20Immunity%20Boosters%2C%20Antibiotic%20Free%20(6%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 121,
+        "mrp": 130,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Abhi%20Eggs%20D.O.S.E%20with%20Immunity%20Boosters%2C%20Antibiotic%20Free%20(6%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-haldi-ayur-plus-6",
+    "name": "Haldi Ayur Plus Eggs (6 pcs)",
+    "nameHindi": "हल्दी आयुर प्लस अंडे (6 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "6 pcs",
+    "image": "https://images.unsplash.com/photo-1506976785307-8732e854ad03?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 90,
+        "mrp": 88,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Haldi%20Ayur%20Plus%20Eggs%20(6%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 88,
+        "mrp": 88,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Haldi+Plus+Eggs+6+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 89,
+        "mrp": 88,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Haldi%20Ayur%20Plus%20Eggs%20(6%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 88,
+        "mrp": 88,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40106728/ayur-plus-eggs-6-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 86,
+        "mrp": 88,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Haldi%20Ayur%20Plus%20Eggs%20(6%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 87,
+        "mrp": 88,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Haldi%20Ayur%20Plus%20Eggs%20(6%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-fresho-kadaknath-6",
+    "name": "Fresho Country/Desi Eggs - Kadaknath (6 pcs)",
+    "nameHindi": "फ्रेशो कड़कनाथ देसी अंडे (6 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "6 pcs",
+    "image": "https://images.unsplash.com/photo-1506976785307-8732e854ad03?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 117,
+        "mrp": 165,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Fresho%20Country%2FDesi%20Eggs%20-%20Kadaknath%20(6%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 115,
+        "mrp": 165,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Fresho+Kadaknath+Eggs+6+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 116,
+        "mrp": 165,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Fresho%20Country%2FDesi%20Eggs%20-%20Kadaknath%20(6%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 115,
+        "mrp": 165,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40094161/fresho-country-eggs-kadaknath-small-antibiotic-residue-free-6-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 113,
+        "mrp": 165,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Fresho%20Country%2FDesi%20Eggs%20-%20Kadaknath%20(6%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 114,
+        "mrp": 165,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Fresho%20Country%2FDesi%20Eggs%20-%20Kadaknath%20(6%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-upf-cage-free-6",
+    "name": "UPF The Good Eggs Cage Free Eggs (6 pcs)",
+    "nameHindi": "यूपीएफ केज फ्री अंडे (6 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "6 pcs",
+    "image": "https://images.unsplash.com/photo-1506976785307-8732e854ad03?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 142,
+        "mrp": 139,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=UPF%20The%20Good%20Eggs%20Cage%20Free%20Eggs%20(6%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 139,
+        "mrp": 139,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=UPF+Cage+Free+Eggs+6+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 140,
+        "mrp": 139,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=UPF%20The%20Good%20Eggs%20Cage%20Free%20Eggs%20(6%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 139,
+        "mrp": 139,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40161156/upf-the-good-eggs-cage-free-eggs-6-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 136,
+        "mrp": 139,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=UPF%20The%20Good%20Eggs%20Cage%20Free%20Eggs%20(6%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 138,
+        "mrp": 139,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=UPF%20The%20Good%20Eggs%20Cage%20Free%20Eggs%20(6%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-abhi-gold-brown-10",
+    "name": "Abhi Eggs Gold+ Brown Eggs With Immunity Boosters (10 pcs)",
+    "nameHindi": "अभि एग्स गोल्ड+ ब्राउन अंडे (10 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "10 pcs",
+    "image": "https://images.unsplash.com/photo-1506976785307-8732e854ad03?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 199,
+        "mrp": 199,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Abhi%20Eggs%20Gold%2B%20Brown%20Eggs%20With%20Immunity%20Boosters%20(10%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 195,
+        "mrp": 199,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Abhi+Eggs+Gold+Brown+10+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 197,
+        "mrp": 199,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Abhi%20Eggs%20Gold%2B%20Brown%20Eggs%20With%20Immunity%20Boosters%20(10%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 195,
+        "mrp": 199,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40367312/abhi-eggs-gold-brown-eggs-with-immunity-boosters-10-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 191,
+        "mrp": 199,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Abhi%20Eggs%20Gold%2B%20Brown%20Eggs%20With%20Immunity%20Boosters%20(10%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 193,
+        "mrp": 199,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Abhi%20Eggs%20Gold%2B%20Brown%20Eggs%20With%20Immunity%20Boosters%20(10%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-abhi-vit-d3-10",
+    "name": "Abhi Eggs Vitamin D3 With Immunity Boosters (10 pcs)",
+    "nameHindi": "अभि एग्स विटामिन डी3 (10 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "10 pcs",
+    "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 155,
+        "mrp": 169,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Abhi%20Eggs%20Vitamin%20D3%20With%20Immunity%20Boosters%20(10%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 152,
+        "mrp": 169,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Abhi+Eggs+Vitamin+D3+10+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 154,
+        "mrp": 169,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Abhi%20Eggs%20Vitamin%20D3%20With%20Immunity%20Boosters%20(10%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 152,
+        "mrp": 169,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40367311/abhi-eggs-vitamin-d3-with-immunity-boosters-10-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 149,
+        "mrp": 169,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Abhi%20Eggs%20Vitamin%20D3%20With%20Immunity%20Boosters%20(10%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 150,
+        "mrp": 169,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Abhi%20Eggs%20Vitamin%20D3%20With%20Immunity%20Boosters%20(10%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-upf-healthy-brown-6",
+    "name": "UPF Healthy Brown Eggs (6 pcs)",
+    "nameHindi": "यूपीएफ हेल्दी ब्राउन अंडे (6 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "6 pcs",
+    "image": "https://images.unsplash.com/photo-1506976785307-8732e854ad03?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 126,
+        "mrp": 124,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=UPF%20Healthy%20Brown%20Eggs%20(6%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 124,
+        "mrp": 124,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=UPF+Healthy+Brown+Eggs+6+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 125,
+        "mrp": 124,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=UPF%20Healthy%20Brown%20Eggs%20(6%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 124,
+        "mrp": 124,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40161158/upf-healthy-brown-eggs-6-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 122,
+        "mrp": 124,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=UPF%20Healthy%20Brown%20Eggs%20(6%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 123,
+        "mrp": 124,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=UPF%20Healthy%20Brown%20Eggs%20(6%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-farm-made-free-range-12",
+    "name": "Farm Made Free Range Eggs (12 pcs)",
+    "nameHindi": "फार्म मेड फ्री रेंज अंडे (12 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "12 pcs",
+    "image": "https://images.unsplash.com/photo-1506976785307-8732e854ad03?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 315,
+        "mrp": 309,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Farm%20Made%20Free%20Range%20Eggs%20(12%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 309,
+        "mrp": 309,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Farm+Made+Free+Range+Eggs+12+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 312,
+        "mrp": 309,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Farm%20Made%20Free%20Range%20Eggs%20(12%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 309,
+        "mrp": 309,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40117922/farm-made-eggs-free-range-12-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 303,
+        "mrp": 309,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Farm%20Made%20Free%20Range%20Eggs%20(12%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 306,
+        "mrp": 309,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Farm%20Made%20Free%20Range%20Eggs%20(12%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-abhi-nutri-24",
+    "name": "Abhi Eggs Nutri+ With Immunity Boosters (24 pcs)",
+    "nameHindi": "अभि एग्स न्यूट्री+ अंडे (24 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "24 pcs",
+    "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 335,
+        "mrp": 359,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Abhi%20Eggs%20Nutri%2B%20With%20Immunity%20Boosters%20(24%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 328,
+        "mrp": 359,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Abhi+Eggs+Nutri+24+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 331,
+        "mrp": 359,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Abhi%20Eggs%20Nutri%2B%20With%20Immunity%20Boosters%20(24%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 328,
+        "mrp": 359,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40295896/abhi-eggs-white-eggs-nutri-with-immunity-boosters-fortified-24-pc/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 321,
+        "mrp": 359,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Abhi%20Eggs%20Nutri%2B%20With%20Immunity%20Boosters%20(24%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 325,
+        "mrp": 359,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Abhi%20Eggs%20Nutri%2B%20With%20Immunity%20Boosters%20(24%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-just-laid-brown-6",
+    "name": "Just Laid Brown Eggs - Antibiotic Free (6 pcs)",
+    "nameHindi": "जस्ट लेड ब्राउन अंडे (6 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "6 pcs",
+    "image": "https://images.unsplash.com/photo-1506976785307-8732e854ad03?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 92,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Just%20Laid%20Brown%20Eggs%20-%20Antibiotic%20Free%20(6%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 90,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Just+Laid+Brown+Eggs+6+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 91,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Just%20Laid%20Brown%20Eggs%20-%20Antibiotic%20Free%20(6%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 90,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40131159/just-laid-eggs-brown-antibiotic-free-6-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 88,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Just%20Laid%20Brown%20Eggs%20-%20Antibiotic%20Free%20(6%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 89,
+        "mrp": 90,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Just%20Laid%20Brown%20Eggs%20-%20Antibiotic%20Free%20(6%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-fresho-premium-12",
+    "name": "Fresho Premium Large White Eggs - Protein & Vitamin Rich (12 pcs)",
+    "nameHindi": "फ्रेशो प्रीमियम बड़े सफेद अंडे (12 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "12 pcs",
+    "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 117,
+        "mrp": 200,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Fresho%20Premium%20Large%20White%20Eggs%20-%20Protein%20%26%20Vitamin%20Rich%20(12%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 115,
+        "mrp": 200,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Fresho+Premium+White+Eggs+12+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 116,
+        "mrp": 200,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Fresho%20Premium%20Large%20White%20Eggs%20-%20Protein%20%26%20Vitamin%20Rich%20(12%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 115,
+        "mrp": 200,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40348875/fresho-premium-white-eggs-12-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 113,
+        "mrp": 200,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Fresho%20Premium%20Large%20White%20Eggs%20-%20Protein%20%26%20Vitamin%20Rich%20(12%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 114,
+        "mrp": 200,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Fresho%20Premium%20Large%20White%20Eggs%20-%20Protein%20%26%20Vitamin%20Rich%20(12%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-abhi-vit-d3-24",
+    "name": "Abhi Eggs Vitamin D3 With Immunity Boosters (24 pcs)",
+    "nameHindi": "अभि एग्स विटामिन डी3 अंडे (24 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "24 pcs",
+    "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 322,
+        "mrp": 399,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Abhi%20Eggs%20Vitamin%20D3%20With%20Immunity%20Boosters%20(24%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 316,
+        "mrp": 399,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Abhi+Eggs+Vitamin+D3+24+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 319,
+        "mrp": 399,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Abhi%20Eggs%20Vitamin%20D3%20With%20Immunity%20Boosters%20(24%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 316,
+        "mrp": 399,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40295897/abhi-eggs-white-eggs-vit-d3-with-immunity-boosters-fortified-24-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 310,
+        "mrp": 399,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Abhi%20Eggs%20Vitamin%20D3%20With%20Immunity%20Boosters%20(24%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 313,
+        "mrp": 399,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Abhi%20Eggs%20Vitamin%20D3%20With%20Immunity%20Boosters%20(24%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-skm-brown-6",
+    "name": "SKM Best Brown Eggs (6 pcs)",
+    "nameHindi": "एसकेएम बेस्ट ब्राउन अंडे (6 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "6 pcs",
+    "image": "https://images.unsplash.com/photo-1506976785307-8732e854ad03?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 107,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=SKM%20Best%20Brown%20Eggs%20(6%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 105,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=SKM+Best+Brown+Eggs+6+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 106,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=SKM%20Best%20Brown%20Eggs%20(6%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 105,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40003817/best-brown-egg-veg-feed-extra-albumen-6-pcs-pouch/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 103,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=SKM%20Best%20Brown%20Eggs%20(6%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 104,
+        "mrp": 105,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=SKM%20Best%20Brown%20Eggs%20(6%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-skm-plus-12",
+    "name": "SKM Best Plus Eggs (12 pcs)",
+    "nameHindi": "एसकेएम बेस्ट प्लस अंडे (12 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "12 pcs",
+    "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 193,
+        "mrp": 189,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=SKM%20Best%20Plus%20Eggs%20(12%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 189,
+        "mrp": 189,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=SKM+Best+Plus+Eggs+12+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 191,
+        "mrp": 189,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=SKM%20Best%20Plus%20Eggs%20(12%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 189,
+        "mrp": 189,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40003813/best-plus-egg-veg-feed-no-bad-odour-12-pcs-pouch/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 185,
+        "mrp": 189,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=SKM%20Best%20Plus%20Eggs%20(12%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 187,
+        "mrp": 189,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=SKM%20Best%20Plus%20Eggs%20(12%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-desi-free-range-6",
+    "name": "Desi Eggs - Free Range & Brown, DHA Enriched (6 pcs)",
+    "nameHindi": "देसी अंडे फ्री रेंज ब्राउन (6 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "6 pcs",
+    "image": "https://images.unsplash.com/photo-1506976785307-8732e854ad03?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 151,
+        "mrp": 148,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Desi%20Eggs%20-%20Free%20Range%20%26%20Brown%2C%20DHA%20Enriched%20(6%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 148,
+        "mrp": 148,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Desi+Brown+Eggs+6+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 149,
+        "mrp": 148,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Desi%20Eggs%20-%20Free%20Range%20%26%20Brown%2C%20DHA%20Enriched%20(6%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 148,
+        "mrp": 148,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40131162/desi-eggs-free-range-brown-dha-enriched-country-6-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 145,
+        "mrp": 148,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Desi%20Eggs%20-%20Free%20Range%20%26%20Brown%2C%20DHA%20Enriched%20(6%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 147,
+        "mrp": 148,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Desi%20Eggs%20-%20Free%20Range%20%26%20Brown%2C%20DHA%20Enriched%20(6%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "bb-egg-fresho-regular-30",
+    "name": "Fresho Farm Eggs, Regular (30 pcs)",
+    "nameHindi": "फ्रेशो फार्म अंडे (30 पीस)",
+    "category": "dairy",
+    "subCategory": "Eggs",
+    "unit": "30 pcs",
+    "image": "https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 247,
+        "mrp": 300,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Fresho%20Farm%20Eggs%2C%20Regular%20(30%20pcs)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 242,
+        "mrp": 300,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/s/?q=Farm+Eggs+Regular+30+pcs"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 244,
+        "mrp": 300,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Fresho%20Farm%20Eggs%2C%20Regular%20(30%20pcs)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 242,
+        "mrp": 300,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/150502/fresho-farm-eggs-table-tray-medium-antibiotic-residue-free-30-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 237,
+        "mrp": 300,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Fresho%20Farm%20Eggs%2C%20Regular%20(30%20pcs)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 240,
+        "mrp": 300,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Fresho%20Farm%20Eggs%2C%20Regular%20(30%20pcs)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "fruit-yellaki-banana",
+    "name": "Yellaki Banana (Aratipandu)",
+    "nameHindi": "येलाक्की केला",
+    "category": "veggies",
+    "subCategory": "Fruits",
+    "unit": "500 g",
+    "image": "https://images.unsplash.com/photo-1603833665858-e61d17a86224?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 79,
+        "mrp": 98,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Yellaki%20Banana%20(Aratipandu)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 77,
+        "mrp": 98,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/yellaki-banana-aratipandu/prid/424416"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 78,
+        "mrp": 98,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Yellaki%20Banana%20(Aratipandu)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 77,
+        "mrp": 98,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/10000033/fresho-banana-yelakki-500-g/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 75,
+        "mrp": 98,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Yellaki%20Banana%20(Aratipandu)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 76,
+        "mrp": 98,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Yellaki%20Banana%20(Aratipandu)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "fruit-pomegranate-2-pieces",
+    "name": "Pomegranate - 2 pieces (350-450 g) (Danimma Pandu)",
+    "nameHindi": "अनार (2 पीस)",
+    "category": "veggies",
+    "subCategory": "Fruits",
+    "unit": "350 g",
+    "image": "https://images.unsplash.com/photo-1541344999736-83eca272f6fc?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 100,
+        "mrp": 115,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Pomegranate%20-%202%20pieces%20(350-450%20g)%20(Danimma%20Pandu)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 98,
+        "mrp": 115,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/pomegranate-2-pieces-350-450-g-danimma-pandu/prid/321169"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 99,
+        "mrp": 115,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Pomegranate%20-%202%20pieces%20(350-450%20g)%20(Danimma%20Pandu)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 98,
+        "mrp": 115,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/20000709/fresho-pomegranate-500-g/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 96,
+        "mrp": 115,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Pomegranate%20-%202%20pieces%20(350-450%20g)%20(Danimma%20Pandu)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 97,
+        "mrp": 115,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Pomegranate%20-%202%20pieces%20(350-450%20g)%20(Danimma%20Pandu)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "fruit-mini-orange-imported",
+    "name": "Mini Orange (Imported) (Narinja Pandu)",
+    "nameHindi": "इम्पोर्टेड मिनी संतरा",
+    "category": "veggies",
+    "subCategory": "Fruits",
+    "unit": "200 g",
+    "image": "https://images.unsplash.com/photo-1582979512210-99b6a53386f9?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 107,
+        "mrp": 120,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Mini%20Orange%20(Imported)%20(Narinja%20Pandu)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 105,
+        "mrp": 120,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/mini-orange-imported-narinja-pandu/prid/294599"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 106,
+        "mrp": 120,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Mini%20Orange%20(Imported)%20(Narinja%20Pandu)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 105,
+        "mrp": 120,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/10000266/fresho-orange-imported-1-kg/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 103,
+        "mrp": 120,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Mini%20Orange%20(Imported)%20(Narinja%20Pandu)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 104,
+        "mrp": 120,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Mini%20Orange%20(Imported)%20(Narinja%20Pandu)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "fruit-papaya-boppayi",
+    "name": "Papaya (Boppayi)",
+    "nameHindi": "ताजा पपीता",
+    "category": "veggies",
+    "subCategory": "Fruits",
+    "unit": "700 g",
+    "image": "https://images.unsplash.com/photo-1517282009859-f000ec3b26fe?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 93,
+        "mrp": 111,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Papaya%20(Boppayi)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 91,
+        "mrp": 111,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/papaya-boppayi/prid/189821"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 92,
+        "mrp": 111,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Papaya%20(Boppayi)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 91,
+        "mrp": 111,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/10000152/fresho-papaya-medium-1-pc-approx-800-g-12-kg/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 89,
+        "mrp": 111,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Papaya%20(Boppayi)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 90,
+        "mrp": 111,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Papaya%20(Boppayi)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "fruit-kiran-watermelon",
+    "name": "Kiran Watermelon",
+    "nameHindi": "किरण तरबूज",
+    "category": "veggies",
+    "subCategory": "Fruits",
+    "unit": "2 kg",
+    "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 81,
+        "mrp": 91,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Kiran%20Watermelon"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 79,
+        "mrp": 91,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/kiran-watermelon/prid/773426"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 80,
+        "mrp": 91,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Kiran%20Watermelon"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 79,
+        "mrp": 91,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/10000207/fresho-watermelon-small-1-pc-17-25-kg/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 77,
+        "mrp": 91,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Kiran%20Watermelon&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 78,
+        "mrp": 91,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Kiran%20Watermelon&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "fruit-brown-coconut",
+    "name": "Brown Coconut (Kobbarikaya)",
+    "nameHindi": "पानी वाला नारियल",
+    "category": "veggies",
+    "subCategory": "Fruits",
+    "unit": "1 pc",
+    "image": "https://images.unsplash.com/photo-1544376798-89aa6b82c6cd?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 44,
+        "mrp": 53,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Brown%20Coconut%20(Kobbarikaya)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 43,
+        "mrp": 53,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/brown-coconut-kobbarikaya/prid/4943"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 43,
+        "mrp": 53,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Brown%20Coconut%20(Kobbarikaya)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 43,
+        "mrp": 53,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/10000093/fresho-coconut-medium-1-pc/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 42,
+        "mrp": 53,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Brown%20Coconut%20(Kobbarikaya)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 43,
+        "mrp": 53,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Brown%20Coconut%20(Kobbarikaya)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "fruit-baby-banana",
+    "name": "Baby Banana (Aratipandu)",
+    "nameHindi": "बेबी केला",
+    "category": "veggies",
+    "subCategory": "Fruits",
+    "unit": "4 pcs",
+    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 29,
+        "mrp": 32,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Baby%20Banana%20(Aratipandu)"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 28,
+        "mrp": 32,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/baby-banana-aratipandu/prid/342340"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 28,
+        "mrp": 32,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Baby%20Banana%20(Aratipandu)"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 28,
+        "mrp": 32,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/10000031/fresho-banana-robusta-1-kg/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 27,
+        "mrp": 32,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Baby%20Banana%20(Aratipandu)&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 28,
+        "mrp": 32,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Baby%20Banana%20(Aratipandu)&marketplace=GROCERY"
+      }
+    }
+  },
+  {
+    "id": "fruit-mr-apple-royal-gala",
+    "name": "Mr. Apple New Zealand Royal Gala",
+    "nameHindi": "न्यूजीलैंड रॉयल गाला सेब",
+    "category": "veggies",
+    "subCategory": "Fruits",
+    "unit": "300 g",
+    "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=300&auto=format&fit=crop&q=60",
+    "offers": {
+      "zepto": {
+        "platform": "zepto",
+        "price": 154,
+        "mrp": 181,
+        "inStock": true,
+        "deliveryTimeMin": 9,
+        "surgeFee": 0,
+        "handlingFee": 2,
+        "affiliateUrl": "https://www.zeptonow.com/search?q=Mr.%20Apple%20New%20Zealand%20Royal%20Gala"
+      },
+      "blinkit": {
+        "platform": "blinkit",
+        "price": 151,
+        "mrp": 181,
+        "inStock": true,
+        "deliveryTimeMin": 8,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://blinkit.com/prn/mr.-apple-new-zealand-royal-gala/prid/355038"
+      },
+      "instamart": {
+        "platform": "instamart",
+        "price": 153,
+        "mrp": 181,
+        "inStock": true,
+        "deliveryTimeMin": 12,
+        "surgeFee": 0,
+        "handlingFee": 5,
+        "affiliateUrl": "https://www.swiggy.com/instamart/search?query=Mr.%20Apple%20New%20Zealand%20Royal%20Gala"
+      },
+      "bigbasket": {
+        "platform": "bigbasket",
+        "price": 151,
+        "mrp": 181,
+        "inStock": true,
+        "deliveryTimeMin": 18,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.bigbasket.com/pd/40033819/fresho-apple-royal-gala-regular-4-pcs/"
+      },
+      "amazon": {
+        "platform": "amazon",
+        "price": 148,
+        "mrp": 181,
+        "inStock": true,
+        "deliveryTimeMin": 25,
+        "surgeFee": 0,
+        "handlingFee": 0,
+        "affiliateUrl": "https://www.amazon.in/s?k=Mr.%20Apple%20New%20Zealand%20Royal%20Gala&i=nowstore"
+      },
+      "flipkart": {
+        "platform": "flipkart",
+        "price": 149,
+        "mrp": 181,
+        "inStock": true,
+        "deliveryTimeMin": 20,
+        "surgeFee": 0,
+        "handlingFee": 4,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Mr.%20Apple%20New%20Zealand%20Royal%20Gala&marketplace=GROCERY"
+      }
+    }
+  },
+  {
     "id": "zepto-rin-matic-top-load-2kg",
     "name": "Rin Matic Top Load Detergent Liquid | Pouch (2 kg)",
     "nameHindi": "रिन मैटिक टॉप लोड लिक्विड डिटर्जेंट",
@@ -482,13 +4032,13 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "blinkit": {
         "platform": "blinkit",
-        "price": 380,
+        "price": 369,
         "mrp": 449,
         "inStock": true,
         "deliveryTimeMin": 11,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=Eggoz%20Eggoz%20Farm%20Fresh%20White%20Eggs%20%2030%20pcs%20Tray"
+        "affiliateUrl": "https://blinkit.com/s/?q=Eggoz+White+Eggs+30+pcs"
       },
       "instamart": {
         "platform": "instamart",
@@ -628,13 +4178,13 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "blinkit": {
         "platform": "blinkit",
-        "price": 147,
+        "price": 142,
         "mrp": 170,
         "inStock": true,
         "deliveryTimeMin": 11,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=Eggoz%20Eggoz%20Protein%20Plus%20Large%20White%20Eggs%20%2010%20pcs%20Pack"
+        "affiliateUrl": "https://blinkit.com/s/?q=Eggoz+Protein+Plus+Eggs+10+pcs"
       },
       "instamart": {
         "platform": "instamart",
@@ -648,7 +4198,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "bigbasket": {
         "platform": "bigbasket",
-        "price": 142.8,
+        "price": 142,
         "mrp": 170,
         "inStock": true,
         "deliveryTimeMin": 18,
@@ -774,13 +4324,13 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "blinkit": {
         "platform": "blinkit",
-        "price": 394,
+        "price": 382,
         "mrp": 450,
         "inStock": true,
         "deliveryTimeMin": 11,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=Hello%20Eggs%20Hello%20Eggs%20Brown%20Eggs%20%2030%20pcs%20Tray"
+        "affiliateUrl": "https://blinkit.com/s/?q=Hello+Eggs+Brown+30+pcs"
       },
       "instamart": {
         "platform": "instamart",
@@ -794,7 +4344,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "bigbasket": {
         "platform": "bigbasket",
-        "price": 382.5,
+        "price": 382,
         "mrp": 450,
         "inStock": true,
         "deliveryTimeMin": 18,
@@ -12371,7 +15921,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
     "offers": {
       "blinkit": {
         "platform": "blinkit",
-        "price": 90,
+        "price": 99,
         "mrp": 90,
         "inStock": true,
         "deliveryTimeMin": 8,
@@ -12401,13 +15951,13 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "bigbasket": {
         "platform": "bigbasket",
-        "price": 90,
+        "price": 99,
         "mrp": 90,
         "inStock": true,
         "deliveryTimeMin": 18,
         "surgeFee": 0,
         "handlingFee": 3,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Mozo%20Ultimate%20Rolling%20Paper%20with%20Filter%20Tips%20%26%20Crushing%20Tray%20(King%20Size%2C%20Unbleached)%20-%20Mozo"
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Mozo+Rolling+Paper"
       },
       "amazon": {
         "platform": "amazon",
@@ -12444,7 +15994,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
     "offers": {
       "blinkit": {
         "platform": "blinkit",
-        "price": 90,
+        "price": 75,
         "mrp": 90,
         "inStock": true,
         "deliveryTimeMin": 8,
@@ -12474,13 +16024,13 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "bigbasket": {
         "platform": "bigbasket",
-        "price": 90,
+        "price": 75,
         "mrp": 90,
         "inStock": true,
         "deliveryTimeMin": 18,
         "surgeFee": 0,
         "handlingFee": 3,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Original%20Gangster%20Booklet%20of%2032%20Brown%20Leaves%20and%20Tips%20Rolling%20Paper%20-%20Original%20Gangster"
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Original+Gangster+Rolling+Paper"
       },
       "amazon": {
         "platform": "amazon",
@@ -12517,7 +16067,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
     "offers": {
       "blinkit": {
         "platform": "blinkit",
-        "price": 120,
+        "price": 80,
         "mrp": 120,
         "inStock": true,
         "deliveryTimeMin": 8,
@@ -12547,13 +16097,13 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "bigbasket": {
         "platform": "bigbasket",
-        "price": 120,
+        "price": 80,
         "mrp": 120,
         "inStock": true,
         "deliveryTimeMin": 18,
         "surgeFee": 0,
         "handlingFee": 3,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Stash%20Pro%20Brown%20Ripper%20Rolling%20Paper%2032%20Leaves%20%2B%2032%20Roaches%20-%20Stash%20Pro"
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Stash+Pro+Rolling+Paper"
       },
       "amazon": {
         "platform": "amazon",
@@ -12590,7 +16140,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
     "offers": {
       "blinkit": {
         "platform": "blinkit",
-        "price": 45,
+        "price": 60,
         "mrp": 45,
         "inStock": true,
         "deliveryTimeMin": 8,
@@ -12620,13 +16170,13 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "bigbasket": {
         "platform": "bigbasket",
-        "price": 45,
+        "price": 60,
         "mrp": 45,
         "inStock": true,
         "deliveryTimeMin": 18,
         "surgeFee": 0,
         "handlingFee": 3,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Bongchie%20Perfect%20Rolled%20Cones%20(Natural)%20-%20Bongchie"
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Bongchie+Cones"
       },
       "amazon": {
         "platform": "amazon",
@@ -12663,7 +16213,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
     "offers": {
       "blinkit": {
         "platform": "blinkit",
-        "price": 80,
+        "price": 99,
         "mrp": 80,
         "inStock": true,
         "deliveryTimeMin": 8,
@@ -12693,13 +16243,13 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "bigbasket": {
         "platform": "bigbasket",
-        "price": 80,
+        "price": 99,
         "mrp": 80,
         "inStock": true,
         "deliveryTimeMin": 18,
         "surgeFee": 0,
         "handlingFee": 3,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Mozo%20Ultimate%20Rolling%20Paper%20with%20Filter%20Tips%20%26%20Crushing%20Tray%20(King%20Size%2C%20Bleached)%20-%20Mozo"
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Mozo+Rolling+Paper"
       },
       "amazon": {
         "platform": "amazon",
@@ -12736,7 +16286,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
     "offers": {
       "blinkit": {
         "platform": "blinkit",
-        "price": 199,
+        "price": 70,
         "mrp": 200,
         "inStock": true,
         "deliveryTimeMin": 8,
@@ -12766,13 +16316,13 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "bigbasket": {
         "platform": "bigbasket",
-        "price": 199,
+        "price": 70,
         "mrp": 200,
         "inStock": true,
         "deliveryTimeMin": 18,
         "surgeFee": 0,
         "handlingFee": 3,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=TRP%20Essentials%20Journeys%20Rolling%20Paper%20-%20TRP%20Essentials"
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=TRP+Rolling+Paper"
       },
       "amazon": {
         "platform": "amazon",
@@ -15443,7 +18993,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 8,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=Orbit%20Orbit%20Spearmint%20Flavour%20Sugar%20Free%20Chewing%20Gum%20(2%20x%2019.8%20g)"
+        "affiliateUrl": "https://blinkit.com/prn/orbit-spearmint-flavour-sugar-free-chewing-gum/prid/482995"
       },
       "zepto": {
         "platform": "zepto",
@@ -15516,7 +19066,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 8,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=Parle%20Parle%20Melody%20Bigger%20Chocolaty%20Toffee%20(138%20g)"
+        "affiliateUrl": "https://blinkit.com/prn/parle-melody-bigger-chocolaty-toffee/prid/753988"
       },
       "zepto": {
         "platform": "zepto",
@@ -15589,7 +19139,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 8,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=Chupa%20Chups%20Chupa%20Chups%20Sour%20Bites%20Mixed%20Fruit%20Sour%20Candy%20(61.6%20g)"
+        "affiliateUrl": "https://blinkit.com/prn/chupa-chups-sour-bites-mixed-fruit-sour-candy/prid/361832"
       },
       "zepto": {
         "platform": "zepto",
@@ -15662,7 +19212,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 8,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=Kopiko%20Kopiko%20Cappuccino%20Candy%20-%20Family%20Pack%20(140%20g)"
+        "affiliateUrl": "https://blinkit.com/prn/kopiko-cappuccino-candy-family-pack/prid/285599"
       },
       "zepto": {
         "platform": "zepto",
@@ -15735,7 +19285,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 8,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=Orbit%20Orbit%20Mixed%20Fruit%20Flavour%20Chewing%20Gum%20(Sugar%20Free)%20(19.8%20g)"
+        "affiliateUrl": "https://blinkit.com/prn/orbit-mixed-fruit-flavour-chewing-gum-sugar-free/prid/440073"
       },
       "zepto": {
         "platform": "zepto",
@@ -15808,7 +19358,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 8,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=Chupa%20Chups%20Chupa%20Chups%20Sour%20Belt%20Mixed%20Fruit%20Sour%20Candy%20(57.6%20g)"
+        "affiliateUrl": "https://blinkit.com/prn/chupa-chups-sour-belt-mixed-fruit-sour-candy/prid/368393"
       },
       "zepto": {
         "platform": "zepto",
@@ -17906,7 +21456,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       }
     }
   },
-{
+  {
     "id": "milk-1",
     "name": "Sids Farm Buffalo A2 Milk (500 ml) (500 ml Pouch)",
     "nameHindi": "Sids Farm ताजा दूध",
@@ -69974,7 +73524,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 21,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=Khetika%20Khetika%20Sprouted%20Moong%20Chilla%20Batter%201%20kg"
+        "affiliateUrl": "https://blinkit.com/prn/khetika-sprouted-moong-chilla-batter/prid/558902"
       },
       "zepto": {
         "platform": "zepto",
@@ -69998,13 +73548,13 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "bigbasket": {
         "platform": "bigbasket",
-        "price": 112,
+        "price": 115,
         "mrp": 125,
         "inStock": true,
         "deliveryTimeMin": 25,
         "surgeFee": 0,
         "handlingFee": 0,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Khetika%20Khetika%20Sprouted%20Moong%20Chilla%20Batter%201%20kg"
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=moong+chilla+batter"
       },
       "flipkart": {
         "platform": "flipkart",
@@ -70047,7 +73597,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 21,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=iD%20Fresh%20Food%20iD%20Idli%20%26%20Dosa%20Batter%20-%201%20kg%201%20kg"
+        "affiliateUrl": "https://blinkit.com/prn/id-idli-dosa-batter-1-kg/prid/17772"
       },
       "zepto": {
         "platform": "zepto",
@@ -70077,7 +73627,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 25,
         "surgeFee": 0,
         "handlingFee": 0,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=iD%20Fresh%20Food%20iD%20Idli%20%26%20Dosa%20Batter%20-%201%20kg%201%20kg"
+        "affiliateUrl": "https://www.bigbasket.com/pd/266539/id-fresh-idly-dosa-batter-1-kg/"
       },
       "flipkart": {
         "platform": "flipkart",
@@ -70120,7 +73670,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 21,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=iD%20Fresh%20Food%20iD%20Idli%20%26%20Dosa%20Batter%20(2%20kg)%202%20kg"
+        "affiliateUrl": "https://blinkit.com/prn/id-idli-dosa-batter-2-kg/prid/122133"
       },
       "zepto": {
         "platform": "zepto",
@@ -70144,13 +73694,13 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "bigbasket": {
         "platform": "bigbasket",
-        "price": 174,
+        "price": 172,
         "mrp": 172,
         "inStock": true,
         "deliveryTimeMin": 25,
         "surgeFee": 0,
         "handlingFee": 0,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=iD%20Fresh%20Food%20iD%20Idli%20%26%20Dosa%20Batter%20(2%20kg)%202%20kg"
+        "affiliateUrl": "https://www.bigbasket.com/pd/40092200/id-fresh-idly-dosa-batter-2-kg/"
       },
       "flipkart": {
         "platform": "flipkart",
@@ -70193,7 +73743,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 21,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=iD%20Fresh%20Food%20iD%20Rice%20Rava%20Idli%20Batter%201%20kg"
+        "affiliateUrl": "https://blinkit.com/prn/id-rice-rava-idli-batter/prid/268259"
       },
       "zepto": {
         "platform": "zepto",
@@ -70223,7 +73773,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 25,
         "surgeFee": 0,
         "handlingFee": 0,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=iD%20Fresh%20Food%20iD%20Rice%20Rava%20Idli%20Batter%201%20kg"
+        "affiliateUrl": "https://www.bigbasket.com/pd/40149955/id-fresh-rice-rava-idly-batter-1-kg/"
       },
       "flipkart": {
         "platform": "flipkart",
@@ -70266,7 +73816,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 21,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=Khetika%20Khetika%20Fresh%20Idli%20Dosa%20Batter%201%20kg"
+        "affiliateUrl": "https://blinkit.com/prn/khetika-fresh-idli-dosa-batter/prid/557380"
       },
       "zepto": {
         "platform": "zepto",
@@ -70290,13 +73840,13 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "bigbasket": {
         "platform": "bigbasket",
-        "price": 76,
+        "price": 79,
         "mrp": 99,
         "inStock": true,
         "deliveryTimeMin": 25,
         "surgeFee": 0,
         "handlingFee": 0,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Khetika%20Khetika%20Fresh%20Idli%20Dosa%20Batter%201%20kg"
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=khetika+fresh+idli+dosa+batter"
       },
       "flipkart": {
         "platform": "flipkart",
@@ -70339,7 +73889,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 21,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=iD%20Fresh%20Food%20iD%20Ragi%20Millet%20Idly%20%26%20Dosa%20Batter%20500%20g"
+        "affiliateUrl": "https://blinkit.com/prn/id-ragi-millet-idly-dosa-batter/prid/602057"
       },
       "zepto": {
         "platform": "zepto",
@@ -70369,7 +73919,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 25,
         "surgeFee": 0,
         "handlingFee": 0,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=iD%20Fresh%20Food%20iD%20Ragi%20Millet%20Idly%20%26%20Dosa%20Batter%20500%20g"
+        "affiliateUrl": "https://www.bigbasket.com/pd/40179929/id-fresh-ragi-idly-dosa-batter-1-kg/"
       },
       "flipkart": {
         "platform": "flipkart",
@@ -70412,7 +73962,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 21,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=Ammamma's%20Ammamma's%20Dosa-Idly%20Batter%201%20kg"
+        "affiliateUrl": "https://blinkit.com/prn/ammammas-dosa-idly-batter/prid/548440"
       },
       "zepto": {
         "platform": "zepto",
@@ -70436,13 +73986,13 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "bigbasket": {
         "platform": "bigbasket",
-        "price": 92,
+        "price": 90,
         "mrp": 99,
         "inStock": true,
         "deliveryTimeMin": 25,
         "surgeFee": 0,
         "handlingFee": 0,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Ammamma's%20Ammamma's%20Dosa-Idly%20Batter%201%20kg"
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=ammammas+dosa+idly+batter"
       },
       "flipkart": {
         "platform": "flipkart",
@@ -70485,7 +74035,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 21,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=iD%20Fresh%20Food%20iD%20Protein-Rich%20Idli%20Dosa%20Batter%20500%20g"
+        "affiliateUrl": "https://blinkit.com/prn/id-protein-rich-idli-dosa-batter/prid/686922"
       },
       "zepto": {
         "platform": "zepto",
@@ -70515,7 +74065,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 25,
         "surgeFee": 0,
         "handlingFee": 0,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=iD%20Fresh%20Food%20iD%20Protein-Rich%20Idli%20Dosa%20Batter%20500%20g"
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=id+protein+rich+batter"
       },
       "flipkart": {
         "platform": "flipkart",
@@ -70558,7 +74108,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 21,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=iD%20Fresh%20Food%20iD%20Fresh%20High%20Fibre%20Brown%20Rice%20%26%20Oats%20Dosa%20Batter%20500%20g"
+        "affiliateUrl": "https://blinkit.com/prn/id-fresh-high-fibre-brown-rice-oats-dosa-batter/prid/800787"
       },
       "zepto": {
         "platform": "zepto",
@@ -70582,13 +74132,13 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "bigbasket": {
         "platform": "bigbasket",
-        "price": 87,
+        "price": 90,
         "mrp": 90,
         "inStock": true,
         "deliveryTimeMin": 25,
         "surgeFee": 0,
         "handlingFee": 0,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=iD%20Fresh%20Food%20iD%20Fresh%20High%20Fibre%20Brown%20Rice%20%26%20Oats%20Dosa%20Batter%20500%20g"
+        "affiliateUrl": "https://www.bigbasket.com/ps/?q=id+fresh+brown+rice+oats+dosa+batter"
       },
       "flipkart": {
         "platform": "flipkart",
@@ -70631,7 +74181,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 21,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=MTR%20MTR%20Minute%20Fresh%20Rice%20Rava%20Idli%20Batter%20750%20g"
+        "affiliateUrl": "https://blinkit.com/prn/mtr-minute-fresh-rice-rava-idli-batter/prid/777087"
       },
       "zepto": {
         "platform": "zepto",
@@ -70661,7 +74211,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 25,
         "surgeFee": 0,
         "handlingFee": 0,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=MTR%20MTR%20Minute%20Fresh%20Rice%20Rava%20Idli%20Batter%20750%20g"
+        "affiliateUrl": "https://www.bigbasket.com/pd/40217522/mtr-minute-fresh-rice-idli-batter-1-kg/"
       },
       "flipkart": {
         "platform": "flipkart",
@@ -76252,7 +79802,7 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
         "deliveryTimeMin": 21,
         "surgeFee": 0,
         "handlingFee": 5,
-        "affiliateUrl": "https://blinkit.com/s/?q=Fresh%20Peeled%20Pomegranate%20-%20Snack%20Pack%2080%20g"
+        "affiliateUrl": "https://blinkit.com/prn/peeled-pomegranate-snack-pack/prid/735411"
       },
       "zepto": {
         "platform": "zepto",
@@ -76276,13 +79826,13 @@ export const COMPREHENSIVE_GROCERY_DATA: Product[] = [
       },
       "bigbasket": {
         "platform": "bigbasket",
-        "price": 76,
+        "price": 74,
         "mrp": 94,
         "inStock": true,
         "deliveryTimeMin": 25,
         "surgeFee": 0,
         "handlingFee": 0,
-        "affiliateUrl": "https://www.bigbasket.com/ps/?q=Fresh%20Peeled%20Pomegranate%20-%20Snack%20Pack%2080%20g"
+        "affiliateUrl": "https://www.bigbasket.com/pd/20000709/fresho-pomegranate-500-g/"
       },
       "flipkart": {
         "platform": "flipkart",

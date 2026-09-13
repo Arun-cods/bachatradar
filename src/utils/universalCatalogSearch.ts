@@ -27,7 +27,7 @@ export const searchUniversalCatalog = (query: string, currentList: Product[]): P
   const existingMatches = currentList.filter(
     (p) =>
       p.name.toLowerCase().includes(q) ||
-      p.brand.toLowerCase().includes(q) ||
+      (p.brand || '').toLowerCase().includes(q) ||
       (p.nameHindi && p.nameHindi.includes(q))
   );
 

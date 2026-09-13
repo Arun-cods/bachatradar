@@ -1,4 +1,4 @@
-# BachatRadar Robots Exclusion Standard
+# OneBasket Robots Exclusion Standard
 User-agent: *
 Allow: /
 

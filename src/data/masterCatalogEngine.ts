@@ -706,7 +706,7 @@ export function queryMasterCatalog(options: {
     for (const p of COMPREHENSIVE_GROCERY_DATA) {
       if (category !== 'all' && p.category !== category) continue;
       if (onlyEssentials && !p.isDailyEssential) continue;
-      if (p.name.toLowerCase().includes(q) || p.brand.toLowerCase().includes(q) || (p.nameHindi && p.nameHindi.includes(q))) {
+      if (p.name.toLowerCase().includes(q) || (p.brand || '').toLowerCase().includes(q) || (p.nameHindi && p.nameHindi.includes(q))) {
         matchedProducts.push(p);
       }
     }
@@ -718,7 +718,7 @@ export function queryMasterCatalog(options: {
       if (onlyEssentials && !p.isDailyEssential) continue;
       if (
         p.name.toLowerCase().includes(q) ||
-        p.brand.toLowerCase().includes(q) ||
+        (p.brand || '').toLowerCase().includes(q) ||
         (p.nameHindi && p.nameHindi.includes(q))
       ) {
         matchedProducts.push(p);

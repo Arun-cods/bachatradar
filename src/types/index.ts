@@ -29,10 +29,12 @@ export interface Product {
   id: string;
   name: string;
   nameHindi?: string;
-  brand: string;
+  brand?: string;
   category: 'dairy' | 'veggies' | 'staples' | 'snacks' | 'household' | 'festive' | string;
+  subCategory?: string;
   unit: string;
-  imageUrl: string;
+  image?: string;
+  imageUrl?: string;
   price?: number;
   mrp?: number;
   trending?: boolean;
