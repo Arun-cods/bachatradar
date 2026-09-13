@@ -49,7 +49,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div>
               <div className="flex items-center gap-1.5">
                 <span className="font-extrabold text-xl text-slate-900 tracking-tight">
-                  One<span className="text-emerald-600">Basket</span>
+                  Nest<span className="text-emerald-600">Basket</span>
                 </span>
                 <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-emerald-100 text-emerald-800 rounded-full border border-emerald-300">
                   ALL-IN-ONE

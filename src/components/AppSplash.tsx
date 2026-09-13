@@ -94,13 +94,13 @@ export const AppSplash: React.FC<AppSplashProps> = ({
 
         {/* Brand Name */}
         <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-white flex items-center justify-center gap-1.5">
-          <span>One</span>
+          <span>Nest</span>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
             Basket
           </span>
         </h1>
         <p className="text-emerald-400 text-xs font-bold mt-1 tracking-wider uppercase">
-          ONE BASKET • ALL-IN-ONE SHOPPING
+          NESTBASKET • ALL-IN-ONE SHOPPING
         </p>
         <p className="text-slate-400 text-xs mt-2 font-medium px-4">
           India's All-In-One Quick-Commerce Shopping & Price Comparison Engine
