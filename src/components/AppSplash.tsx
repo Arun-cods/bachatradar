@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { NestBasketLogo } from './NestBasketLogo';
 
 interface AppSplashProps {
   currentUser?: any;
@@ -86,9 +87,7 @@ export const AppSplash: React.FC<AppSplashProps> = ({
       <div className="flex flex-col items-center text-center max-w-sm my-auto">
         {/* Animated 3D Logo */}
         <div className="relative mb-5">
-          <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-br from-emerald-400 via-emerald-600 to-teal-800 flex items-center justify-center text-white text-4xl sm:text-5xl font-black shadow-2xl shadow-emerald-500/40 border border-emerald-300/50 animate-pulse">
-            🛒
-          </div>
+          <NestBasketLogo size="xl" className="shadow-2xl shadow-emerald-500/40 border border-emerald-300/50 animate-pulse" />
           <div className="absolute -inset-2 rounded-[2rem] bg-emerald-500/20 blur-lg -z-10 animate-ping opacity-60" />
         </div>
 

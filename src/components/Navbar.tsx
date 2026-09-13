@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NestBasketLogo } from './NestBasketLogo';
 import { MapPin, ShoppingBag, Share2, TrendingUp, User, LogOut, CheckCircle, Sparkles, Building2, HelpCircle } from 'lucide-react';
 import { CityOption, UserProfile } from '../types';
 import { CITIES } from '../data/mockGroceryData';

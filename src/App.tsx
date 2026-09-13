@@ -482,18 +482,11 @@ export const App: React.FC = () => {
               >
                 Share NestBasket
               </button>
-              <button
-                onClick={() => setIsPinModalOpen(true)}
-                className="text-slate-400 hover:text-white px-2 py-1.5 rounded-lg transition-colors flex items-center gap-1 cursor-pointer text-[11px]"
-                title="Executive Founder Portal"
-              >
-                <span>🔒 Executive Portal</span>
-              </button>
             </div>
           </div>
 
           {/* Quick Commerce Directory & Categories Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 py-8 border-b border-slate-800 text-xs">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 py-8 border-b border-slate-800 text-xs">
             <div>
               <h4 className="font-bold text-slate-200 uppercase tracking-wider mb-3 text-[11px]">Dairy & Breakfast</h4>
               <ul className="space-y-2 text-slate-400">
@@ -545,26 +538,12 @@ export const App: React.FC = () => {
                 <li><button onClick={() => { setHomeCategory('personal'); document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors text-left">Bath, Body & Grooming</button></li>
               </ul>
             </div>
-
-            <div>
-              <h4 className="font-bold text-slate-200 uppercase tracking-wider mb-3 text-[11px]">Useful Links</h4>
-              <ul className="space-y-2 text-slate-400">
-                <li><button onClick={() => setIsHelpModalOpen(true)} className="hover:text-amber-400 transition-colors text-left">Customer Help Desk</button></li>
-                <li><button onClick={() => handleOpenPrivacyPolicy('dpdp')} className="hover:text-white transition-colors text-left">Privacy Policy (DPDP 2023)</button></li>
-                <li><button onClick={() => handleOpenPrivacyPolicy('affiliate')} className="hover:text-white transition-colors text-left">Affiliate & Pricing Disclosure</button></li>
-                <li><button onClick={() => setIsLocationModalOpen(true)} className="hover:text-white transition-colors text-left">Darkstore City Coverage</button></li>
-                <li><button onClick={handleShareApp} className="hover:text-emerald-400 transition-colors text-left">Share with Neighbors</button></li>
-                <li><a href="./founder/gopagani-arun/" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-300 transition-colors text-left flex items-center gap-1 font-medium text-slate-300"><span>👤 Founder Profile</span></a></li>
-                <li><button onClick={() => setIsPinModalOpen(true)} className="hover:text-slate-300 transition-colors text-left">Executive Management</button></li>
-                <li><span className="text-emerald-400 font-medium">Balkampet 500016 Darkstore</span></li>
-              </ul>
-            </div>
           </div>
 
           {/* Copyright & Disclaimer */}
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
             <div>
-              © 2026 NestBasket. Founded by <a href="./founder/gopagani-arun/" target="_blank" rel="noopener noreferrer" className="text-slate-200 hover:text-emerald-400 underline font-bold">Gopagani Arun</a> (Founder & CEO). Blinkit, Zepto, Swiggy Instamart, BigBasket, and Flipkart are trademarks of their respective owners.
+              © 2026 NestBasket. Founded by <span className="text-slate-300 font-bold">Gopagani Arun</span> (Founder & CEO). Blinkit, Zepto, Swiggy Instamart, BigBasket, and Flipkart are trademarks of their respective owners.
             </div>
             <div className="font-medium text-emerald-400 shrink-0">
               Proudly Made for Indian Households 🇮🇳
