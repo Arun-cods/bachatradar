@@ -324,7 +324,7 @@ export const App: React.FC = () => {
     setCartItems([]);
   };
 
-  const LIVE_URL = 'https://arungopagani.is-a.dev/bachatradar/';
+  const LIVE_URL = 'https://arungopagani.is-a.dev/onebasket/';
 
   const handleDirectWhatsAppShare = () => {
     const text = `🛒 *OneBasket — India's #1 All-In-One Quick-Commerce Shopping App!*\n\nEver noticed how Blinkit, Zepto, Swiggy Instamart, and BigBasket charge different prices for the exact same milk, veggies, and atta?\n\nFamilies are saving *₹1,500 to ₹3,500 every month* using OneBasket!\n⚡ All quick-commerce stores in One Basket\n🥦 Avoid surge charges & find secret discounts\n🎉 *100% FREE for all Indian families*\n\nCheck live rates now:\n${LIVE_URL}`;

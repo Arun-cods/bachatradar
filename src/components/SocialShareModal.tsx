@@ -22,7 +22,7 @@ export const SocialShareModal: React.FC<SocialShareModalProps> = ({ isOpen, onCl
   if (!isOpen) return null;
 
   // Guaranteed 24/7 globally-hosted production URL accessible on any phone anywhere:
-  const LIVE_URL = 'https://arungopagani.is-a.dev/bachatradar/';
+  const LIVE_URL = 'https://arungopagani.is-a.dev/onebasket/';
 
   const currentHostname = typeof window !== 'undefined' ? window.location.hostname : '';
   const isLocalDev = !currentHostname || currentHostname === 'localhost' || currentHostname === '127.0.0.1' || currentHostname.startsWith('10.') || currentHostname.startsWith('192.168.');

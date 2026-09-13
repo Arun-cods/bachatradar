@@ -36,7 +36,7 @@ Don't overpay for daily groceries today! Here is the live comparison across Blin
 ⚡ *Live Surge Alert:* Blinkit currently has +₹15 surge fee active!
 
 👉 Compare live rates on OneBasket before you order:
-https://arungopagani.is-a.dev/bachatradar/?ref=wa_${city.id}`;
+https://arungopagani.is-a.dev/onebasket/?ref=wa_${city.id}`;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(shareText);

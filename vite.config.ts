@@ -75,7 +75,7 @@ function realSmsGatewayPlugin(): Plugin {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/bachatradar/',
+  base: './',
   plugins: [react(), realSmsGatewayPlugin()],
   server: {
     port: 3000,
